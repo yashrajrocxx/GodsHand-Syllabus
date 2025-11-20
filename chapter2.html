@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>God's Hand | Chapter 2: Inner Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+            colors: {
+              "brand-bg": "#F8FAFC",
+              "brand-surface": "#FFFFFF",
+              "brand-text": "#0F172A",
+              "brand-text-light": "#475569",
+              "brand-primary": "#2563EB",
+              "brand-highlight": "#EFF6FF",
+              "brand-border": "#E2E8F0",
+              "dark-bg": "#0B1120",
+              "dark-surface": "#1E293B",
+              "dark-text": "#F8FAFC",
+              "dark-text-light": "#CBD5E1",
+              "dark-primary": "#38BDF8",
+              "dark-highlight": "#0F172A",
+              "dark-border": "#334155",
+            },
+            boxShadow: {
+              card: "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+              "card-hover":
+                "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+              popup: "0 10px 40px -10px rgba(0,0,0,0.15)",
+            },
+          },
+        },
+      };
+      // Initial Theme Check
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="p-4 md:p-8 lg:p-12 pb-32">
+    <!-- HEADER -->
+    <header class="text-center mb-12 fade-up">
+      <div class="flex justify-center items-center gap-4 mb-2">
+        <h1 class="text-3xl md:text-5xl font-black tracking-tight">
+          📘 God's Hand
+        </h1>
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6 hidden dark:block text-yellow-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
+          </svg>
+          <svg
+            class="w-6 h-6 block dark:hidden text-slate-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <h2 class="text-xl md:text-2xl font-bold text-brand-primary">
+        Chapter 2: The Inner Intelligence System
+      </h2>
+    </header>
+
+    <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+      <!-- DESKTOP SIDEBAR (Hidden on Mobile) -->
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <nav class="sticky top-8">
+          <h3
+            class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 ml-2"
+          >
+            Contents
+          </h3>
+          <ul class="space-y-1">
+            <li><a href="#intro" class="nav-link">Introduction</a></li>
+            <li><a href="#sec1" class="nav-link">The 3 Layers of Desire</a></li>
+            <li><a href="#sec2" class="nav-link">Why We Fear Desire</a></li>
+            <li><a href="#sec3" class="nav-link">Identity System</a></li>
+            <li><a href="#sec4" class="nav-link">Interaction Loop</a></li>
+            <li><a href="#sec5" class="nav-link">Intelligence Triangle</a></li>
+            <li><a href="#sec6" class="nav-link">Deep Framework</a></li>
+            <li><a href="#sec7" class="nav-link">Shame: Identity Killer</a></li>
+            <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+            <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+            <li><a href="#summary" class="nav-link">Summary</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT AREA -->
+      <main id="main-content" class="flex-1 min-w-0">
+        <!-- MOBILE TABLE OF CONTENTS (ADDED) -->
+        <details class="mobile-toc lg:hidden fade-up">
+          <summary>Table of Contents</summary>
+          <nav>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li>
+                <a href="#sec1" class="nav-link">The 3 Layers of Desire</a>
+              </li>
+              <li><a href="#sec2" class="nav-link">Why We Fear Desire</a></li>
+              <li><a href="#sec3" class="nav-link">Identity System</a></li>
+              <li><a href="#sec4" class="nav-link">Interaction Loop</a></li>
+              <li>
+                <a href="#sec5" class="nav-link">Intelligence Triangle</a>
+              </li>
+              <li><a href="#sec6" class="nav-link">Deep Framework</a></li>
+              <li>
+                <a href="#sec7" class="nav-link">Shame: Identity Killer</a>
+              </li>
+              <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+              <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </details>
+
+        <!-- Intro -->
+        <section id="intro" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-3xl font-black mb-6">Introduction</h3>
+          <p class="text-lg leading-relaxed mb-6">
+            The three most misunderstood forces in human psychology are
+            <strong>Desire</strong> (what you want),
+            <strong>Identity</strong> (who you think you are), and
+            <strong>Curiosity</strong> (what you are drawn toward). When
+            misunderstood, we lose connection to ourselves.
+          </p>
+          <div
+            class="bg-brand-highlight dark:bg-dark-highlight p-6 rounded-xl border-l-4 border-brand-primary dark:border-dark-primary"
+          >
+            <p
+              class="font-bold text-brand-primary dark:text-dark-primary mb-2 text-lg"
+            >
+              Core Truths:
+            </p>
+            <ul class="list-disc pl-5 space-y-1 text-base">
+              <li>Desire is not chaos; it is information.</li>
+              <li>Identity is not fixed; it is fluid.</li>
+              <li>Curiosity is not dangerous; it is intelligence.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="sec1" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">1. What Desire Really Is</h3>
+          <p class="mb-6 text-lg">
+            Desire is an information system operating on three distinct layers:
+          </p>
+
+          <div class="space-y-6">
+            <div
+              class="p-6 rounded-xl border border-brand-border bg-gray-50 dark:bg-white/5"
+            >
+              <h4 class="font-bold text-brand-primary text-lg mb-2">
+                Layer 1: Biological Desire (Physical)
+              </h4>
+              <p class="mb-2">
+                Driven by hormones (testosterone, dopamine). It appears as
+                physical attraction or hunger for novelty.
+              </p>
+              <p class="text-sm font-semibold">
+                Truth: It is not a choice. It does not define your morality.
+              </p>
+            </div>
+
+            <div
+              class="p-6 rounded-xl border border-brand-border bg-gray-50 dark:bg-white/5"
+            >
+              <h4 class="font-bold text-brand-primary text-lg mb-2">
+                Layer 2: Psychological Desire (Emotional)
+              </h4>
+              <p class="mb-2">
+                Stemming from unmet needs, loneliness, or past wounds. It often
+                manifests as repeating toxic cycles or comfort-seeking.
+              </p>
+              <p class="text-sm font-semibold">
+                Truth: It reveals what your nervous system has learned to call
+                "safe."
+              </p>
+            </div>
+
+            <div
+              class="p-6 rounded-xl border border-brand-border bg-gray-50 dark:bg-white/5"
+            >
+              <h4 class="font-bold text-brand-primary text-lg mb-2">
+                Layer 3: Curiosity-Based Desire (Exploratory)
+              </h4>
+              <p class="mb-2">
+                The most suppressed layer. It includes sudden identity questions
+                or new interests. It is the mind expanding.
+              </p>
+              <p class="text-sm font-semibold">
+                Truth: Curiosity is the engine of inner evolution.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec2" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">2. Why Humans Fear Desire</h3>
+          <p class="mb-6 text-lg">
+            People don't fear desire itself; they fear what it reveals. It
+            threatens cultural rules and reputations.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div
+              class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800 text-center"
+            >
+              <span class="font-bold text-red-600 dark:text-red-400"
+                >Misunderstanding it leads to threat</span
+              >
+            </div>
+            <div
+              class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+            >
+              <span class="font-bold text-blue-600 dark:text-blue-400"
+                >Understanding it reveals a mirror</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec3" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">3. The Identity System</h3>
+          <p class="mb-6">Identity feels fixed, but it is layered:</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-brand-primary font-bold">1. Assigned:</span>
+              <span
+                >Imposed by society/parents ("A good boy doesn't do this"). Not
+                chosen.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand-primary font-bold">2. Performed:</span>
+              <span
+                >Created for safety/approval. It is functional, not fake, but
+                not your core.</span
+              >
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-brand-primary font-bold">3. Authentic:</span>
+              <span
+                >Emerges when fear drops. Shaped by real values and natural
+                rhythm.</span
+              >
+            </li>
+          </ul>
+          <div class="mt-8 p-4 text-center border-t border-brand-border">
+            <p class="italic text-lg font-medium">
+              "Authenticity is identity without fear."
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec4" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">
+            4. Desire & Identity Interaction Loop
+          </h3>
+          <p class="mb-6">They influence each other constantly:</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>
+              <strong>Desire reveals hidden identity layers:</strong> Your
+              impulses contain information about who you are becoming.
+            </li>
+            <li>
+              <strong>Identity controls interpretation:</strong> Rigid identity
+              leads to shame. Flexible identity leads to understanding.
+            </li>
+            <li>
+              <strong>Shame freezes identity:</strong> It blocks growth and
+              confidence.
+            </li>
+            <li>
+              <strong>Acceptance stabilizes identity:</strong> When you stop
+              fearing your impulses, you stop fearing yourself.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec5" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">
+            5. The Inner Intelligence Triangle
+          </h3>
+          <p class="mb-6">
+            To understand any impulse, check these three angles:
+          </p>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="p-4 bg-brand-highlight rounded-xl text-center">
+              <h4 class="font-bold text-brand-primary mb-2">Biological</h4>
+              <p class="text-sm">
+                "Am I stressed or tired? Is this a natural response?"
+              </p>
+            </div>
+            <div class="p-4 bg-brand-highlight rounded-xl text-center">
+              <h4 class="font-bold text-brand-primary mb-2">Emotional</h4>
+              <p class="text-sm">
+                "Is this linked to loneliness? Am I repeating a pattern?"
+              </p>
+            </div>
+            <div class="p-4 bg-brand-highlight rounded-xl text-center">
+              <h4 class="font-bold text-brand-primary mb-2">Curiosity</h4>
+              <p class="text-sm">
+                "What truth am I avoiding? Where is the growth?"
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="sec6" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">
+            6. Deep Framework: Interpreting Desire
+          </h3>
+          <p class="mb-4">Don't react. Respond using this analysis:</p>
+          <ol
+            class="list-decimal pl-5 space-y-2 marker:text-brand-primary marker:font-bold"
+          >
+            <li>
+              <strong>Identify Trigger:</strong> What caused it? (Image, stress,
+              person?)
+            </li>
+            <li>
+              <strong>Identify Layer:</strong> Biological, Emotional, or
+              Curiosity?
+            </li>
+            <li>
+              <strong>Identify Purpose:</strong> Comfort, novelty, validation?
+            </li>
+            <li>
+              <strong>Identify Fear:</strong> What blocks it? Judgment?
+              Rejection?
+            </li>
+            <li>
+              <strong>Identify Meaning:</strong> A suppressed need? A growing
+              identity?
+            </li>
+            <li>
+              <strong>Respond:</strong> Understand it first, then act with
+              wisdom.
+            </li>
+          </ol>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="sec7" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">7. Shame: The Identity Killer</h3>
+          <p class="mb-6">
+            Shame is the shutdown of identity. It produces anxiety, low libido,
+            and confusion.
+          </p>
+          <div
+            class="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border-l-4 border-red-500"
+          >
+            <p class="font-bold text-red-700 dark:text-red-400">
+              Breaking Shame:
+            </p>
+            <p>
+              Requires questioning inherited beliefs and separating biology from
+              morality. When shame dissolves, identity becomes stable.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="sec8" class="content-card p-8 md:p-10 fade-up">
+          <h3 class="text-2xl font-bold mb-6">8. Practical Drills</h3>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div
+              class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl border-t-4 border-brand-primary dark:border-dark-primary shadow-sm"
+            >
+              <h4
+                class="font-bold text-lg text-brand-primary dark:text-dark-primary mb-3"
+              >
+                Tool 1: Desire Mapping
+              </h4>
+              <p class="text-sm leading-relaxed">
+                Write down one desire you trust, one you judge, and one you
+                hide.
+              </p>
+            </div>
+            <div
+              class="bg-gray-50 dark:bg-slate-800 p-6 rounded-xl border-t-4 border-brand-primary dark:border-dark-primary shadow-sm"
+            >
+              <h4
+                class="font-bold text-lg text-brand-primary dark:text-dark-primary mb-3"
+              >
+                Tool 2: Shame Removal
+              </h4>
+              <p class="text-sm leading-relaxed">
+                Identify a shame belief. Ask: "Did I choose this, or was it
+                inherited?"
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section
+          id="summary"
+          class="content-card p-8 md:p-10 fade-up border-t-4 border-brand-primary dark:border-dark-primary"
+        >
+          <h3 class="text-2xl font-bold mb-4">Chapter Summary</h3>
+          <p class="text-lg">
+            Mastering this chapter means understanding that
+            <strong>Desire is Information</strong>. Identity emerges when fear
+            drops.
+          </p>
+        </section>
+
+        <!-- Bottom Nav Buttons -->
+        <nav
+          class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4 fade-up"
+        >
+          <a
+            href="chapter1.html"
+            class="btn-nav w-full sm:w-auto justify-center"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+            <span>Chapter 1</span>
+          </a>
+          <a
+            href="chapter3.html"
+            class="btn-nav w-full sm:w-auto justify-center"
+          >
+            <span>Chapter 3</span>
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
+        </nav>
+      </main>
+    </div>
+
+    <!-- SELECTION POPUP -->
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button
+          id="popup-close"
+          class="text-gray-400 hover:text-red-500 font-bold text-xl ml-2"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="popup-body">
+        <!-- Explain Area -->
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+
+        <!-- Discuss Area -->
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Script Link -->
+    <script src="script.js"></script>
+  </body>
+</html>

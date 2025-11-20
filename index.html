@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>God's Hand | Human Evolution Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+            colors: {
+              "brand-bg": "#F8FAFC",
+              "brand-surface": "#FFFFFF",
+              "brand-text": "#0F172A",
+              "brand-text-light": "#475569",
+              "brand-primary": "#2563EB",
+              "brand-highlight": "#EFF6FF",
+              "brand-border": "#E2E8F0",
+              "dark-bg": "#0B1120",
+              "dark-surface": "#1E293B",
+              "dark-text": "#F8FAFC",
+              "dark-text-light": "#CBD5E1",
+              "dark-primary": "#38BDF8",
+              "dark-highlight": "#0F172A",
+              "dark-border": "#334155",
+            },
+            boxShadow: {
+              card: "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+              "card-hover":
+                "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            },
+          },
+        },
+      };
+      // Initial Theme Check
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <style>
+      /* Manual overrides for index-specific layout needs */
+      .section-header {
+        grid-column: 1 / -1;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 1.5rem;
+      }
+      html.dark .section-header {
+        border-color: var(--border-color);
+      }
+
+      .section-title {
+        font-size: 0.875rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-light);
+      }
+      html.dark .section-title {
+        color: var(--text-light);
+      }
+    </style>
+  </head>
+  <body class="p-4 md:p-8 lg:p-12 pb-32">
+    <!-- HEADER -->
+    <header class="text-center mb-16 fade-up">
+      <div class="flex justify-center items-center gap-4 mb-4">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter">
+          🌐 GOD’S HAND
+        </h1>
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6 hidden dark:block text-yellow-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
+          </svg>
+          <svg
+            class="w-6 h-6 block dark:hidden text-slate-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <h2 class="text-xl md:text-2xl font-bold text-brand-primary mb-6">
+        Syllabus Overview
+      </h2>
+      <p class="max-w-2xl mx-auto text-brand-text-light text-lg">
+        A complete framework for Human Intelligence, Emotional Growth & Life
+        Mastery.
+      </p>
+    </header>
+
+    <div class="max-w-7xl mx-auto">
+      <!-- CHAPTER GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- PART I -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART I — SELF-SCIENCE ENGINE</h2>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 01</span>
+          <h3 class="chapter-title">
+            Your Body: Biology, Meaning & Self-Control
+          </h3>
+          <p class="chapter-desc">
+            Learn how energy, stress, desire, and emotional stability shape your
+            daily experience. Understand hormones and decode internal signals
+            without shame.
+          </p>
+          <a href="chapter1.html" class="read-btn">Read Chapter →</a>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 02</span>
+          <h3 class="chapter-title">Desire, Identity & Curiosity</h3>
+          <p class="chapter-desc">
+            Discover the three layers of desire and the fluid nature of
+            identity. Learn to understand impulses without fear and break
+            shame-conditioning.
+          </p>
+          <a href="chapter2_interactive.html" class="read-btn"
+            >Read Chapter →</a
+          >
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 03</span>
+          <h3 class="chapter-title">
+            Open-Mindedness & Perspective Intelligence
+          </h3>
+          <p class="chapter-desc">
+            Develop cognitive flexibility and multiple-perspective thinking.
+            Learn to question assumptions and break rigid beliefs.
+          </p>
+          <a href="chapter3.html" class="read-btn">Read Chapter →</a>
+        </div>
+
+        <!-- PART II -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART II — RATIONALITY FORGE</h2>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 04</span>
+          <h3 class="chapter-title">
+            Thinking Tools: Logic, Biases & Mental Precision
+          </h3>
+          <p class="chapter-desc">
+            Master practical thinking frameworks, logical analysis, cognitive
+            bias correction, and decision-making tools.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 05</span>
+          <h3 class="chapter-title">Truth-Seeking & Intellectual Honesty</h3>
+          <p class="chapter-desc">
+            Learn how to question beliefs, analyze information accurately, and
+            pursue truth without ego or defensiveness.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART III -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">
+            PART III — RELATIONSHIPS & HUMAN BEHAVIOR
+          </h2>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 06</span>
+          <h3 class="chapter-title">
+            Human Interaction, Connection & Attachment
+          </h3>
+          <p class="chapter-desc">
+            Understand attachment styles, emotional safety, bonding patterns,
+            and how early experiences shape adult behavior.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 7 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 07</span>
+          <h3 class="chapter-title">Relationship Intelligence & Boundaries</h3>
+          <p class="chapter-desc">
+            Develop emotional maturity, healthy communication, strong
+            boundaries, conflict resolution, and relational clarity.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART IV -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART IV — CREATIVE & STRATEGIC MIND</h2>
+        </div>
+
+        <!-- Chapter 8 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 08</span>
+          <h3 class="chapter-title">
+            Creativity: Pattern-Breaking & Idea Synthesis
+          </h3>
+          <p class="chapter-desc">
+            Learn creativity as a skill: connecting unrelated ideas, reframing
+            problems, and generating original solutions.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 9 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 09</span>
+          <h3 class="chapter-title">
+            Strategy: Long-Term Thinking & Power Dynamics
+          </h3>
+          <p class="chapter-desc">
+            Understand strategic thinking, influence, game theory basics, and
+            how to navigate social & professional complexity.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART V -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART V — BEAST-PERSONA ENGINE</h2>
+        </div>
+
+        <!-- Chapter 10 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 10</span>
+          <h3 class="chapter-title">
+            Presence, Charisma & Psychological Strength
+          </h3>
+          <p class="chapter-desc">
+            Build magnetic presence, confident body language, emotional
+            stability, and strong masculine/feminine energy balance.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 11 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 11</span>
+          <h3 class="chapter-title">
+            Identity Mastery, Persona Crafting & Integration
+          </h3>
+          <p class="chapter-desc">
+            Create an adaptive, powerful identity. Learn how to shape your
+            persona consciously and integrate light + shadow aspects.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART VI -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">
+            PART VI — CAREER, LEARNING & PERFORMANCE
+          </h2>
+        </div>
+
+        <!-- Chapter 12 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 12</span>
+          <h3 class="chapter-title">How to Learn Anything: Mastery Science</h3>
+          <p class="chapter-desc">
+            A complete model of accelerated learning: deconstruction, deliberate
+            practice, active recall, and skill acquisition.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 13 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 13</span>
+          <h3 class="chapter-title">Career Intelligence & Skill-Stacking</h3>
+          <p class="chapter-desc">
+            Understand value creation, skill stacking, personal branding, and
+            how to build a career that is future-proof.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 14 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 14</span>
+          <h3 class="chapter-title">
+            Leadership, Influence & High-Agency Living
+          </h3>
+          <p class="chapter-desc">
+            Develop leadership presence, influence skills, power awareness,
+            decisiveness, ownership, and high-agency thinking.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART VII -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART VII — ETHICS, PURPOSE & LEGACY</h2>
+        </div>
+
+        <!-- Chapter 15 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 15</span>
+          <h3 class="chapter-title">
+            Power, Responsibility & Ethical Reasoning
+          </h3>
+          <p class="chapter-desc">
+            Learn how to use power responsibly, understand moral dilemmas, and
+            build a compass for ethical decision-making.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- Chapter 16 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 16</span>
+          <h3 class="chapter-title">Meaning, Purpose & Personal Philosophy</h3>
+          <p class="chapter-desc">
+            Explore purpose, values, long-term meaning, and how to build your
+            own philosophical foundation for life.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+
+        <!-- PART VIII -->
+        <div class="section-header fade-up">
+          <h2 class="section-title">PART VIII — IMPLEMENTATION BLUEPRINT</h2>
+        </div>
+
+        <!-- Chapter 17 -->
+        <div class="chapter-card fade-up">
+          <span class="chapter-number">Chapter 17</span>
+          <h3 class="chapter-title">
+            Teaching Frameworks & Transformation Systems
+          </h3>
+          <p class="chapter-desc">
+            A full training architecture for educators and coaches: how to teach
+            everything in this book effectively.
+          </p>
+          <button class="read-btn opacity-50 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="mt-24 text-center text-brand-text-light text-sm pb-8 fade-up"
+      >
+        <p>© 2025 God's Hand Manual. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- External Script Link -->
+    <script src="script.js"></script>
+  </body>
+</html>
