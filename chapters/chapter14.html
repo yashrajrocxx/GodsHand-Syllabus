@@ -900,6 +900,128 @@
       style="display: none"
     ></div>
 
+    
+    <!-- SETTINGS BUTTON -->
+    <button id="settings-btn" aria-label="Settings">
+      
+    </button>
+
+    <!-- SETTINGS PANEL -->
+    <div id="settings-panel">
+      <div class="settings-header">
+        <h2> Settings</h2>
+        <button id="settings-close" aria-label="Close Settings"></button>
+      </div>
+      <div class="settings-content">
+        <!-- Font Size -->
+        <div class="setting-group">
+          <h3> Font Size</h3>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Text Size</div>
+              <div class="setting-description">Adjust reading comfort</div>
+            </div>
+            <div class="font-size-controls">
+              <button class="font-btn" data-size="small">A-</button>
+              <span id="font-size-display">100%</span>
+              <button class="font-btn active" data-size="medium">A</button>
+              <button class="font-btn" data-size="large">A+</button>
+              <button class="font-btn" data-size="xlarge">A++</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme -->
+        <div class="setting-group">
+          <h3> Theme</h3>
+          <div class="setting-item" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+            <div>
+              <div class="setting-label">Appearance</div>
+              <div class="setting-description">Choose your preferred theme</div>
+            </div>
+            <div class="theme-options">
+              <div class="theme-option" data-theme="light">
+                 Light
+              </div>
+              <div class="theme-option" data-theme="dark">
+                 Dark
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reading Options -->
+        <div class="setting-group">
+          <h3> Reading Experience</h3>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Auto-scroll Progress</div>
+              <div class="setting-description">Track reading automatically</div>
+            </div>
+            <div class="toggle-switch active" data-toggle="auto-progress">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Chapter Completion Badge</div>
+              <div class="setting-description">Show completion popup</div>
+            </div>
+            <div class="toggle-switch active" data-toggle="completion-badge">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Smooth Animations</div>
+              <div class="setting-description">Enable UI transitions</div>
+            </div>
+            <div class="toggle-switch active" data-toggle="animations">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="setting-group">
+          <h3> Accessibility</h3>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Reduce Motion</div>
+              <div class="setting-description">Minimize animations</div>
+            </div>
+            <div class="toggle-switch" data-toggle="reduce-motion">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">High Contrast</div>
+              <div class="setting-description">Increase readability</div>
+            </div>
+            <div class="toggle-switch" data-toggle="high-contrast">
+              <div class="toggle-slider"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data -->
+        <div class="setting-group">
+          <h3> Data</h3>
+          <div class="setting-item">
+            <div>
+              <div class="setting-label">Reset Progress</div>
+              <div class="setting-description">Clear all chapter completion data</div>
+            </div>
+            <button class="font-btn" id="reset-progress-btn" style="background: #ef4444; color: white; border-color: #ef4444;">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script src="../assets/js/script.js"></script>
   </body>
 </html>

@@ -579,5 +579,92 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       if (toggleBtn) toggleBtn.click();
     }
+
+    // Ctrl/Cmd + , for settings
+    if ((e.ctrlKey || e.metaKey) && e.key === ",") {
+      e.preventDefault();
+      const settingsPanel = document.getElementById("settings-panel");
+      const settingsBackdrop = document.getElementById("settings-backdrop");
+      if (settingsPanel) {
+        settingsPanel.classList.toggle("visible");
+        if (settingsBackdrop) settingsBackdrop.classList.toggle("visible");
+      }
+    }
   });
+
+  // === SETTINGS DROPDOWN MENU ===
+  const settingsBtnNav = document.getElementById("settings-btn-nav");
+  const settingsDropdown = document.getElementById("settings-dropdown");
+  const fontSizeBtns = document.querySelectorAll(".font-size-btn");
+  const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
+
+  // Load settings from localStorage
+  function loadSettings() {
+    const settings = {
+      fontSize: localStorage.getItem("fontSize") || "normal",
+      theme: localStorage.getItem("theme") || "light",
+    };
+    return settings;
+  }
+
+  // Apply settings
+  function applySettings() {
+    const settings = loadSettings();
+
+    // Font size
+    htmlEl.classList.remove("font-small", "font-normal", "font-large");
+    htmlEl.classList.add(`font-${settings.fontSize}`);
+
+    // Update font buttons
+    fontSizeBtns.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.size === settings.fontSize);
+    });
+
+    // Theme buttons
+    themeToggleBtns.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.theme === settings.theme);
+    });
+    setTheme(settings.theme === "dark");
+  }
+
+  // Toggle dropdown
+  if (settingsBtnNav && settingsDropdown) {
+    settingsBtnNav.addEventListener("click", (e) => {
+      e.stopPropagation();
+      settingsDropdown.classList.toggle("visible");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        !settingsDropdown.contains(e.target) &&
+        !settingsBtnNav.contains(e.target)
+      ) {
+        settingsDropdown.classList.remove("visible");
+      }
+    });
+  }
+
+  // Font size controls
+  fontSizeBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const size = btn.dataset.size;
+      localStorage.setItem("fontSize", size);
+      applySettings();
+    });
+  });
+
+  // Theme controls
+  themeToggleBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const theme = btn.dataset.theme;
+      localStorage.setItem("theme", theme);
+      applySettings();
+    });
+  });
+
+  // Initialize settings on page load
+  applySettings();
 });

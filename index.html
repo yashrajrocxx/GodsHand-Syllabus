@@ -89,6 +89,7 @@
   </head>
   <body
     class="min-h-screen bg-white dark:bg-slate-900 text-gray-900 dark:text-white"
+    onclick="const dropdown = document.getElementById('settings-dropdown'); if (dropdown && !event.target.closest('#settings-btn-nav') && !event.target.closest('#settings-dropdown')) { dropdown.classList.remove('visible'); }"
   >
     <!-- NAVIGATION BAR -->
     <nav
@@ -109,38 +110,122 @@
             </h1>
           </div>
           <div class="flex items-center gap-4">
-            <button
-              id="theme-toggle"
-              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              aria-label="Toggle theme"
-            >
-              <svg
-                class="w-5 h-5 hidden dark:block text-yellow-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div style="position: relative">
+              <button
+                id="settings-btn-nav"
+                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label="Settings"
+                style="cursor: pointer"
+                onclick="document.getElementById('settings-dropdown').classList.toggle('visible'); event.stopPropagation();"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                ></path>
-              </svg>
-              <svg
-                class="w-5 h-5 block dark:hidden text-slate-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  class="w-5 h-5 text-gray-600 dark:text-gray-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- Settings Dropdown Menu -->
+              <div id="settings-dropdown" class="settings-dropdown">
+                <div class="settings-dropdown-header">
+                  <span>⚙️ Settings</span>
+                </div>
+
+                <!-- Theme Toggle -->
+                <div class="settings-dropdown-item">
+                  <span class="settings-label">🎨 Theme</span>
+                  <div class="theme-toggle-buttons">
+                    <button
+                      class="theme-toggle-btn"
+                      data-theme="light"
+                      title="Light Mode"
+                      onclick="localStorage.setItem('theme', 'light'); document.documentElement.classList.remove('dark'); localStorage.theme = 'light'; document.querySelectorAll('.theme-toggle-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); event.stopPropagation();"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="theme-toggle-btn"
+                      data-theme="dark"
+                      title="Dark Mode"
+                      onclick="localStorage.setItem('theme', 'dark'); document.documentElement.classList.add('dark'); localStorage.theme = 'dark'; document.querySelectorAll('.theme-toggle-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); event.stopPropagation();"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Font Size -->
+                <div class="settings-dropdown-item">
+                  <span class="settings-label">📝 Text Size</span>
+                  <div class="font-size-buttons">
+                    <button
+                      class="font-size-btn"
+                      data-size="small"
+                      title="Smaller than device settings"
+                      onclick="localStorage.setItem('fontSize', 'small'); document.documentElement.classList.remove('font-small','font-normal','font-large'); document.documentElement.classList.add('font-small'); document.querySelectorAll('.font-size-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); event.stopPropagation();"
+                    >
+                      A⁻
+                    </button>
+                    <button
+                      class="font-size-btn active"
+                      data-size="normal"
+                      title="Same as device settings"
+                      onclick="localStorage.setItem('fontSize', 'normal'); document.documentElement.classList.remove('font-small','font-normal','font-large'); document.documentElement.classList.add('font-normal'); document.querySelectorAll('.font-size-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); event.stopPropagation();"
+                    >
+                      A
+                    </button>
+                    <button
+                      class="font-size-btn"
+                      data-size="large"
+                      title="Bigger than device settings"
+                      onclick="localStorage.setItem('fontSize', 'large'); document.documentElement.classList.remove('font-small','font-normal','font-large'); document.documentElement.classList.add('font-large'); document.querySelectorAll('.font-size-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); event.stopPropagation();"
+                    >
+                      A⁺
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
