@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
       endpoint:
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent",
     },
-    // Groq - Free tier with 30 requests/min
     groq: {
       name: "Groq",
       apiKey: "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",
       endpoint: "https://api.groq.com/openai/v1/chat/completions",
       model: "llama-3.1-8b-instant",
     },
-    // Ollama local (if user has it installed)
     ollama: {
       name: "Ollama (Local)",
       endpoint: "http://localhost:11434/api/generate",
@@ -22,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  let currentProvider = "gemini";
   let isApiCallPending = false;
 
   // --- ELEMENTS ---
@@ -41,7 +38,37 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedText = "";
   let chatHistory = [];
 
-  // --- THEME TOGGLE ---
+  // --- SETTINGS & THEME MANAGEMENT ---
+  function loadSettings() {
+    return {
+      fontSize: localStorage.getItem("fontSize") || "normal",
+      theme: localStorage.getItem("theme") || "light",
+    };
+  }
+
+  function applySettings() {
+    const settings = loadSettings();
+
+    // Apply font size
+    htmlEl.classList.remove("font-small", "font-normal", "font-large");
+    htmlEl.classList.add(`font-${settings.fontSize}`);
+
+    // Apply theme
+    setTheme(settings.theme === "dark");
+
+    // Update UI buttons if they exist (home page only)
+    const fontSizeBtns = document.querySelectorAll(".font-size-btn");
+    const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
+
+    fontSizeBtns.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.size === settings.fontSize);
+    });
+
+    themeToggleBtns.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.theme === settings.theme);
+    });
+  }
+
   function setTheme(isDark) {
     if (isDark) {
       htmlEl.classList.add("dark");
@@ -52,63 +79,73 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  toggleBtn.addEventListener("click", () => {
-    const isDark = htmlEl.classList.contains("dark");
-    setTheme(!isDark);
-  });
+  // Theme toggle button (works on all pages)
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      const isDark = htmlEl.classList.contains("dark");
+      setTheme(!isDark);
+    });
+  }
+
+  // Initialize settings
+  applySettings();
 
   // --- SELECTION LOGIC (Mobile & Desktop) ---
   const handleSelection = (e) => {
-    // 1. Allow interaction inside the popup without closing it
-    if (selectionPopup.contains(e.target)) return;
+    // Don't close popup if clicking inside it
+    if (selectionPopup && selectionPopup.contains(e.target)) return;
 
-    // 2. Ignore clicks on specific UI elements (like the theme toggle)
+    // Ignore clicks on UI elements
     if (e.target.closest("#theme-toggle")) return;
+    if (e.target.closest("#settings-btn-nav")) return;
+    if (e.target.closest("#settings-dropdown")) return;
 
-    // 3. Wait a tick for the browser to update the selection range
+    // Wait for browser to update selection
     setTimeout(() => {
       const selection = window.getSelection();
       const text = selection.toString().trim();
 
-      // Check if text is selected AND it's inside the main content area
+      if (!mainContent) return;
+
+      // Check if text is selected AND it's inside main content
       if (
         text.length > 0 &&
-        mainContent &&
+        selection.anchorNode &&
         mainContent.contains(selection.anchorNode)
       ) {
         selectedText = text;
 
-        // Reset Chat
+        // Reset chat
         chatHistory = [];
         if (chatMessages) chatMessages.innerHTML = "";
 
-        // Get Coordinates
-        // We use the range rect to get the visual position of the selection
+        // Get selection coordinates
         try {
           const range = selection.getRangeAt(0);
           const rect = range.getBoundingClientRect();
 
-          // Show the popup
+          // Show popup
           showPopup(rect);
 
           // Auto-load explanation
           switchTab("explain");
         } catch (err) {
-          console.warn("Could not get selection bounds", err);
+          // Silently fail if selection bounds cannot be determined
         }
       } else {
-        // If no text is selected (or clicked outside), hide popup
-        selectionPopup.classList.remove("visible");
+        // Hide popup if no selection
+        if (selectionPopup) {
+          selectionPopup.classList.remove("visible");
+        }
       }
     }, 10);
   };
 
-  // Attach to both Mouse and Touch events
+  // Attach to mouse and touch events
   document.addEventListener("mouseup", handleSelection);
   document.addEventListener("touchend", handleSelection);
 
-  // --- DISABLE CONTEXT MENU ---
-  // This prevents the native "Copy/Paste" menu from blocking our popup
+  // Disable context menu on selected text
   document.addEventListener("contextmenu", (e) => {
     if (
       window.getSelection().toString().trim().length > 0 &&
@@ -119,58 +156,130 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- POPUP FUNCTIONS ---
+  // Close popup button
   if (popupClose) {
     popupClose.addEventListener("click", (e) => {
-      e.stopPropagation(); // Prevent triggering selection logic
+      e.stopPropagation();
       selectionPopup.classList.remove("visible");
     });
   }
 
   function showPopup(rect) {
-    // Responsive sizing
-    const isMobile = window.innerWidth < 640;
-    const popupWidth = isMobile ? Math.min(window.innerWidth - 20, 380) : 420;
-    const popupHeight = 400; // Max height estimate
-    const margin = isMobile ? 10 : 15;
+    if (!selectionPopup) return;
 
-    // --- Horizontal Positioning ---
-    // Center the popup horizontally relative to the selection
-    let left = rect.left + rect.width / 2 - popupWidth / 2;
+    // Responsive sizing with multiple breakpoints
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
-    // Clamp: Ensure it doesn't go off the left screen edge
-    if (left < margin) {
-      left = margin;
+    // Determine device type and set appropriate values
+    let popupWidth, popupMinHeight, popupMaxHeight, margin, gap;
+
+    if (screenWidth < 375) {
+      // Very small phones (iPhone SE, etc.)
+      popupWidth = screenWidth - 24;
+      popupMinHeight = 280;
+      popupMaxHeight = Math.min(screenHeight * 0.65, 450);
+      margin = 12;
+      gap = 8;
+    } else if (screenWidth < 640) {
+      // Small phones and mobile devices
+      popupWidth = Math.min(screenWidth - 32, 380);
+      popupMinHeight = 300;
+      popupMaxHeight = Math.min(screenHeight * 0.7, 500);
+      margin = 16;
+      gap = 10;
+    } else if (screenWidth < 768) {
+      // Large phones and small tablets
+      popupWidth = Math.min(screenWidth - 48, 420);
+      popupMinHeight = 320;
+      popupMaxHeight = Math.min(screenHeight * 0.75, 550);
+      margin = 20;
+      gap = 12;
+    } else if (screenWidth < 1024) {
+      // Tablets
+      popupWidth = 460;
+      popupMinHeight = 340;
+      popupMaxHeight = Math.min(screenHeight * 0.8, 600);
+      margin = 24;
+      gap = 14;
+    } else {
+      // Desktop and large screens
+      popupWidth = 480;
+      popupMinHeight = 360;
+      popupMaxHeight = Math.min(screenHeight * 0.85, 650);
+      margin = 32;
+      gap = 16;
     }
-    // Clamp: Ensure it doesn't go off the right screen edge
-    else if (left + popupWidth > window.innerWidth - margin) {
-      left = window.innerWidth - popupWidth - margin;
+
+    // === HORIZONTAL POSITIONING ===
+    // Center popup on selection, but keep it on screen
+    const selectionCenterX = rect.left + rect.width / 2;
+    let left = selectionCenterX - popupWidth / 2;
+
+    // Keep popup within viewport bounds
+    const minLeft = margin;
+    const maxLeft = window.innerWidth - popupWidth - margin;
+    left = Math.max(minLeft, Math.min(left, maxLeft));
+
+    // Convert to absolute positioning with scroll offset
+    const absoluteLeft = left + window.pageXOffset;
+
+    // === VERTICAL POSITIONING ===
+    // Calculate viewport position of selection
+    const viewportTop = rect.top;
+    const viewportBottom = rect.bottom;
+    const viewportHeight = window.innerHeight;
+    const scrollY = window.pageYOffset;
+
+    // Calculate available space
+    const spaceAbove = viewportTop - margin;
+    const spaceBelow = viewportHeight - viewportBottom - margin;
+
+    // Determine optimal position
+    let top;
+    let positionAbove = false;
+    let availableHeight;
+
+    // Smart positioning: prefer position with more space
+    if (spaceBelow >= popupMinHeight + gap) {
+      // Place below if there's enough space
+      positionAbove = false;
+      top = rect.bottom + scrollY + gap;
+      availableHeight = Math.min(spaceBelow - gap, popupMaxHeight);
+    } else if (spaceAbove >= popupMinHeight + gap) {
+      // Place above if below doesn't work but above has space
+      positionAbove = true;
+      availableHeight = Math.min(spaceAbove - gap, popupMaxHeight);
+      top = rect.top + scrollY - availableHeight - gap;
+    } else {
+      // Not enough space in either direction - use the side with more space
+      if (spaceBelow > spaceAbove) {
+        positionAbove = false;
+        top = rect.bottom + scrollY + gap;
+        availableHeight = Math.min(spaceBelow - gap, popupMaxHeight);
+      } else {
+        positionAbove = true;
+        availableHeight = Math.min(spaceAbove - gap, popupMaxHeight);
+        top = rect.top + scrollY - availableHeight - gap;
+      }
     }
 
-    // Add horizontal scroll offset (usually 0 for mobile, but important for desktop)
-    const absoluteLeft = left + window.scrollX;
+    // Ensure popup stays within page bounds
+    const minTop = scrollY + margin;
+    const maxTop = scrollY + viewportHeight - availableHeight - margin;
+    top = Math.max(minTop, Math.min(top, maxTop));
 
-    // --- Vertical Positioning ---
-    // Default: Calculate position *above* the text
-    let top = rect.top + window.scrollY - popupHeight - margin;
+    // Add positioning class for arrow direction
+    selectionPopup.setAttribute(
+      "data-position",
+      positionAbove ? "above" : "below"
+    );
 
-    // Check collision with top of viewport
-    // On mobile, prefer showing below to avoid keyboard issues
-    const spaceAbove = rect.top;
-    const spaceBelow = window.innerHeight - rect.bottom;
-
-    if (isMobile && spaceBelow > 200) {
-      // On mobile with space below, show below
-      top = rect.bottom + window.scrollY + margin;
-    } else if (spaceAbove < popupHeight + margin) {
-      // Not enough space above, show below
-      top = rect.bottom + window.scrollY + margin;
-    }
-
-    // Apply coordinates
+    // Apply positioning with smooth transition
     selectionPopup.style.left = `${absoluteLeft}px`;
     selectionPopup.style.top = `${top}px`;
     selectionPopup.style.width = `${popupWidth}px`;
+    selectionPopup.style.maxHeight = `${availableHeight}px`;
     selectionPopup.classList.add("visible");
   }
 
@@ -178,50 +287,60 @@ document.addEventListener("DOMContentLoaded", () => {
   if (popupTabs) {
     popupTabs.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent event bubbling
+        e.stopPropagation();
         switchTab(e.target.dataset.tab);
       });
     });
   }
 
   function switchTab(mode) {
+    if (!popupTabs) return;
+
     popupTabs.forEach((b) => b.classList.remove("active"));
-    document.querySelector(`[data-tab="${mode}"]`).classList.add("active");
+    const activeTab = document.querySelector(`[data-tab="${mode}"]`);
+    if (activeTab) activeTab.classList.add("active");
 
     if (mode === "discuss") {
-      popupExplain.style.display = "none";
-      popupChat.classList.remove("hidden");
+      if (popupExplain) popupExplain.style.display = "none";
+      if (popupChat) popupChat.classList.remove("hidden");
       if (chatMessages) chatMessages.scrollTop = chatMessages.scrollHeight;
       renderChat();
     } else {
-      popupChat.classList.add("hidden");
-      popupExplain.style.display = "block";
+      if (popupChat) popupChat.classList.add("hidden");
+      if (popupExplain) {
+        popupExplain.style.display = "block";
 
-      // Show professional loading state
-      popupExplain.innerHTML = `
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; gap: 1rem;">
-          <div class="spinner"></div>
-          <p style="color: #64748b; font-size: 0.875rem; font-weight: 500;">Loading explanation...</p>
-        </div>
-      `;
+        // Professional loading state
+        popupExplain.innerHTML = `
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 150px; gap: 1rem;">
+            <div class="spinner"></div>
+            <p style="color: #64748b; font-size: 0.875rem; font-weight: 500;">Loading explanation...</p>
+          </div>
+        `;
 
-      const prompt = `
-            You are a helpful dictionary assistant.
-            Term: "${selectedText}"
-            
-            Instructions:
-            1. Define the term simply in English (Max 2 sentences).
-            2. Translate JUST the term "${selectedText}" into Hindi.
-            
-            Output Format (Markdown):
-            **Definition:** [English Definition]
-            
-            **Hindi:** [Hindi Translation]
-            `;
+        const prompt = `You are a helpful dictionary assistant.
+Term: "${selectedText}"
 
-      callAI(prompt).then((res) => {
-        popupExplain.innerHTML = marked.parse(res);
-      });
+Instructions:
+1. Define the term simply in English (Max 2 sentences).
+2. Translate JUST the term "${selectedText}" into Hindi.
+
+Output Format (Markdown):
+**Definition:** [English Definition]
+
+**Hindi:** [Hindi Translation]`;
+
+        callAI(prompt).then((res) => {
+          if (popupExplain && typeof marked !== "undefined") {
+            popupExplain.innerHTML = marked.parse(res);
+          } else if (popupExplain) {
+            popupExplain.innerHTML = `<div style="padding: 1rem; line-height: 1.6;">${res.replace(
+              /\n/g,
+              "<br>"
+            )}</div>`;
+          }
+        });
+      }
     }
   }
 
@@ -231,26 +350,21 @@ document.addEventListener("DOMContentLoaded", () => {
       return "Please wait for the current request to complete.";
     isApiCallPending = true;
 
-    // Try providers in order: gemini -> groq -> ollama -> offline
     const providers = ["gemini", "groq", "ollama"];
 
     for (let i = 0; i < providers.length; i++) {
       const provider = providers[i];
       try {
-        console.log(`Trying ${AI_PROVIDERS[provider].name}...`);
         const result = await callProvider(provider, prompt);
-        currentProvider = provider;
+        isApiCallPending = false;
         return result;
       } catch (e) {
-        console.warn(`${AI_PROVIDERS[provider].name} failed:`, e.message);
-
-        // If rate limited on gemini, try next provider immediately
         if (e.message.includes("429") || e.message.includes("quota")) {
           continue;
         }
 
-        // If last provider, fall back to offline mode
         if (i === providers.length - 1) {
+          isApiCallPending = false;
           return fallbackOfflineResponse(prompt);
         }
       }
@@ -326,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         throw new Error("Invalid response format");
       } else if (provider === "ollama") {
-        // Try local Ollama installation
         response = await fetch(config.endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -353,24 +466,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {
       clearTimeout(timeoutId);
       throw e;
-    } finally {
-      isApiCallPending = false;
     }
   }
 
   function fallbackOfflineResponse(prompt) {
-    // Simple offline dictionary mode
     const text = selectedText.toLowerCase().trim();
 
-    // Check if it's a simple term request
     if (prompt.includes("Define the term") || prompt.includes("dictionary")) {
-      return `**Offline Mode**\n\n**Selected Text:** ${selectedText}\n\n*AI services are temporarily unavailable. This is a basic offline response.*\n\n**Tip:** The selected text appears to be "${
-        text.split(" ")[0]
-      }". You can:\n1. Try again in a few moments\n2. Search online for more information\n3. Check a dictionary or reference material`;
+      return `**Offline Mode**\n\n**Selected Text:** ${selectedText}\n\n*AI services are temporarily unavailable.*\n\n**Tip:** You can:\n1. Try again in a few moments\n2. Search online for more information\n3. Check a dictionary or reference material`;
     }
 
-    // For chat/discussion mode
-    return `**Offline Mode**\n\nAI services are currently unavailable. Please:\n\n1. **Check your internet connection**\n2. **Wait a moment** and try again (rate limits reset quickly)\n3. **Get a free Groq API key** at console.groq.com (30 requests/min)\n\nSelected text: "${selectedText}"`;
+    return `**Offline Mode**\n\nAI services are currently unavailable. Please:\n\n1. Check your internet connection\n2. Wait a moment and try again\n3. Get a free Groq API key at console.groq.com\n\nSelected text: "${selectedText}"`;
   }
 
   // --- CHAT LOGIC ---
@@ -380,10 +486,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sendChat();
     });
     chatInput.addEventListener("keypress", (e) => {
-      e.stopPropagation(); // Stop keypress from triggering other listeners
+      e.stopPropagation();
       if (e.key === "Enter") sendChat();
     });
-    // Prevent taps on input from closing the popup
     chatInput.addEventListener("mouseup", (e) => e.stopPropagation());
     chatInput.addEventListener("touchend", (e) => e.stopPropagation());
   }
@@ -396,24 +501,19 @@ document.addEventListener("DOMContentLoaded", () => {
     renderChat();
     chatInput.value = "";
 
-    // Disable input while loading
     chatInput.disabled = true;
     chatSend.disabled = true;
 
-    // Show loading indicator
     chatHistory.push({ role: "loading", text: "Thinking..." });
     renderChat();
 
     const contextPrompt = `Context: "${selectedText}". User Question: ${msg}. Answer simply in 2-3 sentences.`;
     const response = await callAI(contextPrompt);
 
-    // Remove loading indicator
     chatHistory = chatHistory.filter((m) => m.role !== "loading");
-
     chatHistory.push({ role: "model", text: response });
     renderChat();
 
-    // Re-enable input
     chatInput.disabled = false;
     chatSend.disabled = false;
     chatInput.focus();
@@ -432,7 +532,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return `<div class="chat-bubble ${
           m.role === "user" ? "chat-user" : "chat-ai"
         } markdown-body">${
-          m.role === "user" ? m.text : marked.parse(m.text)
+          m.role === "user"
+            ? m.text
+            : typeof marked !== "undefined"
+            ? marked.parse(m.text)
+            : m.text.replace(/\n/g, "<br>")
         }</div>`;
       })
       .join("");
@@ -477,7 +581,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- CHAPTER PROGRESS TRACKING ---
   function initProgressTracking() {
-    // Get current chapter from URL
     const currentPage = window.location.pathname.split("/").pop();
     if (!currentPage.includes("chapter")) return;
 
@@ -485,13 +588,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!chapterMatch) return;
 
     const chapterNum = parseInt(chapterMatch[1]);
-
-    // Load progress from localStorage
     let progress = JSON.parse(
       localStorage.getItem("chaptersCompleted") || "[]"
     );
 
-    // Track scroll depth for current chapter
     let maxScroll = 0;
     window.addEventListener("scroll", () => {
       const scrollPercent =
@@ -500,7 +600,6 @@ document.addEventListener("DOMContentLoaded", () => {
         100;
       maxScroll = Math.max(maxScroll, scrollPercent);
 
-      // Mark as completed if scrolled past 80%
       if (maxScroll > 80 && !progress.includes(chapterNum)) {
         progress.push(chapterNum);
         localStorage.setItem("chaptersCompleted", JSON.stringify(progress));
@@ -533,7 +632,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  // Display progress on home page
   function displayProgressOnHome() {
     const progressBar = document.getElementById("overall-progress");
     if (!progressBar) return;
@@ -565,106 +663,33 @@ document.addEventListener("DOMContentLoaded", () => {
     displayProgressOnHome();
   }
 
-  // Add keyboard shortcuts
+  // Keyboard shortcuts
   document.addEventListener("keydown", (e) => {
-    // Ctrl/Cmd + K for search (if we add it)
-    if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-      e.preventDefault();
-      const searchInput = document.getElementById("search-input");
-      if (searchInput) searchInput.focus();
-    }
-
     // Ctrl/Cmd + D for dark mode toggle
     if ((e.ctrlKey || e.metaKey) && e.key === "d") {
       e.preventDefault();
       if (toggleBtn) toggleBtn.click();
     }
-
-    // Ctrl/Cmd + , for settings
-    if ((e.ctrlKey || e.metaKey) && e.key === ",") {
-      e.preventDefault();
-      const settingsPanel = document.getElementById("settings-panel");
-      const settingsBackdrop = document.getElementById("settings-backdrop");
-      if (settingsPanel) {
-        settingsPanel.classList.toggle("visible");
-        if (settingsBackdrop) settingsBackdrop.classList.toggle("visible");
-      }
-    }
   });
 
-  // === SETTINGS DROPDOWN MENU ===
-  const settingsBtnNav = document.getElementById("settings-btn-nav");
-  const settingsDropdown = document.getElementById("settings-dropdown");
+  // === SETTINGS DROPDOWN (HOME PAGE ONLY) ===
+  // Note: Settings dropdown is handled by inline onclick handlers in index.html
+  // This section just initializes the active states on page load
   const fontSizeBtns = document.querySelectorAll(".font-size-btn");
   const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
 
-  // Load settings from localStorage
-  function loadSettings() {
-    const settings = {
-      fontSize: localStorage.getItem("fontSize") || "normal",
-      theme: localStorage.getItem("theme") || "light",
-    };
-    return settings;
-  }
+  // Initialize active states for settings buttons
+  const currentSettings = loadSettings();
 
-  // Apply settings
-  function applySettings() {
-    const settings = loadSettings();
-
-    // Font size
-    htmlEl.classList.remove("font-small", "font-normal", "font-large");
-    htmlEl.classList.add(`font-${settings.fontSize}`);
-
-    // Update font buttons
-    fontSizeBtns.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.size === settings.fontSize);
-    });
-
-    // Theme buttons
-    themeToggleBtns.forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.theme === settings.theme);
-    });
-    setTheme(settings.theme === "dark");
-  }
-
-  // Toggle dropdown
-  if (settingsBtnNav && settingsDropdown) {
-    settingsBtnNav.addEventListener("click", (e) => {
-      e.stopPropagation();
-      settingsDropdown.classList.toggle("visible");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (
-        !settingsDropdown.contains(e.target) &&
-        !settingsBtnNav.contains(e.target)
-      ) {
-        settingsDropdown.classList.remove("visible");
-      }
-    });
-  }
-
-  // Font size controls
   fontSizeBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const size = btn.dataset.size;
-      localStorage.setItem("fontSize", size);
-      applySettings();
-    });
+    if (btn.dataset.size === currentSettings.fontSize) {
+      btn.classList.add("active");
+    }
   });
 
-  // Theme controls
   themeToggleBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const theme = btn.dataset.theme;
-      localStorage.setItem("theme", theme);
-      applySettings();
-    });
+    if (btn.dataset.theme === currentSettings.theme) {
+      btn.classList.add("active");
+    }
   });
-
-  // Initialize settings on page load
-  applySettings();
 });
