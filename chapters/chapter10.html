@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 10: Presence & Charisma | God's Hand</title>
+    <meta
+      name="description"
+      content="Master psychological presence, charisma, and non-verbal communication for lasting impact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#presence-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Presence Actually Is</a
+              >
+              <a
+                href="#charisma-components"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4 Components of Charisma</a
+              >
+              <a
+                href="#psychological-strength"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychological Strength</a
+              >
+              <a
+                href="#biology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Biology of Presence</a
+              >
+              <a
+                href="#non-verbal"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Non-Verbal Dominance</a
+              >
+              <a
+                href="#communication"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Charismatic Communication</a
+              >
+              <a
+                href="#confidence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Foundations of Confidence</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#presence-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Presence Actually Is</a
+              >
+              <a
+                href="#charisma-components"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4 Components of Charisma</a
+              >
+              <a
+                href="#psychological-strength"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychological Strength</a
+              >
+              <a
+                href="#biology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Biology of Presence</a
+              >
+              <a
+                href="#non-verbal"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Non-Verbal Dominance</a
+              >
+              <a
+                href="#communication"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Charismatic Communication</a
+              >
+              <a
+                href="#confidence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Foundations of Confidence</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-amber-500 to-orange-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 10</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Presence, Charisma & Psychological Strength
+              </h1>
+              <p class="text-xl text-amber-50">
+                Become someone people respect, follow, and remember through
+                psychological presence
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold">Charisma is not beauty.</p>
+                  <p class="text-lg font-bold">Charisma is not loudness.</p>
+                  <p class="text-lg font-bold">
+                    Charisma is psychological presence.
+                  </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div class="info-box">
+                    <p class="font-bold mb-2">Presence =</p>
+                    <p class="text-sm">
+                      The ability to make people feel your energy, stability,
+                      and confidence without trying.
+                    </p>
+                  </div>
+                  <div class="info-box">
+                    <p class="font-bold mb-2">Psychological Strength =</p>
+                    <p class="text-sm">
+                      The inner stability that others subconsciously trust.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <h3 class="font-bold mb-3">This Chapter Teaches:</h3>
+                  <ul class="grid md:grid-cols-2 gap-2 text-sm">
+                    <li>→ Presence</li>
+                    <li>→ Charisma</li>
+                    <li>→ Confidence</li>
+                    <li>→ Emotional gravity</li>
+                    <li>→ Non-verbal power</li>
+                    <li>→ Psychological dominance (ethical)</li>
+                    <li>→ Communication magnetism</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >This is how you become someone people respect, follow, and
+                    remember.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 1: What Presence Is -->
+              <section id="presence-definition" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Presence Actually Is
+                </h2>
+                <p class="info-text">Presence is the combination of:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Nervous System Calmness</h3>
+                      <p class="mechanism-description">
+                        Your calm makes others calm.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Focused Attention</h3>
+                      <p class="mechanism-description">
+                        Your attention is not scattered.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Identity Stability</h3>
+                      <p class="mechanism-description">
+                        You don't shrink or inflate.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Emotional Gravity</h3>
+                      <p class="mechanism-description">
+                        People feel anchored around you.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Presence is the energy of someone who is comfortable with
+                    themselves.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 2: Charisma Components -->
+              <section id="charisma-components" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The 4 Components of Charisma
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-3"
+                    >
+                      1. Power
+                    </h3>
+                    <p class="text-sm">
+                      Confidence, decisiveness, controlled expression.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-3"
+                    >
+                      2. Warmth
+                    </h3>
+                    <p class="text-sm">
+                      Compassion, empathy, emotional understanding.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-3"
+                    >
+                      3. Authenticity
+                    </h3>
+                    <p class="text-sm">No mask. Natural expression.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-3"
+                    >
+                      4. Expression
+                    </h3>
+                    <p class="text-sm">Voice, tone, eye contact, posture.</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="text-lg font-bold text-center">
+                    Charisma = Power + Warmth + Authenticity + Expression
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 3: Psychological Strength -->
+              <section id="psychological-strength" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — Psychological Strength
+                </h2>
+                <p class="info-text">
+                  Psychological strength is demonstrated through:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Calmness under pressure</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Clarity under stress</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Non-reactivity</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Emotional self-control</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Resilient identity</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Stable boundaries</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Grounded presence</p>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >People follow those who remain stable when others
+                    panic.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 4: Biology -->
+              <section id="biology" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — The Biology of Presence
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">Presence is biological:</p>
+                  <ul class="space-y-2">
+                    <li>→ Deep breathing</li>
+                    <li>→ Low cortisol</li>
+                    <li>→ Balanced testosterone</li>
+                    <li>→ Relaxed muscles</li>
+                    <li>→ Slow movements</li>
+                    <li>→ Consistent eye contact</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Your nervous system state determines how others perceive
+                    you.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 5: Non-Verbal -->
+              <section id="non-verbal" class="content-section">
+                <h2 class="section-title">Section 5 — Non-Verbal Dominance</h2>
+                <p class="info-text">
+                  Non-verbal behaviors create unconscious influence:
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Eye Contact</h3>
+                      <p class="mechanism-description">
+                        Steady, relaxed, not aggressive.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Posture</h3>
+                      <p class="mechanism-description">
+                        Open, upright, grounded.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Voice</h3>
+                      <p class="mechanism-description">
+                        Slow, calm, controlled.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Movement</h3>
+                      <p class="mechanism-description">Minimal, intentional.</p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Space</h3>
+                      <p class="mechanism-description">
+                        Own your space without shrinking.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Non-verbal mastery builds charisma faster than
+                    words.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 6: Communication -->
+              <section id="communication" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — Building Charismatic Communication
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">1. Speak with Pauses</h3>
+                    <p class="text-sm">Silence shows confidence.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">2. Use a Grounded Voice</h3>
+                    <p class="text-sm">Lower pitch, slower tempo.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">3. Remove Filler Words</h3>
+                    <p class="text-sm">Filler = insecurity.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">4. Speak Directly</h3>
+                    <p class="text-sm">Clear, concise, precise.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">5. Increase Listening</h3>
+                    <p class="text-sm">
+                      Charismatic people listen more than they talk.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 7: Confidence -->
+              <section id="confidence" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — Internal Foundations of Confidence
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">Confidence is not hype.</p>
+                  <p class="mb-3">
+                    Confidence is evidence-based self-trust built from:
+                  </p>
+                  <ul class="space-y-2">
+                    <li>→ Skill</li>
+                    <li>→ Competence</li>
+                    <li>→ Integrity</li>
+                    <li>→ Consistency</li>
+                    <li>→ Experience</li>
+                    <li>→ Self-awareness</li>
+                  </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <p class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      Fake confidence collapses.
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      Real confidence compounds.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 8: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 8 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 1: Posture Reset</h3>
+                    <p class="text-sm">
+                      Practice upright, relaxed posture for 5 minutes daily.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 2: Voice Grounding</h3>
+                    <p class="text-sm">
+                      Record your voice speaking slowly and clearly.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      Drill 3: Eye Contact Training
+                    </h3>
+                    <p class="text-sm">
+                      Hold eye contact for 1–2 seconds longer than comfortable.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 4: Calmness Activation</h3>
+                    <p class="text-sm">
+                      Breathwork before conversation or speaking.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 9: Wisdom Questions -->
+              <section id="wisdom" class="content-section">
+                <h2 class="section-title">Section 9 — Wisdom Questions</h2>
+                <div class="info-box">
+                  <ul class="space-y-3">
+                    <li>
+                      <strong>→</strong> What emotional triggers make me shrink?
+                    </li>
+                    <li><strong>→</strong> Where do I lose presence?</li>
+                    <li>
+                      <strong>→</strong> What part of my identity is unstable?
+                    </li>
+                    <li>
+                      <strong>→</strong> What energy do people feel from me?
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- Section 10: 7-Day Program -->
+              <section id="program" class="content-section">
+                <h2 class="section-title">
+                  Section 10 — 7-Day Presence Training
+                </h2>
+                <div class="space-y-3">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 1</h3>
+                      <p class="mechanism-description">Posture</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 2</h3>
+                      <p class="mechanism-description">Voice</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 3</h3>
+                      <p class="mechanism-description">Eye contact</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 4</h3>
+                      <p class="mechanism-description">Calm breathing</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 5</h3>
+                      <p class="mechanism-description">Authentic expression</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 6</h3>
+                      <p class="mechanism-description">Boundary strength</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 7</h3>
+                      <p class="mechanism-description">Integration</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">This chapter builds:</p>
+                  <ul class="space-y-2">
+                    <li>✓ Presence</li>
+                    <li>✓ Charisma</li>
+                    <li>✓ Communication impact</li>
+                    <li>✓ Psychological resilience</li>
+                    <li>✓ Non-verbal mastery</li>
+                    <li>✓ Inner confidence</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter9.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 9</span>
+            </a>
+            <a href="chapter11.html" class="nav-button nav-button-primary">
+              <span>Chapter 11</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 1: Your Body | God's Hand</title>
+    <meta
+      name="description"
+      content="Learn about biology, meaning, and self-control. Master energy, stress, desire, and emotional stability."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <!-- NAVIGATION BAR -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- DESKTOP SIDEBAR -->
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <nav
+            class="sticky top-24 bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700"
+          >
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4"
+            >
+              Contents
+            </h3>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li><a href="#sec1" class="nav-link">Body as a System</a></li>
+              <li><a href="#sec2" class="nav-link">The 4 Forces</a></li>
+              <li><a href="#sec3" class="nav-link">The 6 Mechanisms</a></li>
+              <li><a href="#sec4" class="nav-link">The Bio-Loop</a></li>
+              <li><a href="#sec5" class="nav-link">Advanced Framework</a></li>
+              <li><a href="#sec6" class="nav-link">Practical Tools</a></li>
+              <li><a href="#sec7" class="nav-link">Wisdom Questions</a></li>
+              <li><a href="#sec8" class="nav-link">7-Day Program</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main id="main-content" class="flex-1 min-w-0">
+          <!-- CHAPTER HEADER -->
+          <div class="mb-8 text-center lg:text-left">
+            <div
+              class="inline-block mb-3 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+            >
+              <span
+                class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+                >Chapter 01</span
+              >
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            >
+              Your Body: Biology, Meaning & Self-Control
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+              Learn how energy, stress, desire, and emotional stability shape
+              your daily experience
+            </p>
+          </div>
+
+          <!-- MOBILE TOC -->
+          <details
+            class="lg:hidden mb-8 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700"
+          >
+            <summary
+              class="px-6 py-4 cursor-pointer font-bold text-blue-600 dark:text-blue-400 flex justify-between items-center"
+            >
+              <span>Table of Contents</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <nav
+              class="px-6 pb-4 border-t border-gray-200 dark:border-slate-700"
+            >
+              <ul class="space-y-1 mt-4">
+                <li><a href="#intro" class="nav-link">Introduction</a></li>
+                <li><a href="#sec1" class="nav-link">Body as a System</a></li>
+                <li><a href="#sec2" class="nav-link">The 4 Forces</a></li>
+                <li><a href="#sec3" class="nav-link">The 6 Mechanisms</a></li>
+                <li><a href="#sec4" class="nav-link">The Bio-Loop</a></li>
+                <li><a href="#sec5" class="nav-link">Advanced Framework</a></li>
+                <li><a href="#sec6" class="nav-link">Practical Tools</a></li>
+                <li><a href="#sec7" class="nav-link">Wisdom Questions</a></li>
+                <li><a href="#sec8" class="nav-link">7-Day Program</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+              </ul>
+            </nav>
+          </details>
+
+          <!-- INTRO -->
+          <section id="intro" class="content-section">
+            <h3 class="section-title">Introduction</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              Your body is not just a biological structure. It is your first
+              language, the operating system through which you feel, react,
+              decide, think, and desire.
+            </p>
+            <div class="highlight-box">
+              <p
+                class="font-bold text-blue-600 dark:text-blue-400 mb-2 text-lg"
+              >
+                The Core Mission:
+              </p>
+              <p>
+                This chapter blends biology, psychology, and practical
+                self-regulation. If you understand this, every emotion and
+                reaction becomes predictable instead of confusing.
+              </p>
+            </div>
+          </section>
+
+          <!-- SECTION 1 -->
+          <section id="sec1" class="content-section">
+            <h3 class="section-title">1. The Body as a Living System</h3>
+            <p class="mb-6 text-lg">
+              Your body is not a moral object. It is a system built for
+              survival, adaptation, and communication.
+            </p>
+            <div class="info-box">
+              <h4
+                class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+              >
+                The Reality
+              </h4>
+              <p class="mb-2">
+                Everything you feel—anger, desire, boredom, loneliness—has a
+                biological reason. The body isn't trying to embarrass you; it's
+                trying to inform you.
+              </p>
+              <p class="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                Your job is to listen.
+              </p>
+            </div>
+          </section>
+
+          <!-- SECTION 2 -->
+          <section id="sec2" class="content-section">
+            <h3 class="section-title">
+              2. The Four Forces That Control Your Experience
+            </h3>
+            <p class="mb-6 text-lg">
+              Master these four forces, and you master your emotional world.
+            </p>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  1. ENERGY (Fuel)
+                </h4>
+                <p class="text-sm mb-2">
+                  Decides stability, patience, and resilience. Driven by sleep,
+                  blood sugar, and dopamine.
+                </p>
+                <p class="text-xs font-bold text-red-500 dark:text-red-400">
+                  Low energy disguises itself as irritation or emptiness.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  2. STRESS (Alarm)
+                </h4>
+                <p class="text-sm mb-2">
+                  Biological, not emotional. Cortisol prepares for danger.
+                  Chronic stress leads to overthinking and shallow breathing.
+                </p>
+                <p class="text-xs font-bold text-red-500 dark:text-red-400">
+                  Stress creates a protective, not authentic, version of you.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  3. DESIRE (Impulse)
+                </h4>
+                <p class="text-sm mb-2">
+                  Reflects excitement, wounds, and needs. It is the intelligence
+                  of your impulses.
+                </p>
+                <p class="text-xs font-bold text-blue-500 dark:text-blue-400">
+                  When understood, people discover themselves.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  4. STABILITY (Anchor)
+                </h4>
+                <p class="text-sm mb-2">
+                  Serotonin and nervous system regulation. Makes perception
+                  accurate and judgments reliable.
+                </p>
+                <p class="text-xs font-bold text-blue-500 dark:text-blue-400">
+                  Stability is the foundation of inner peace.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 3 -->
+          <section id="sec3" class="content-section">
+            <h3 class="section-title">3. The Six Mechanisms</h3>
+            <p class="mb-6">
+              You don't need medical textbooks. You need to understand these six
+              clearly.
+            </p>
+            <div class="space-y-3">
+              <div class="mechanism-item">
+                <div class="mechanism-label">1. Dopamine</div>
+                <div class="mechanism-desc">
+                  Motivation & Curiosity. Balanced = Focus. Low = Apathy.
+                  Determines how alive you feel.
+                </div>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">2. Cortisol</div>
+                <div class="mechanism-desc">
+                  Stress Regulator. High = Anxiety/Volatility. Low = Burnout.
+                  Identity confusion often comes from mistaking cortisol states
+                  for personality.
+                </div>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">3. Testosterone</div>
+                <div class="mechanism-desc">
+                  Drive & Confidence. Lowered by shame and stress. Suppressed
+                  testosterone leads to passivity, not weakness.
+                </div>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">4. Serotonin</div>
+                <div class="mechanism-desc">
+                  Stability & Social Ease. Regulates mood and patience. Low
+                  levels feel like insecurity and sensitivity.
+                </div>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">5. Sleep</div>
+                <div class="mechanism-desc">
+                  The Full-System Reset. A tired person is a body in
+                  damage-control mode.
+                </div>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">6. Shame</div>
+                <div class="mechanism-desc">
+                  Identity Suppression. Causes body contraction and cortisol
+                  spikes. The enemy of inner clarity.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 4 -->
+          <section id="sec4" class="content-section">
+            <h3 class="section-title">4. The Bio-Loop</h3>
+            <p class="mb-4">
+              Your internal state moves in predictable loops. Understanding them
+              equals mastery.
+            </p>
+            <div class="info-box space-y-3">
+              <p>
+                <strong>⚡ Energy Loop:</strong> Low energy → Irritability →
+                Negative thinking.
+              </p>
+              <p>
+                <strong>🚨 Stress Loop:</strong> Stress → Threat response →
+                Insecurity.
+              </p>
+              <p>
+                <strong>🔥 Desire Loop:</strong> Suppressed desire → Shame → Low
+                confidence.
+              </p>
+              <p>
+                <strong>⚓ Stability Loop:</strong> Instability →
+                Hypersensitivity → Overreactions.
+              </p>
+            </div>
+          </section>
+
+          <!-- SECTION 5 -->
+          <section id="sec5" class="content-section">
+            <h3 class="section-title">
+              5. Advanced Framework: Reading Your Body
+            </h3>
+            <p class="mb-6">
+              Decode every internal experience with the 4-Step Method:
+            </p>
+            <ol class="list-decimal pl-6 space-y-3 text-lg">
+              <li>
+                <strong>Sensation:</strong> What do I feel physically? (Tight
+                chest, heat, tension?)
+              </li>
+              <li>
+                <strong>System:</strong> Which system is active? (Energy,
+                Stress, Desire, Stability?)
+              </li>
+              <li>
+                <strong>Mechanism:</strong> Which chemical is influencing me?
+                (Dopamine, Cortisol?)
+              </li>
+              <li>
+                <strong>Meaning:</strong> What is the message? ("I need rest",
+                "I need security"?)
+              </li>
+            </ol>
+          </section>
+
+          <!-- SECTION 6 -->
+          <section id="sec6" class="content-section">
+            <h3 class="section-title">6. Practical Tools</h3>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 1: 14-Day Tracking</h4>
+                <p class="tool-desc">
+                  Track Energy, Stress, Libido, Mood, Sleep, and Triggers daily.
+                  Patterns reveal where you lose power.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 2: Nervous System Reset</h4>
+                <p class="tool-desc">
+                  3 Minutes: Inhale 4s, Exhale 6s. Relax shoulders, unclench
+                  jaw. Switches off the threat state.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 3: Bio vs Emotional Sheet</h4>
+                <p class="tool-desc">
+                  Ask: Is this biological? Emotional? Suppressed expression?
+                  Identity fear? Separating these prevents confusion.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 4: Shame Disassembly</h4>
+                <p class="tool-desc">
+                  Write one shame belief. Ask: Who taught me this? Does it match
+                  my truth? What happens if I stop believing it?
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 7 -->
+          <section id="sec7" class="content-section">
+            <h3 class="section-title">7. Wisdom Reflection</h3>
+            <ul class="list-disc pl-6 space-y-2 text-lg">
+              <li>Which part of my internal state do I misunderstand most?</li>
+              <li>What pattern repeats in my stress responses?</li>
+              <li>What beliefs about my body are inherited, not chosen?</li>
+              <li>What behavior improves my state instantly?</li>
+            </ul>
+          </section>
+
+          <!-- SECTION 8 -->
+          <section id="sec8" class="content-section">
+            <h3 class="section-title">8. 7-Day Implementation</h3>
+            <ol class="list-decimal pl-6 space-y-2 text-base">
+              <li><strong>Day 1:</strong> Begin body tracking</li>
+              <li><strong>Day 2:</strong> Stress reset practice</li>
+              <li><strong>Day 3:</strong> Shame audit</li>
+              <li>
+                <strong>Day 4:</strong> Dopamine detox (reduced stimulation)
+              </li>
+              <li><strong>Day 5:</strong> Movement activation</li>
+              <li><strong>Day 6:</strong> Emotional-awareness check</li>
+              <li><strong>Day 7:</strong> Pattern reflection</li>
+            </ol>
+          </section>
+
+          <!-- SUMMARY -->
+          <section id="summary" class="content-section summary-section">
+            <h3 class="section-title">Chapter Summary</h3>
+            <p class="text-lg">
+              The body is a system, not a moral object. Emotions are signals.
+              Clarity emerges from honesty. This chapter gives you the
+              foundational map of your inner world.
+            </p>
+          </section>
+
+          <!-- NAVIGATION BUTTONS -->
+          <nav
+            class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4"
+          >
+            <a href="../index.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+              <span>Home</span>
+            </a>
+            <a href="chapter2.html" class="nav-button nav-button-primary">
+              <span>Chapter 2</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <!-- SELECTION POPUP -->
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button id="popup-close" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+              aria-label="Chat input"
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

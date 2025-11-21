@@ -4,15 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>God's Hand | Human Evolution Manual</title>
+    <meta
+      name="description"
+      content="A comprehensive framework for Human Intelligence, Emotional Growth, and Life Mastery"
+    />
+    <meta
+      name="keywords"
+      content="personal development, human evolution, self-improvement, learning, mastery, leadership, emotional intelligence"
+    />
+    <meta name="author" content="God's Hand" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="God's Hand | Human Evolution Manual" />
+    <meta
+      property="og:description"
+      content="A comprehensive framework for Human Intelligence, Emotional Growth, and Life Mastery"
+    />
+    <meta property="og:site_name" content="God's Hand" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="God's Hand | Human Evolution Manual" />
+    <meta
+      name="twitter:description"
+      content="A comprehensive framework for Human Intelligence, Emotional Growth, and Life Mastery"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📘</text></svg>"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="God's Hand" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,26 +65,16 @@
         theme: {
           extend: {
             fontFamily: { sans: ["Inter", "sans-serif"] },
-            colors: {
-              "brand-bg": "#F8FAFC",
-              "brand-surface": "#FFFFFF",
-              "brand-text": "#0F172A",
-              "brand-text-light": "#475569",
-              "brand-primary": "#2563EB",
-              "brand-highlight": "#EFF6FF",
-              "brand-border": "#E2E8F0",
-              "dark-bg": "#0B1120",
-              "dark-surface": "#1E293B",
-              "dark-text": "#F8FAFC",
-              "dark-text-light": "#CBD5E1",
-              "dark-primary": "#38BDF8",
-              "dark-highlight": "#0F172A",
-              "dark-border": "#334155",
+            animation: {
+              blob: "blob 7s infinite",
             },
-            boxShadow: {
-              card: "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
-              "card-hover":
-                "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" },
+              },
             },
           },
         },
@@ -55,377 +86,813 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
-    <style>
-      /* Manual overrides for index-specific layout needs */
-      .section-header {
-        grid-column: 1 / -1;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-        margin-bottom: 1.5rem;
-      }
-      html.dark .section-header {
-        border-color: var(--border-color);
-      }
-
-      .section-title {
-        font-size: 0.875rem;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--text-light);
-      }
-      html.dark .section-title {
-        color: var(--text-light);
-      }
-    </style>
   </head>
-  <body class="p-4 md:p-8 lg:p-12 pb-32">
-    <!-- HEADER -->
-    <header class="text-center mb-16 fade-up">
-      <div class="flex justify-center items-center gap-4 mb-4">
-        <h1 class="text-4xl md:text-6xl font-black tracking-tighter">
-          🌐 GOD’S HAND
-        </h1>
-        <button
-          id="theme-toggle"
-          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors focus:outline-none"
+  <body
+    class="min-h-screen bg-white dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <!-- NAVIGATION BAR -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+            >
+              <span class="text-white text-xl font-black">G</span>
+            </div>
+            <h1
+              class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+            >
+              GOD'S HAND
+            </h1>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800"
+      ></div>
+      <div class="absolute inset-0 opacity-30 dark:opacity-20">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
+        ></div>
+        <div
+          class="absolute top-40 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto text-center">
+        <div
+          class="inline-block mb-4 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
         >
-          <svg
-            class="w-6 h-6 hidden dark:block text-yellow-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-            ></path>
-          </svg>
-          <svg
-            class="w-6 h-6 block dark:hidden text-slate-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-            ></path>
-          </svg>
-        </button>
-      </div>
-      <h2 class="text-xl md:text-2xl font-bold text-brand-primary mb-6">
-        Syllabus Overview
-      </h2>
-      <p class="max-w-2xl mx-auto text-brand-text-light text-lg">
-        A complete framework for Human Intelligence, Emotional Growth & Life
-        Mastery.
-      </p>
-    </header>
-
-    <div class="max-w-7xl mx-auto">
-      <!-- CHAPTER GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- PART I -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART I — SELF-SCIENCE ENGINE</h2>
-        </div>
-
-        <!-- Chapter 1 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 01</span>
-          <h3 class="chapter-title">
-            Your Body: Biology, Meaning & Self-Control
-          </h3>
-          <p class="chapter-desc">
-            Learn how energy, stress, desire, and emotional stability shape your
-            daily experience. Understand hormones and decode internal signals
-            without shame.
-          </p>
-          <a href="chapter1.html" class="read-btn">Read Chapter →</a>
-        </div>
-
-        <!-- Chapter 2 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 02</span>
-          <h3 class="chapter-title">Desire, Identity & Curiosity</h3>
-          <p class="chapter-desc">
-            Discover the three layers of desire and the fluid nature of
-            identity. Learn to understand impulses without fear and break
-            shame-conditioning.
-          </p>
-          <a href="chapter2_interactive.html" class="read-btn"
-            >Read Chapter →</a
+          <span class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+            >Human Evolution Manual v1.0</span
           >
         </div>
-
-        <!-- Chapter 3 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 03</span>
-          <h3 class="chapter-title">
-            Open-Mindedness & Perspective Intelligence
-          </h3>
-          <p class="chapter-desc">
-            Develop cognitive flexibility and multiple-perspective thinking.
-            Learn to question assumptions and break rigid beliefs.
-          </p>
-          <a href="chapter3.html" class="read-btn">Read Chapter →</a>
-        </div>
-
-        <!-- PART II -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART II — RATIONALITY FORGE</h2>
-        </div>
-
-        <!-- Chapter 4 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 04</span>
-          <h3 class="chapter-title">
-            Thinking Tools: Logic, Biases & Mental Precision
-          </h3>
-          <p class="chapter-desc">
-            Master practical thinking frameworks, logical analysis, cognitive
-            bias correction, and decision-making tools.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 5 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 05</span>
-          <h3 class="chapter-title">Truth-Seeking & Intellectual Honesty</h3>
-          <p class="chapter-desc">
-            Learn how to question beliefs, analyze information accurately, and
-            pursue truth without ego or defensiveness.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART III -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">
-            PART III — RELATIONSHIPS & HUMAN BEHAVIOR
-          </h2>
-        </div>
-
-        <!-- Chapter 6 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 06</span>
-          <h3 class="chapter-title">
-            Human Interaction, Connection & Attachment
-          </h3>
-          <p class="chapter-desc">
-            Understand attachment styles, emotional safety, bonding patterns,
-            and how early experiences shape adult behavior.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 7 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 07</span>
-          <h3 class="chapter-title">Relationship Intelligence & Boundaries</h3>
-          <p class="chapter-desc">
-            Develop emotional maturity, healthy communication, strong
-            boundaries, conflict resolution, and relational clarity.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART IV -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART IV — CREATIVE & STRATEGIC MIND</h2>
-        </div>
-
-        <!-- Chapter 8 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 08</span>
-          <h3 class="chapter-title">
-            Creativity: Pattern-Breaking & Idea Synthesis
-          </h3>
-          <p class="chapter-desc">
-            Learn creativity as a skill: connecting unrelated ideas, reframing
-            problems, and generating original solutions.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 9 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 09</span>
-          <h3 class="chapter-title">
-            Strategy: Long-Term Thinking & Power Dynamics
-          </h3>
-          <p class="chapter-desc">
-            Understand strategic thinking, influence, game theory basics, and
-            how to navigate social & professional complexity.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART V -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART V — BEAST-PERSONA ENGINE</h2>
-        </div>
-
-        <!-- Chapter 10 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 10</span>
-          <h3 class="chapter-title">
-            Presence, Charisma & Psychological Strength
-          </h3>
-          <p class="chapter-desc">
-            Build magnetic presence, confident body language, emotional
-            stability, and strong masculine/feminine energy balance.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 11 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 11</span>
-          <h3 class="chapter-title">
-            Identity Mastery, Persona Crafting & Integration
-          </h3>
-          <p class="chapter-desc">
-            Create an adaptive, powerful identity. Learn how to shape your
-            persona consciously and integrate light + shadow aspects.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART VI -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">
-            PART VI — CAREER, LEARNING & PERFORMANCE
-          </h2>
-        </div>
-
-        <!-- Chapter 12 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 12</span>
-          <h3 class="chapter-title">How to Learn Anything: Mastery Science</h3>
-          <p class="chapter-desc">
-            A complete model of accelerated learning: deconstruction, deliberate
-            practice, active recall, and skill acquisition.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 13 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 13</span>
-          <h3 class="chapter-title">Career Intelligence & Skill-Stacking</h3>
-          <p class="chapter-desc">
-            Understand value creation, skill stacking, personal branding, and
-            how to build a career that is future-proof.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 14 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 14</span>
-          <h3 class="chapter-title">
-            Leadership, Influence & High-Agency Living
-          </h3>
-          <p class="chapter-desc">
-            Develop leadership presence, influence skills, power awareness,
-            decisiveness, ownership, and high-agency thinking.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART VII -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART VII — ETHICS, PURPOSE & LEGACY</h2>
-        </div>
-
-        <!-- Chapter 15 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 15</span>
-          <h3 class="chapter-title">
-            Power, Responsibility & Ethical Reasoning
-          </h3>
-          <p class="chapter-desc">
-            Learn how to use power responsibly, understand moral dilemmas, and
-            build a compass for ethical decision-making.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- Chapter 16 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 16</span>
-          <h3 class="chapter-title">Meaning, Purpose & Personal Philosophy</h3>
-          <p class="chapter-desc">
-            Explore purpose, values, long-term meaning, and how to build your
-            own philosophical foundation for life.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
-        </div>
-
-        <!-- PART VIII -->
-        <div class="section-header fade-up">
-          <h2 class="section-title">PART VIII — IMPLEMENTATION BLUEPRINT</h2>
-        </div>
-
-        <!-- Chapter 17 -->
-        <div class="chapter-card fade-up">
-          <span class="chapter-number">Chapter 17</span>
-          <h3 class="chapter-title">
-            Teaching Frameworks & Transformation Systems
-          </h3>
-          <p class="chapter-desc">
-            A full training architecture for educators and coaches: how to teach
-            everything in this book effectively.
-          </p>
-          <button class="read-btn opacity-50 cursor-not-allowed">
-            Coming Soon
-          </button>
+        <h2
+          class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 dark:from-white dark:via-blue-200 dark:to-white bg-clip-text text-transparent leading-tight"
+        >
+          Master Your Mind,<br />Transform Your Life
+        </h2>
+        <p
+          class="max-w-3xl mx-auto text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed"
+        >
+          A comprehensive framework for Human Intelligence, Emotional Growth,
+          and Life Mastery. Build the skills that truly matter.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="#curriculum"
+            class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-200 smooth-scroll"
+          >
+            Explore Curriculum
+          </a>
+          <a
+            href="chapters/chapter1.html"
+            class="px-8 py-4 bg-white dark:bg-slate-800 text-gray-900 dark:text-white font-bold rounded-xl border-2 border-gray-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-200"
+          >
+            Start Learning
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Footer -->
-      <footer
-        class="mt-24 text-center text-brand-text-light text-sm pb-8 fade-up"
-      >
-        <p>© 2025 God's Hand Manual. All rights reserved.</p>
-      </footer>
-    </div>
+    <!-- PROGRESS SECTION -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+      <div class="max-w-4xl mx-auto">
+        <div id="overall-progress"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-black mb-4">
+            Why This Framework Works
+          </h3>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Built on psychology, neuroscience, and practical wisdom
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-600">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Science-Based</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              Every concept grounded in psychology, neuroscience, and behavioral
+              research
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon bg-purple-600">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Immediately Actionable</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              Practical tools and frameworks you can apply starting today
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon bg-green-600">
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Complete System</h4>
+            <p class="text-gray-600 dark:text-gray-400">
+              From self-awareness to relationships to career mastery—everything
+              covered
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM SECTION -->
+    <section
+      id="curriculum"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800/50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-black mb-4">
+            Complete Curriculum
+          </h3>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            8 comprehensive parts covering every aspect of human intelligence
+            and growth
+          </p>
+        </div>
+        <div class="space-y-6">
+          <!-- PART 1 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART I</div>
+              <h4 class="part-title">Self-Science Engine</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter1.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">01</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Your Body: Biology, Meaning & Self-Control
+                    </h5>
+                    <p class="chapter-preview">
+                      Energy, stress, desire, and emotional stability
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter2.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">02</span>
+                  <div>
+                    <h5 class="chapter-name">Desire, Identity & Curiosity</h5>
+                    <p class="chapter-preview">
+                      Understanding impulses and breaking shame
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter3.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">03</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Open-Mindedness & Perspective Intelligence
+                    </h5>
+                    <p class="chapter-preview">
+                      Cognitive flexibility and multiple perspectives
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 2 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART II</div>
+              <h4 class="part-title">Rationality Forge</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter4.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">04</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Thinking Tools: Logic, Biases & Mental Precision
+                    </h5>
+                    <p class="chapter-preview">
+                      Master frameworks and decision-making tools
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter5.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">05</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Truth-Seeking & Intellectual Honesty
+                    </h5>
+                    <p class="chapter-preview">
+                      Question beliefs and analyze information
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 3 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART III</div>
+              <h4 class="part-title">Relationships & Human Behavior</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter6.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">06</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Human Interaction, Connection & Attachment
+                    </h5>
+                    <p class="chapter-preview">
+                      Attachment styles and bonding patterns
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter7.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">07</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Relationship Intelligence & Boundaries
+                    </h5>
+                    <p class="chapter-preview">
+                      Emotional maturity and communication
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 4 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART IV</div>
+              <h4 class="part-title">Creative & Strategic Mind</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter8.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">08</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Creativity: Pattern-Breaking & Idea Synthesis
+                    </h5>
+                    <p class="chapter-preview">Generate original solutions</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter9.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">09</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Strategy: Long-Term Thinking & Power Dynamics
+                    </h5>
+                    <p class="chapter-preview">
+                      Navigate complexity strategically
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 5 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART V</div>
+              <h4 class="part-title">Beast-Persona Engine</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter10.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">10</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Presence, Charisma & Psychological Strength
+                    </h5>
+                    <p class="chapter-preview">Build magnetic presence</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter11.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">11</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Identity Mastery & Persona Crafting
+                    </h5>
+                    <p class="chapter-preview">
+                      Shape your identity consciously
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 6 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART VI</div>
+              <h4 class="part-title">Career, Learning & Performance</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter12.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">12</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      How to Learn Anything: Mastery Science
+                    </h5>
+                    <p class="chapter-preview">Accelerated learning systems</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter13.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">13</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Career Intelligence & Skill-Stacking
+                    </h5>
+                    <p class="chapter-preview">Build a future-proof career</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter14.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">14</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Leadership, Influence & High-Agency Living
+                    </h5>
+                    <p class="chapter-preview">Develop leadership presence</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 7 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART VII</div>
+              <h4 class="part-title">Ethics, Purpose & Legacy</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter15.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">15</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Power, Responsibility & Ethical Reasoning
+                    </h5>
+                    <p class="chapter-preview">Use power responsibly</p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter16.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">16</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Meaning, Purpose & Personal Philosophy
+                    </h5>
+                    <p class="chapter-preview">
+                      Build your philosophical foundation
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- PART 8 -->
+          <div class="curriculum-part">
+            <div class="part-header">
+              <div class="part-number">PART VIII</div>
+              <h4 class="part-title">Implementation Blueprint</h4>
+            </div>
+            <div class="chapters-list">
+              <a href="chapters/chapter17.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">17</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      Teaching Frameworks & Transformation Systems
+                    </h5>
+                    <p class="chapter-preview">
+                      Complete training architecture
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+              <a href="chapters/chapter18.html" class="chapter-item">
+                <div class="chapter-info">
+                  <span class="chapter-num">18</span>
+                  <div>
+                    <h5 class="chapter-name">
+                      The 12-Month Total Evolution Plan
+                    </h5>
+                    <p class="chapter-preview">
+                      Your complete year-long transformation program
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chapter-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-cyan-600"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl md:text-4xl font-black text-white mb-6">
+          Ready to Transform Your Life?
+        </h3>
+        <p class="text-xl text-blue-100 mb-8">
+          Start with Chapter 1 and begin your journey today
+        </p>
+        <a
+          href="chapters/chapter1.html"
+          class="inline-block px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-200"
+        >
+          Begin Your Journey
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+            >
+              <span class="text-white text-xl font-black">G</span>
+            </div>
+            <div>
+              <h4 class="font-black">GOD'S HAND</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Human Evolution Manual
+              </p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            © 2025 God's Hand. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!-- External Script Link -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

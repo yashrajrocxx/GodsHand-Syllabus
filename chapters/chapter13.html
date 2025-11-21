@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 13: Career Intelligence & Skill-Stacking | God's Hand</title>
+    <meta
+      name="description"
+      content="Build a future-proof career through career intelligence, skill-stacking, and strategic positioning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#foundations"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Career Foundations</a
+              >
+              <a
+                href="#growth-stages"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Stages of Growth</a
+              >
+              <a
+                href="#value-pyramid"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Career Value Pyramid</a
+              >
+              <a
+                href="#skill-stacking"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Skill-Stacking</a
+              >
+              <a
+                href="#career-path"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Choosing Your Path</a
+              >
+              <a
+                href="#career-map"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >10-Year Career Map</a
+              >
+              <a
+                href="#reputation"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Professional Reputation</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#foundations"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Career Foundations</a
+              >
+              <a
+                href="#growth-stages"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Stages of Growth</a
+              >
+              <a
+                href="#value-pyramid"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Career Value Pyramid</a
+              >
+              <a
+                href="#skill-stacking"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Skill-Stacking</a
+              >
+              <a
+                href="#career-path"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Choosing Your Path</a
+              >
+              <a
+                href="#career-map"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >10-Year Career Map</a
+              >
+              <a
+                href="#reputation"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Professional Reputation</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-indigo-600 to-purple-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 13</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Career Intelligence & Skill-Stacking
+              </h1>
+              <p class="text-xl text-indigo-50">
+                Build a future-proof career through strategic positioning and
+                rare skill combinations
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold">
+                    A successful career is built on value creation, not degrees
+                    or luck.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">
+                    Career Intelligence (CQ) is the ability to:
+                  </h3>
+                  <ul class="space-y-2">
+                    <li>✓ Understand the job market</li>
+                    <li>✓ Identify valuable skills</li>
+                    <li>✓ Position yourself intelligently</li>
+                    <li>✓ Build a rare skill stack</li>
+                    <li>✓ Become irreplaceable</li>
+                    <li>✓ Adapt faster than others</li>
+                    <li>✓ Create long-term opportunities</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  This chapter gives you a complete roadmap to build a powerful,
+                  future-proof career.
+                </p>
+              </section>
+
+              <!-- Section 1: Foundations -->
+              <section id="foundations" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — The Real Foundations of a Great Career
+                </h2>
+                <p class="info-text">
+                  A strong career is built from three components:
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      1. Skill (Your actual competence)
+                    </h3>
+                    <p class="text-sm">Your ability to solve problems.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      2. Reputation (What people know you for)
+                    </h3>
+                    <p class="text-sm">
+                      People trust competence + consistency.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      3. Positioning (Where you place yourself)
+                    </h3>
+                    <p class="text-sm">Right environment accelerates growth.</p>
+                  </div>
+                </div>
+
+                <div class="tool-card mt-6 border-red-200 dark:border-red-800">
+                  <p class="font-bold text-red-600 dark:text-red-400">
+                    A weak career is missing one of these three.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: Growth Stages -->
+              <section id="growth-stages" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The 5 Stages of Career Growth
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Learning (Foundation)</h3>
+                      <p class="mechanism-description">
+                        You build fundamental knowledge and basic competence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Practicing (Competence)</h3>
+                      <p class="mechanism-description">
+                        You sharpen technique, speed, accuracy, and
+                        problem-solving.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Specializing (Expertise)</h3>
+                      <p class="mechanism-description mb-2">
+                        You master a niche.
+                      </p>
+                      <p
+                        class="text-sm font-bold text-indigo-600 dark:text-indigo-400"
+                      >
+                        Specialists get hired faster and earn more.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Skill Stacking (Uniqueness)
+                      </h3>
+                      <p class="mechanism-description mb-3">
+                        Combine different skills to create unique value.
+                      </p>
+                      <div class="text-sm">
+                        <p class="font-semibold mb-2">Example stacks:</p>
+                        <ul class="space-y-1 text-gray-600 dark:text-gray-400">
+                          <li>• coding + design + psychology</li>
+                          <li>• writing + marketing + storytelling</li>
+                          <li>• finance + data + strategic thinking</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Leverage Creation (Power)</h3>
+                      <p class="mechanism-description mb-3">You:</p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                      >
+                        <li>• Lead</li>
+                        <li>• Create</li>
+                        <li>• Innovate</li>
+                        <li>• Build systems</li>
+                        <li>• Build reputation</li>
+                        <li>• Create opportunities</li>
+                      </ul>
+                      <p
+                        class="mt-3 text-sm font-bold text-indigo-600 dark:text-indigo-400"
+                      >
+                        This is the highest career stage.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 3: Value Pyramid -->
+              <section id="value-pyramid" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The Career Value Pyramid
+                </h2>
+                <p class="info-text">From lowest to highest:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold mb-2">
+                      Level 1 — Replaceable Workers
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                      Do tasks anyone can do.
+                    </p>
+                    <p class="text-sm font-bold text-red-600 dark:text-red-400">
+                      Low pay. Low control.
+                    </p>
+                  </div>
+
+                  <div
+                    class="tool-card border-orange-200 dark:border-orange-800"
+                  >
+                    <h3 class="font-bold mb-2">Level 2 — Skilled Workers</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                      Have specific skills.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-orange-600 dark:text-orange-400"
+                    >
+                      Moderate pay. Moderate control.
+                    </p>
+                  </div>
+
+                  <div
+                    class="tool-card border-yellow-200 dark:border-yellow-800"
+                  >
+                    <h3 class="font-bold mb-2">
+                      Level 3 — Multi-Skilled Professionals
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                      Combine skills.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-yellow-600 dark:text-yellow-400"
+                    >
+                      High value. High flexibility.
+                    </p>
+                  </div>
+
+                  <div class="tool-card border-blue-200 dark:border-blue-800">
+                    <h3 class="font-bold mb-2">Level 4 — Strategic Thinkers</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                      Solve complex problems.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-blue-600 dark:text-blue-400"
+                    >
+                      High influence. High income.
+                    </p>
+                  </div>
+
+                  <div
+                    class="tool-card border-indigo-200 dark:border-indigo-800"
+                  >
+                    <h3 class="font-bold mb-2">
+                      Level 5 — Leaders / Creators / Innovators
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                      Create new systems and opportunities.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-indigo-600 dark:text-indigo-400"
+                    >
+                      Maximum freedom and authority.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 4: Skill-Stacking -->
+              <section id="skill-stacking" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — Skill-Stacking (Explained in Depth)
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-2">
+                    Skill stacking is the process of combining multiple
+                    abilities to create exponential value.
+                  </p>
+                  <p class="text-indigo-600 dark:text-indigo-400 font-bold">
+                    Instead of becoming the best in the world at one thing,
+                    become top 10–20% in 3–5 complementary skills.
+                  </p>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <h3 class="font-bold mb-3">
+                    Example stack for a powerful career:
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                      ></span>
+                      Communication
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                      ></span>
+                      Strategy
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                      ></span>
+                      Psychology
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                      ></span>
+                      Digital tools
+                    </li>
+                    <li
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-400"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                      ></span>
+                      Negotiation
+                    </li>
+                  </ul>
+                  <p
+                    class="mt-4 text-sm font-bold text-indigo-600 dark:text-indigo-400"
+                  >
+                    This combination is extremely rare.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">Skill stacking gives you:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Uniqueness</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Adaptability</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Creativity</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Higher salary</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Career freedom</p>
+                    </div>
+                  </div>
+                  <p
+                    class="mt-4 font-bold text-indigo-600 dark:text-indigo-400"
+                  >
+                    It is the strongest competitive advantage.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 5: Career Path -->
+              <section id="career-path" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — How to Choose the Right Career Path
+                </h2>
+                <p class="info-text">Ask yourself these six questions:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      1. What skills come naturally to me?
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Your strengths shape your direction.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      2. What skills excite me to learn?
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Passion sustains long-term effort.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      3. What skills are globally valuable?
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Choose skills that move the world:
+                    </p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Tech</li>
+                      <li>• Psychology</li>
+                      <li>• Communication</li>
+                      <li>• Finance</li>
+                      <li>• Leadership</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      4. What problems do I enjoy solving?
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Career satisfaction = solving meaningful problems.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">5. What lifestyle do I want?</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Your career must match your life goals.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      6. What niche can I dominate?
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Specialization builds authority.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 6: Career Map -->
+              <section id="career-map" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — Building Your Career Map (10-Year Model)
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+                    >
+                      Years 1–2 — Learn Fundamentals
+                    </h3>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Study deeply</li>
+                      <li>• Build foundational skills</li>
+                      <li>• Be curious</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+                    >
+                      Years 3–4 — Build Competence
+                    </h3>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Work on real projects</li>
+                      <li>• Solve real problems</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+                    >
+                      Years 5–6 — Specialize
+                    </h3>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Choose a niche</li>
+                      <li>• Become excellent at it</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+                    >
+                      Years 7–8 — Skill-Stacking
+                    </h3>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Add complementary skills</li>
+                      <li>• Become rare</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-2"
+                    >
+                      Years 9–10 — Leverage
+                    </h3>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Lead</li>
+                      <li>• Create</li>
+                      <li>• Innovate</li>
+                      <li>• Build systems</li>
+                      <li>• Build personal brand</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 7: Reputation -->
+              <section id="reputation" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — How to Build a Powerful Professional Reputation
+                </h2>
+
+                <div class="info-box">
+                  <h3 class="font-bold mb-3">Your reputation is built from:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• Consistency</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Integrity</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Quality of work</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Communication skill</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Reliability</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Helping others</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Visible results</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">Reputation compounds.</p>
+                  <p class="font-bold text-indigo-600 dark:text-indigo-400">
+                    It becomes your career capital.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 8: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 8 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 1 — Skill Inventory</h3>
+                    <p class="text-sm mb-2">Make 3 lists:</p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Skills you have</li>
+                      <li>• Skills you need</li>
+                      <li>• Skills you want</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 2 — Build Your Skill Stack
+                    </h3>
+                    <p class="text-sm mb-2">Choose:</p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• 1 core skill</li>
+                      <li>• 2 supporting skills</li>
+                      <li>• 1 differentiator skill</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 3 — Career Map Exercise
+                    </h3>
+                    <p class="text-sm mb-2">Write your:</p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• 1-year plan</li>
+                      <li>• 3-year plan</li>
+                      <li>• 10-year vision</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 4 — Reputation Builder</h3>
+                    <p class="text-sm mb-2">Do one high-value action weekly:</p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Help someone</li>
+                      <li>• Publish work</li>
+                      <li>• Teach something</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="space-y-6">
+                  <div class="highlight-box">
+                    <p class="font-bold mb-1">Career Intelligence =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      the ability to understand skills, trends, human behavior,
+                      and leverage.
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold mb-1">Skill stacking =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      becoming rare, valuable, and irreplaceable.
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold text-indigo-600 dark:text-indigo-400">
+                      A powerful career is designed, not stumbled into.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter12.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 12</span>
+            </a>
+            <a href="chapter14.html" class="nav-button nav-button-primary">
+              <span>Chapter 14</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

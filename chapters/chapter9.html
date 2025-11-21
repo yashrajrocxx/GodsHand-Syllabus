@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 9: Strategy & Power Dynamics | God's Hand</title>
+    <meta
+      name="description"
+      content="Master strategic thinking, long-term planning, and understanding power dynamics in human systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#strategy-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Strategy Actually Is</a
+              >
+              <a
+                href="#strategic-mindset"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Strategic Mindset</a
+              >
+              <a
+                href="#five-pillars"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Pillars of Strategic Intelligence</a
+              >
+              <a
+                href="#power-dynamics"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Power Dynamics</a
+              >
+              <a
+                href="#frameworks"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Strategic Thinking Frameworks</a
+              >
+              <a
+                href="#social-strategy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Social Strategy</a
+              >
+              <a
+                href="#psychological-defense"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychological Defense</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#strategy-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Strategy Actually Is</a
+              >
+              <a
+                href="#strategic-mindset"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Strategic Mindset</a
+              >
+              <a
+                href="#five-pillars"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Pillars of Strategic Intelligence</a
+              >
+              <a
+                href="#power-dynamics"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Power Dynamics</a
+              >
+              <a
+                href="#frameworks"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Strategic Thinking Frameworks</a
+              >
+              <a
+                href="#social-strategy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Social Strategy</a
+              >
+              <a
+                href="#psychological-defense"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychological Defense</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-indigo-600 to-purple-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 9</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Strategy: Long-Term Thinking & Power Dynamics
+              </h1>
+              <p class="text-xl text-indigo-50">
+                Turn life from chaos into a chessboard through strategic
+                thinking and pattern recognition
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold mb-4">
+                    Strategy is the ability to think beyond the present moment.
+                  </p>
+                  <div class="space-y-2">
+                    <p>
+                      → Where most people <strong>react</strong>, strategists
+                      <strong>predict</strong>.
+                    </p>
+                    <p>
+                      → Where most people follow <strong>impulses</strong>,
+                      strategists follow <strong>patterns</strong>.
+                    </p>
+                    <p>
+                      → Where most people think <strong>emotionally</strong>,
+                      strategists think <strong>structurally</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">This Chapter Teaches:</h3>
+                  <ul class="grid md:grid-cols-2 gap-2">
+                    <li>→ Long-term thinking</li>
+                    <li>→ Pattern analysis</li>
+                    <li>→ Power dynamics</li>
+                    <li>→ Risk assessment</li>
+                    <li>→ Second-order consequences</li>
+                    <li>→ Psychological strategy</li>
+                    <li>→ Social intelligence</li>
+                    <li>→ Anticipating behavior</li>
+                    <li>→ Avoiding traps</li>
+                    <li>→ Designing life intentionally</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Strategy turns life from chaos into a chessboard.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 1: What Strategy Is -->
+              <section id="strategy-definition" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Strategy Actually Is
+                </h2>
+                <p class="info-text">Strategy is the ability to:</p>
+
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Identify patterns</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Understand incentives</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Predict reactions</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">
+                      ✓ Make decisions with long-term impact
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Position yourself advantageously</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Use time as a weapon</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Foresee consequences</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">✓ Adapt dynamically</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">Most people see life as "events."</p>
+                  <p class="font-bold text-indigo-600 dark:text-indigo-400">
+                    Strategists see life as systems.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: Strategic Mindset -->
+              <section id="strategic-mindset" class="content-section">
+                <h2 class="section-title">Section 2 — The Strategic Mindset</h2>
+                <p class="info-text">The strategic mind thinks in:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Possibilities</h3>
+                      <p class="mechanism-description">
+                        Not "What is happening?" but "What
+                        <strong>could</strong> happen?"
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Leverage</h3>
+                      <p class="mechanism-description">
+                        "What small move creates the biggest outcome?"
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Consequences</h3>
+                      <div class="mechanism-description space-y-1">
+                        <p>"What happens next?"</p>
+                        <p>"What does this decision cause downstream?"</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Patterns</h3>
+                      <div class="mechanism-description space-y-1">
+                        <p>"What repeats?"</p>
+                        <p>"What cycles keep returning?"</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Incentives</h3>
+                      <p class="mechanism-description">
+                        "What does each person gain or lose?"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  Strategy is less about intelligence and more about
+                  <strong>awareness of structures</strong>.
+                </p>
+              </section>
+
+              <!-- Section 3: Five Pillars -->
+              <section id="five-pillars" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The 5 Pillars of Strategic Intelligence
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      Pillar 1 — Long-Term Thinking
+                    </h3>
+                    <p class="text-sm mb-2">Seeing 2, 5, 10, 20 steps ahead.</p>
+                    <div class="text-sm">
+                      <p class="font-semibold">Example:</p>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        Short-term pleasure vs long-term stability.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      Pillar 2 — Positioning
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Where you stand affects what options you have.
+                    </p>
+                    <div class="text-sm">
+                      <p class="font-semibold">Example:</p>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        Being financially stable gives you more freedom in
+                        relationships, career, and decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      Pillar 3 — Pattern Recognition
+                    </h3>
+                    <p class="text-sm mb-2">
+                      History repeats because humans repeat.
+                    </p>
+                    <p class="text-sm font-semibold">
+                      Strategists notice cycles.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      Pillar 4 — Emotional Control
+                    </h3>
+                    <p class="text-sm mb-2">Emotion destroys strategy.</p>
+                    <p
+                      class="text-sm font-semibold text-red-600 dark:text-red-400"
+                    >
+                      A reactive mind cannot plan.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-indigo-600 dark:text-indigo-400 mb-3"
+                    >
+                      Pillar 5 — Adaptability
+                    </h3>
+                    <p class="text-sm mb-2">
+                      The ability to adjust quickly when conditions change.
+                    </p>
+                    <p
+                      class="text-sm font-semibold text-red-600 dark:text-red-400"
+                    >
+                      Rigidity destroys strategic plans.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 4: Power Dynamics -->
+              <section id="power-dynamics" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — Power Dynamics: The Reality of Human Systems
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold">Power is not domination.</p>
+                  <p class="font-bold">
+                    Power is influence, leverage, and control over outcomes.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold text-lg mb-4">
+                    6 Primary Sources of Power:
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">1</div>
+                      <div>
+                        <h4 class="mechanism-title">Knowledge Power</h4>
+                        <p class="mechanism-description">
+                          Understanding systems others don't.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">2</div>
+                      <div>
+                        <h4 class="mechanism-title">Social Power</h4>
+                        <p class="mechanism-description">
+                          Networks, allies, trust, reputation.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">3</div>
+                      <div>
+                        <h4 class="mechanism-title">Emotional Power</h4>
+                        <p class="mechanism-description">
+                          Stability under pressure.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">4</div>
+                      <div>
+                        <h4 class="mechanism-title">Economic Power</h4>
+                        <p class="mechanism-description">
+                          Money, resources, independence.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">5</div>
+                      <div>
+                        <h4 class="mechanism-title">Positional Power</h4>
+                        <p class="mechanism-description">
+                          Titles, authority, structural control.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">6</div>
+                      <div>
+                        <h4 class="mechanism-title">Psychological Power</h4>
+                        <p class="mechanism-description">
+                          Confidence, charisma, presence.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Power is neutral; intention determines morality.</strong
+                  >
+                </p>
+              </section>
+
+              <!-- Section 5: Frameworks -->
+              <section id="frameworks" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — Strategic Thinking Frameworks
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Framework 1 — Second-Order Thinking
+                    </h3>
+                    <p class="text-sm mb-3 font-semibold">
+                      Ask: "What happens after what happens?"
+                    </p>
+                    <div class="text-sm space-y-1">
+                      <p class="text-gray-600 dark:text-gray-400">
+                        Most people only see step 1.
+                      </p>
+                      <p
+                        class="font-semibold text-indigo-600 dark:text-indigo-400"
+                      >
+                        Strategists see step 5.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Framework 2 — Inversion Thinking
+                    </h3>
+                    <div class="text-sm space-y-2">
+                      <p>Instead of asking: "How do I succeed?"</p>
+                      <p class="font-semibold">
+                        Ask: "How do I avoid failing?"
+                      </p>
+                      <p
+                        class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold"
+                      >
+                        Removing mistakes is easier than chasing perfection.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Framework 3 — Incentive Mapping
+                    </h3>
+                    <div class="text-sm space-y-2">
+                      <p class="font-semibold">Always ask:</p>
+                      <p>"What does each person want?"</p>
+                      <p>"What motivates their behavior?"</p>
+                      <p
+                        class="mt-3 text-indigo-600 dark:text-indigo-400 font-semibold"
+                      >
+                        Incentives predict outcomes better than words.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Framework 4 — Asymmetric Advantage
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Small moves that create big results.
+                    </p>
+                    <div class="text-sm">
+                      <p class="font-semibold">Example:</p>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        One mentor = 5 years of shortcuts.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Framework 5 — Resource Allocation
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Time, energy, and attention must be invested wisely.
+                    </p>
+                    <p
+                      class="text-sm font-semibold text-indigo-600 dark:text-indigo-400"
+                    >
+                      Strategists protect these three above all.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 6: Social Strategy -->
+              <section id="social-strategy" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — Social Strategy: Understanding People
+                </h2>
+                <p class="info-text">People behave based on:</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Desire</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Fear</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Incentives</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Ego</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Insecurity</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Survival Patterns</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">Strategists don't judge behavior.</p>
+                  <p class="font-bold text-indigo-600 dark:text-indigo-400">
+                    They decode it.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 7: Psychological Defense -->
+              <section id="psychological-defense" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — Psychological Warfare & Defense
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold">Not manipulation.</p>
+                  <p class="font-bold">Defense.</p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-4">Common Psychological Attacks:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Guilt-tripping</p>
+                    </div>
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Passive aggression</p>
+                    </div>
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Emotional withdrawal</p>
+                    </div>
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Shame induction</p>
+                    </div>
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Playing victim</p>
+                    </div>
+                    <div class="tool-card border-red-200 dark:border-red-800">
+                      <p class="text-sm">• Dominance tactics</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <p class="text-lg font-bold">
+                    Defense = Awareness + Boundaries + Calmness
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 8: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 8 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 1: 10-Year Thinking</h3>
+                    <p class="text-sm">
+                      Write decisions based on long-term outcomes.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 2: Incentive Mapping</h3>
+                    <p class="text-sm">Take 3 people. List what drives them.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 3: Pattern Recognition</h3>
+                    <p class="text-sm">
+                      Observe one repeated pattern in your life.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 9: Wisdom Questions -->
+              <section id="wisdom" class="content-section">
+                <h2 class="section-title">Section 9 — Wisdom Questions</h2>
+                <div class="info-box">
+                  <ul class="space-y-3">
+                    <li>
+                      <strong>→</strong> What decisions today create impact 10
+                      years later?
+                    </li>
+                    <li>
+                      <strong>→</strong> What patterns do I repeat
+                      unconsciously?
+                    </li>
+                    <li>
+                      <strong>→</strong> Whose incentives am I misreading?
+                    </li>
+                    <li>
+                      <strong>→</strong> Where do I give away power emotionally?
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- Section 10: 7-Day Program -->
+              <section id="program" class="content-section">
+                <h2 class="section-title">
+                  Section 10 — 7-Day Strategy Training
+                </h2>
+                <div class="space-y-3">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 1</h3>
+                      <p class="mechanism-description">Pattern recognition</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 2</h3>
+                      <p class="mechanism-description">Incentive mapping</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 3</h3>
+                      <p class="mechanism-description">Second-order thinking</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 4</h3>
+                      <p class="mechanism-description">Emotional control</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 5</h3>
+                      <p class="mechanism-description">Asymmetric advantage</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 6</h3>
+                      <p class="mechanism-description">Positioning</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 7</h3>
+                      <p class="mechanism-description">Reflection</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">This chapter builds:</p>
+                  <ul class="space-y-2">
+                    <li>✓ Strategic thinking</li>
+                    <li>✓ Long-term clarity</li>
+                    <li>✓ Power awareness</li>
+                    <li>✓ Emotional discipline</li>
+                    <li>✓ Prediction skills</li>
+                    <li>✓ Decision sharpness</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter8.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 8</span>
+            </a>
+            <a href="chapter10.html" class="nav-button nav-button-primary">
+              <span>Chapter 10</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

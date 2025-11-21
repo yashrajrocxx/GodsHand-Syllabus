@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 2: Desire, Identity & Curiosity | God's Hand</title>
+    <meta
+      name="description"
+      content="Understand the three layers of desire and fluid nature of identity. Break shame-conditioning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <nav
+            class="sticky top-24 bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700"
+          >
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4"
+            >
+              Contents
+            </h3>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li>
+                <a href="#sec1" class="nav-link">The 3 Layers of Desire</a>
+              </li>
+              <li><a href="#sec2" class="nav-link">Why We Fear Desire</a></li>
+              <li><a href="#sec3" class="nav-link">Identity System</a></li>
+              <li><a href="#sec4" class="nav-link">Interaction Loop</a></li>
+              <li>
+                <a href="#sec5" class="nav-link">Intelligence Triangle</a>
+              </li>
+              <li><a href="#sec6" class="nav-link">Deep Framework</a></li>
+              <li>
+                <a href="#sec7" class="nav-link">Shame: Identity Killer</a>
+              </li>
+              <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="flex-1 min-w-0">
+          <div class="mb-8 text-center lg:text-left">
+            <div
+              class="inline-block mb-3 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+            >
+              <span
+                class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+                >Chapter 02</span
+              >
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            >
+              Desire, Identity & Curiosity
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+              Discover the three layers of desire and the fluid nature of
+              identity
+            </p>
+          </div>
+
+          <details
+            class="lg:hidden mb-8 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700"
+          >
+            <summary
+              class="px-6 py-4 cursor-pointer font-bold text-blue-600 dark:text-blue-400 flex justify-between items-center"
+            >
+              <span>Table of Contents</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <nav
+              class="px-6 pb-4 border-t border-gray-200 dark:border-slate-700"
+            >
+              <ul class="space-y-1 mt-4">
+                <li><a href="#intro" class="nav-link">Introduction</a></li>
+                <li>
+                  <a href="#sec1" class="nav-link">The 3 Layers of Desire</a>
+                </li>
+                <li><a href="#sec2" class="nav-link">Why We Fear Desire</a></li>
+                <li><a href="#sec3" class="nav-link">Identity System</a></li>
+                <li><a href="#sec4" class="nav-link">Interaction Loop</a></li>
+                <li>
+                  <a href="#sec5" class="nav-link">Intelligence Triangle</a>
+                </li>
+                <li><a href="#sec6" class="nav-link">Deep Framework</a></li>
+                <li>
+                  <a href="#sec7" class="nav-link">Shame: Identity Killer</a>
+                </li>
+                <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+              </ul>
+            </nav>
+          </details>
+
+          <section id="intro" class="content-section">
+            <h3 class="section-title">Introduction</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              The three most misunderstood forces in human psychology are
+              <strong>Desire</strong> (what you want),
+              <strong>Identity</strong> (who you think you are), and
+              <strong>Curiosity</strong> (what you are drawn toward). When
+              misunderstood, we lose connection to ourselves.
+            </p>
+            <div class="highlight-box">
+              <p
+                class="font-bold text-blue-600 dark:text-blue-400 mb-2 text-lg"
+              >
+                Core Truths:
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Desire is not chaos; it is information.</li>
+                <li>Identity is not fixed; it is fluid.</li>
+                <li>Curiosity is not dangerous; it is intelligence.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="sec1" class="content-section">
+            <h3 class="section-title">1. What Desire Really Is</h3>
+            <p class="mb-6 text-lg">
+              Desire is an information system operating on three distinct
+              layers:
+            </p>
+            <div class="space-y-6">
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  Layer 1: Biological Desire (Physical)
+                </h4>
+                <p class="mb-2">
+                  Driven by hormones (testosterone, dopamine). It appears as
+                  physical attraction or hunger for novelty.
+                </p>
+                <p class="text-sm font-semibold">
+                  Truth: It is not a choice. It does not define your morality.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  Layer 2: Psychological Desire (Emotional)
+                </h4>
+                <p class="mb-2">
+                  Stemming from unmet needs, loneliness, or past wounds. It
+                  often manifests as repeating toxic cycles or comfort-seeking.
+                </p>
+                <p class="text-sm font-semibold">
+                  Truth: It reveals what your nervous system has learned to call
+                  "safe."
+                </p>
+              </div>
+              <div class="info-box">
+                <h4
+                  class="font-bold text-blue-600 dark:text-blue-400 text-lg mb-2"
+                >
+                  Layer 3: Curiosity-Based Desire (Exploratory)
+                </h4>
+                <p class="mb-2">
+                  The most suppressed layer. It includes sudden identity
+                  questions or new interests. It is the mind expanding.
+                </p>
+                <p class="text-sm font-semibold">
+                  Truth: Curiosity is the engine of inner evolution.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec2" class="content-section">
+            <h3 class="section-title">2. Why Humans Fear Desire</h3>
+            <p class="mb-6 text-lg">
+              People don't fear desire itself; they fear what it reveals. It
+              threatens cultural rules and reputations.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800 text-center"
+              >
+                <span class="font-bold text-red-600 dark:text-red-400"
+                  >Misunderstanding it leads to threat</span
+                >
+              </div>
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Understanding it reveals a mirror</span
+                >
+              </div>
+            </div>
+          </section>
+
+          <section id="sec3" class="content-section">
+            <h3 class="section-title">3. The Identity System</h3>
+            <p class="mb-6">Identity feels fixed, but it is layered:</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 dark:text-blue-400 font-bold"
+                  >1. Assigned:</span
+                >
+                <span
+                  >Imposed by society/parents ("A good boy doesn't do this").
+                  Not chosen.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 dark:text-blue-400 font-bold"
+                  >2. Performed:</span
+                >
+                <span
+                  >Created for safety/approval. It is functional, not fake, but
+                  not your core.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-600 dark:text-blue-400 font-bold"
+                  >3. Authentic:</span
+                >
+                <span
+                  >Emerges when fear drops. Shaped by real values and natural
+                  rhythm.</span
+                >
+              </li>
+            </ul>
+            <div
+              class="mt-8 p-4 text-center border-t border-gray-200 dark:border-slate-700"
+            >
+              <p class="italic text-lg font-medium">
+                "Authenticity is identity without fear."
+              </p>
+            </div>
+          </section>
+
+          <section id="sec4" class="content-section">
+            <h3 class="section-title">4. Desire & Identity Interaction Loop</h3>
+            <p class="mb-6">They influence each other constantly:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>
+                <strong>Desire reveals hidden identity layers:</strong> Your
+                impulses contain information about who you are becoming.
+              </li>
+              <li>
+                <strong>Identity controls interpretation:</strong> Rigid
+                identity leads to shame. Flexible identity leads to
+                understanding.
+              </li>
+              <li>
+                <strong>Shame freezes identity:</strong> It blocks growth and
+                confidence.
+              </li>
+              <li>
+                <strong>Acceptance stabilizes identity:</strong> When you stop
+                fearing your impulses, you stop fearing yourself.
+              </li>
+            </ul>
+          </section>
+
+          <section id="sec5" class="content-section">
+            <h3 class="section-title">5. The Inner Intelligence Triangle</h3>
+            <p class="mb-6">
+              To understand any impulse, check these three angles:
+            </p>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-center border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Biological
+                </h4>
+                <p class="text-sm">
+                  "Am I stressed or tired? Is this a natural response?"
+                </p>
+              </div>
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-center border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Emotional
+                </h4>
+                <p class="text-sm">
+                  "Is this linked to loneliness? Am I repeating a pattern?"
+                </p>
+              </div>
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-center border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Curiosity
+                </h4>
+                <p class="text-sm">
+                  "What truth am I avoiding? Where is the growth?"
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec6" class="content-section">
+            <h3 class="section-title">
+              6. Deep Framework: Interpreting Desire
+            </h3>
+            <p class="mb-4">Don't react. Respond using this analysis:</p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>
+                <strong>Identify Trigger:</strong> What caused it? (Image,
+                stress, person?)
+              </li>
+              <li>
+                <strong>Identify Layer:</strong> Biological, Emotional, or
+                Curiosity?
+              </li>
+              <li>
+                <strong>Identify Purpose:</strong> Comfort, novelty, validation?
+              </li>
+              <li>
+                <strong>Identify Fear:</strong> What blocks it? Judgment?
+                Rejection?
+              </li>
+              <li>
+                <strong>Identify Meaning:</strong> A suppressed need? A growing
+                identity?
+              </li>
+              <li>
+                <strong>Respond:</strong> Understand it first, then act with
+                wisdom.
+              </li>
+            </ol>
+          </section>
+
+          <section id="sec7" class="content-section">
+            <h3 class="section-title">7. Shame: The Identity Killer</h3>
+            <p class="mb-6">
+              Shame is the shutdown of identity. It produces anxiety, low
+              libido, and confusion.
+            </p>
+            <div
+              class="p-6 bg-red-50 dark:bg-red-900/20 rounded-xl border-l-4 border-red-500"
+            >
+              <p class="font-bold text-red-700 dark:text-red-400 mb-2">
+                Breaking Shame:
+              </p>
+              <p>
+                Requires questioning inherited beliefs and separating biology
+                from morality. When shame dissolves, identity becomes stable.
+              </p>
+            </div>
+          </section>
+
+          <section id="sec8" class="content-section">
+            <h3 class="section-title">8. Practical Drills</h3>
+            <div class="grid gap-6 md:grid-cols-2">
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 1: Desire Mapping</h4>
+                <p class="tool-desc">
+                  Write down one desire you trust, one you judge, and one you
+                  hide.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Tool 2: Shame Removal</h4>
+                <p class="tool-desc">
+                  Identify a shame belief. Ask: "Did I choose this, or was it
+                  inherited?"
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="summary" class="content-section summary-section">
+            <h3 class="section-title">Chapter Summary</h3>
+            <p class="text-lg">
+              Mastering this chapter means understanding that
+              <strong>Desire is Information</strong>. Identity emerges when fear
+              drops.
+            </p>
+          </section>
+
+          <nav
+            class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4"
+          >
+            <a href="chapter1.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 1</span>
+            </a>
+            <a href="chapter3.html" class="nav-button nav-button-primary">
+              <span>Chapter 3</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button id="popup-close" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+              aria-label="Chat input"
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

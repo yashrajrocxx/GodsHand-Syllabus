@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Chapter 15: Power, Responsibility & Ethical Reasoning | God's Hand
+    </title>
+    <meta
+      name="description"
+      content="Master the ethical use of power, responsibility, and moral reasoning for mature leadership."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#nature"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Nature of Power</a
+              >
+              <a
+                href="#responsibility"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Responsibility</a
+              >
+              <a
+                href="#ethical-reasoning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4-Lens Ethical Model</a
+              >
+              <a
+                href="#unhealthy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Unhealthy Power</a
+              >
+              <a
+                href="#healthy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Healthy Power</a
+              >
+              <a
+                href="#dilemmas"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Moral Dilemmas</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#nature"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Nature of Power</a
+              >
+              <a
+                href="#responsibility"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Responsibility</a
+              >
+              <a
+                href="#ethical-reasoning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4-Lens Ethical Model</a
+              >
+              <a
+                href="#unhealthy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Unhealthy Power</a
+              >
+              <a
+                href="#healthy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Healthy Power</a
+              >
+              <a
+                href="#dilemmas"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Moral Dilemmas</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-amber-600 to-orange-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 15</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Power, Responsibility & Ethical Reasoning
+              </h1>
+              <p class="text-xl text-amber-50">
+                Master the ethical use of power through responsibility, wisdom,
+                and moral clarity
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-2">
+                    Power is not domination, aggression, or control.
+                  </p>
+                  <p class="text-amber-600 dark:text-amber-400 font-bold">
+                    Power is the ability to influence outcomes, shape
+                    environments, and create or prevent impact.
+                  </p>
+                </div>
+
+                <div class="tool-card mt-6 border-red-200 dark:border-red-800">
+                  <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                    Power becomes dangerous when combined with:
+                  </h3>
+                  <div class="grid md:grid-cols-2 gap-2 text-sm">
+                    <div>• Insecurity</div>
+                    <div>• Ego</div>
+                    <div>• Fear</div>
+                    <div>• Impulsiveness</div>
+                    <div class="md:col-span-2">• Immaturity</div>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <p class="font-bold">
+                    This chapter gives you a complete ethical model of power,
+                    built for stability, clarity, and responsibility.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 1: Nature of Power -->
+              <section id="nature" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — The Real Nature of Power
+                </h2>
+                <p class="info-text">Power comes in many forms:</p>
+
+                <div class="space-y-4 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Knowledge Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Information and expertise.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Psychological Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Calmness, confidence, emotional control.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Social Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Reputation, networks, alliances.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Economic Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Resources, financial stability.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Moral Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Integrity, principles.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-amber-600 dark:text-amber-400 mb-2"
+                    >
+                      Structural Power
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Authority given by a role or system.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold mb-2">Power is not good or bad.</p>
+                  <p class="font-bold text-amber-600 dark:text-amber-400">
+                    Its use determines morality.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: Responsibility -->
+              <section id="responsibility" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — Responsibility: The Foundation of Ethical Power
+                </h2>
+                <div class="tool-card">
+                  <p class="font-bold mb-2">Responsibility =</p>
+                  <p class="text-sm">
+                    the willingness to own consequences, actions, and results.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-3">This includes:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• Owning mistakes</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Managing emotions</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Correcting harm</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Thinking long-term</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Protecting others</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Staying accountable</p>
+                    </div>
+                    <div class="tool-card md:col-span-2">
+                      <p class="text-sm">• Making hard decisions when needed</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-red-600 dark:text-red-400">
+                    Without responsibility, power becomes destructive.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 3: Ethical Reasoning -->
+              <section id="ethical-reasoning" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — Ethical Reasoning: The 4-Lens Model
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold">
+                    Every decision must be inspected through four lenses:
+                  </p>
+                </div>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Lens 1 — Intentions</h3>
+                      <p class="mechanism-description mb-2">
+                        Why am I doing this?
+                      </p>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Selfish? Fear-based? Compassionate? Logical?
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Lens 2 — Consequences</h3>
+                      <p class="mechanism-description">
+                        What will this cause—in the short and long term?
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Lens 3 — Principles</h3>
+                      <p class="mechanism-description mb-2">
+                        Does this match my values?
+                      </p>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Does this protect dignity?
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Lens 4 — Context</h3>
+                      <p class="mechanism-description mb-2">
+                        What limitations or external conditions matter?
+                      </p>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Is this the right time? Right method?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-amber-600 dark:text-amber-400">
+                    Balancing all four creates wisdom.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 4: Unhealthy Power -->
+              <section id="unhealthy" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — The Five Forms of Unhealthy Power
+                </h2>
+                <p class="info-text">
+                  Understanding these helps you avoid falling into them.
+                </p>
+
+                <div class="space-y-4 mt-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      1. Coercion
+                    </h3>
+                    <p class="text-sm">
+                      Using fear, intimidation, or pressure.
+                    </p>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      2. Manipulation
+                    </h3>
+                    <p class="text-sm">Deception disguised as care.</p>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      3. Exploitation
+                    </h3>
+                    <p class="text-sm">Using others' weaknesses for gain.</p>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      4. Emotional Control
+                    </h3>
+                    <p class="text-sm">Triggering guilt, shame, or fear.</p>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      5. Moral Hypocrisy
+                    </h3>
+                    <p class="text-sm">
+                      Justifying wrong actions behind moral claims.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-red-600 dark:text-red-400">
+                    Unhealthy power destroys trust and damages the self.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 5: Healthy Power -->
+              <section id="healthy" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — The Five Forms of Healthy Power
+                </h2>
+
+                <div class="space-y-4">
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      1. Protective Power
+                    </h3>
+                    <p class="text-sm">
+                      You safeguard others and environments.
+                    </p>
+                  </div>
+
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      2. Constructive Power
+                    </h3>
+                    <p class="text-sm">
+                      You build systems, growth, and opportunities.
+                    </p>
+                  </div>
+
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      3. Inspirational Power
+                    </h3>
+                    <p class="text-sm">Your example motivates others.</p>
+                  </div>
+
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      4. Insightful Power
+                    </h3>
+                    <p class="text-sm">You see what others cannot.</p>
+                  </div>
+
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      5. Servant Power
+                    </h3>
+                    <p class="text-sm">
+                      You lead by supporting the growth of others.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-amber-600 dark:text-amber-400">
+                    This is the kind of power that builds legacies.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 6: Moral Dilemmas -->
+              <section id="dilemmas" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — Working with Moral Dilemmas
+                </h2>
+                <div class="info-box">
+                  <h3 class="font-bold mb-3">Ethical dilemmas happen when:</h3>
+                  <ul class="space-y-2 text-sm">
+                    <li>• Values clash</li>
+                    <li>• Outcomes conflict</li>
+                    <li>• Harm exists in both options</li>
+                    <li>• Priorities compete</li>
+                    <li>• Loyalty challenges truth</li>
+                  </ul>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-4">To navigate them:</h3>
+                  <div class="space-y-4">
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">1</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Identify the core conflict
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">2</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Analyze with the 4-lens model
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">3</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Choose the action that protects dignity and long-term
+                          impact
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold mb-2">
+                    Ethics is rarely black and white.
+                  </p>
+                  <p class="font-bold text-amber-600 dark:text-amber-400">
+                    It is a dynamic balancing act.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 7: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 7 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 1: Power Mapping</h3>
+                    <p class="text-sm mb-2">
+                      List areas of your life where you hold power.
+                    </p>
+                    <p class="text-sm">Identify how ethically you use it.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 2: Responsibility Expansion
+                    </h3>
+                    <p class="text-sm">
+                      Choose one area where you can take more responsibility
+                      starting today.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 3: Ethical Scenario Analysis
+                    </h3>
+                    <p class="text-sm mb-2">Write one real dilemma.</p>
+                    <p class="text-sm">Analyze it using all four lenses.</p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="space-y-4">
+                  <div class="highlight-box">
+                    <p class="font-bold">
+                      Power must be guided by responsibility.
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold">
+                      Responsibility must be guided by ethics.
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold">
+                      Ethics must be guided by clarity and compassion.
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold text-amber-600 dark:text-amber-400">
+                      This is the foundation of mature adulthood.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter14.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 14</span>
+            </a>
+            <a href="chapter16.html" class="nav-button nav-button-primary">
+              <span>Chapter 16</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

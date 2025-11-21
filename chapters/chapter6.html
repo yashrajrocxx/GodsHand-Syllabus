@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 6: Human Interaction & Attachment | God's Hand</title>
+    <meta
+      name="description"
+      content="Understand attachment styles, connection patterns, and the psychology of human relationships."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <nav
+            class="sticky top-24 bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700"
+          >
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4"
+            >
+              Contents
+            </h3>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li><a href="#sec1" class="nav-link">Need for Connection</a></li>
+              <li><a href="#sec2" class="nav-link">Attachment System</a></li>
+              <li><a href="#sec3" class="nav-link">How Attachment Forms</a></li>
+              <li>
+                <a href="#sec4" class="nav-link">Social Nervous System</a>
+              </li>
+              <li><a href="#sec5" class="nav-link">Emotional Needs</a></li>
+              <li>
+                <a href="#sec6" class="nav-link">Psychology of Connection</a>
+              </li>
+              <li><a href="#sec7" class="nav-link">Behavior Patterns</a></li>
+              <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+              <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+              <li><a href="#sec10" class="nav-link">7-Day Program</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="flex-1 min-w-0">
+          <div class="mb-8 text-center lg:text-left">
+            <div
+              class="inline-block mb-3 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+            >
+              <span
+                class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+                >Chapter 06</span
+              >
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            >
+              Human Interaction, Connection & Attachment
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+              Master the psychology of relationships and understand how humans
+              connect
+            </p>
+          </div>
+
+          <details
+            class="lg:hidden mb-8 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700"
+          >
+            <summary
+              class="px-6 py-4 cursor-pointer font-bold text-blue-600 dark:text-blue-400 flex justify-between items-center"
+            >
+              <span>Table of Contents</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <nav
+              class="px-6 pb-4 border-t border-gray-200 dark:border-slate-700"
+            >
+              <ul class="space-y-1 mt-4">
+                <li><a href="#intro" class="nav-link">Introduction</a></li>
+                <li>
+                  <a href="#sec1" class="nav-link">Need for Connection</a>
+                </li>
+                <li><a href="#sec2" class="nav-link">Attachment System</a></li>
+                <li>
+                  <a href="#sec3" class="nav-link">How Attachment Forms</a>
+                </li>
+                <li>
+                  <a href="#sec4" class="nav-link">Social Nervous System</a>
+                </li>
+                <li><a href="#sec5" class="nav-link">Emotional Needs</a></li>
+                <li>
+                  <a href="#sec6" class="nav-link">Psychology of Connection</a>
+                </li>
+                <li><a href="#sec7" class="nav-link">Behavior Patterns</a></li>
+                <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+                <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+                <li><a href="#sec10" class="nav-link">7-Day Program</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+              </ul>
+            </nav>
+          </details>
+
+          <section id="intro" class="content-section">
+            <h3 class="section-title">Introduction</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              Human relationships are not random. They follow predictable
+              patterns controlled by:
+            </p>
+            <div class="highlight-box mb-6">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Attachment systems</li>
+                <li>Childhood conditioning</li>
+                <li>Emotional wiring</li>
+                <li>Nervous system patterns</li>
+                <li>Belief structures</li>
+                <li>Past wounds</li>
+                <li>Safety and belonging needs</li>
+              </ul>
+            </div>
+            <p class="mb-6">
+              Most misunderstandings in life arise because people don't
+              understand how humans connect.
+            </p>
+            <div class="info-box">
+              <p class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                This chapter teaches you:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li>How attachment works</li>
+                <li>Why people behave the way they do</li>
+                <li>How emotional safety shapes personality</li>
+                <li>The dynamics of connection</li>
+                <li>How trauma influences relationships</li>
+                <li>How to understand human behavior accurately</li>
+              </ul>
+            </div>
+            <p class="mt-6 text-lg font-semibold text-center">
+              You cannot understand yourself without understanding how humans
+              relate.
+            </p>
+          </section>
+
+          <section id="sec1" class="content-section">
+            <h3 class="section-title">1. The Human Need for Connection</h3>
+            <p class="mb-6">
+              Connection is not optional. Humans are wired for:
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <p class="font-semibold text-blue-600 dark:text-blue-400">
+                  Bonding
+                </p>
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <p class="font-semibold text-blue-600 dark:text-blue-400">
+                  Support
+                </p>
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <p class="font-semibold text-blue-600 dark:text-blue-400">
+                  Recognition
+                </p>
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <p class="font-semibold text-blue-600 dark:text-blue-400">
+                  Emotional Reciprocity
+                </p>
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 text-center"
+              >
+                <p class="font-semibold text-blue-600 dark:text-blue-400">
+                  Social Understanding
+                </p>
+              </div>
+            </div>
+            <p class="mb-4">Connection shapes:</p>
+            <ul class="list-disc pl-5 space-y-1 mb-6">
+              <li>Confidence</li>
+              <li>Stability</li>
+              <li>Emotional health</li>
+              <li>Identity</li>
+              <li>Behavior</li>
+              <li>Decision-making</li>
+            </ul>
+            <p class="font-semibold text-center">
+              Every relationship follows patterns rooted in childhood.
+            </p>
+          </section>
+
+          <section id="sec2" class="content-section">
+            <h3 class="section-title">2. The Attachment System</h3>
+            <p class="mb-6">
+              Attachment determines how you love, express affection, react to
+              conflict, handle distance, and whether you trust easily.
+            </p>
+            <div class="space-y-4">
+              <div class="info-box">
+                <h4 class="font-bold text-green-600 dark:text-green-400 mb-2">
+                  1. Secure Attachment
+                </h4>
+                <p class="text-sm mb-2">
+                  <strong>Characteristics:</strong> Comfort with intimacy, good
+                  communication, stable emotional responses, trust is natural,
+                  balanced independence.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  ✓ This is the healthiest style.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-yellow-600 dark:text-yellow-400 mb-2">
+                  2. Anxious Attachment
+                </h4>
+                <p class="text-sm mb-2">
+                  <strong>Characteristics:</strong> Fear of losing people,
+                  overthinking, need for reassurance, emotional intensity,
+                  hypervigilance.
+                </p>
+                <p class="text-xs italic">
+                  These individuals seek closeness at any cost.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-purple-600 dark:text-purple-400 mb-2">
+                  3. Avoidant Attachment
+                </h4>
+                <p class="text-sm mb-2">
+                  <strong>Characteristics:</strong> Emotional distance,
+                  discomfort with vulnerability, suppressed needs, fear of
+                  dependence, preference for independence.
+                </p>
+                <p class="text-xs italic">
+                  These individuals protect themselves by withdrawing.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  4. Disorganized Attachment
+                </h4>
+                <p class="text-sm mb-2">
+                  <strong>Characteristics:</strong> Mixed signals, unpredictable
+                  reactions, emotional confusion, difficulty trusting, chaotic
+                  relationship patterns.
+                </p>
+                <p class="text-xs italic">Usually rooted in trauma.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec3" class="content-section">
+            <h3 class="section-title">3. How Attachment Forms</h3>
+            <p class="mb-4">Attachment is shaped by:</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="mechanism-item">
+                <div class="mechanism-label">Early Childhood</div>
+                <p class="text-sm">Early childhood caregiving</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Emotional Safety</div>
+                <p class="text-sm">Emotional safety from parents</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Consistency</div>
+                <p class="text-sm">Consistency of attention</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Bonding Patterns</div>
+                <p class="text-sm">Bonding patterns</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Family Conflicts</div>
+                <p class="text-sm">Family conflicts</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Stability</div>
+                <p class="text-sm">Stability or chaos in home</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Availability</div>
+                <p class="text-sm">Emotional availability</p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold">
+              Your adult behavior in relationships mirrors your childhood
+              emotional environment.
+            </p>
+          </section>
+
+          <section id="sec4" class="content-section">
+            <h3 class="section-title">4. The Social Nervous System</h3>
+            <p class="mb-6">
+              Your nervous system responds during human interaction:
+            </p>
+            <div class="space-y-4">
+              <div
+                class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500"
+              >
+                <h4 class="font-bold text-green-700 dark:text-green-400 mb-2">
+                  1. Safety Response (Ventral Vagal)
+                </h4>
+                <p class="text-sm">Calm, open, social, expressive, confident</p>
+              </div>
+              <div
+                class="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg border-l-4 border-orange-500"
+              >
+                <h4 class="font-bold text-orange-700 dark:text-orange-400 mb-2">
+                  2. Threat Response (Sympathetic)
+                </h4>
+                <p class="text-sm">Defensive, angry, anxious, reactive</p>
+              </div>
+              <div
+                class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-gray-500"
+              >
+                <h4 class="font-bold text-gray-700 dark:text-gray-400 mb-2">
+                  3. Shutdown Response (Dorsal Vagal)
+                </h4>
+                <p class="text-sm">
+                  Numb, detached, avoidant, disinterested, withdrawn
+                </p>
+              </div>
+            </div>
+            <p class="mt-4 text-center font-semibold">
+              Relationships trigger these states regularly.
+            </p>
+          </section>
+
+          <section id="sec5" class="content-section">
+            <h3 class="section-title">
+              5. Emotional Needs That Drive All Relationships
+            </h3>
+            <p class="mb-4">Every human—child or adult—needs:</p>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Safety
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Acceptance
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Attention
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Affection
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Understanding
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Autonomy
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Consistency
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center"
+              >
+                Emotional Presence
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold">
+              If any of these are missing, relationships become unstable.
+            </p>
+          </section>
+
+          <section id="sec6" class="content-section">
+            <h3 class="section-title">6. The Psychology of Connection</h3>
+            <p class="mb-6">Connections form through:</p>
+            <div class="space-y-3">
+              <div class="mechanism-item">
+                <div class="mechanism-label">1. Attunement</div>
+                <p class="text-sm">Reading emotional cues correctly.</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">2. Reciprocity</div>
+                <p class="text-sm">Balanced energy exchange.</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">3. Vulnerability</div>
+                <p class="text-sm">Open communication, honesty, expression.</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">4. Trust</div>
+                <p class="text-sm">Predictability and emotional safety.</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">5. Shared Understanding</div>
+                <p class="text-sm">Feeling "seen" and understood.</p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold">
+              When these elements exist, connection becomes effortless.
+            </p>
+          </section>
+
+          <section id="sec7" class="content-section">
+            <h3 class="section-title">7. Common Human Behavior Patterns</h3>
+            <p class="mb-4">People behave in predictable ways:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Anxious people <strong>chase</strong></li>
+              <li>Avoidant people <strong>withdraw</strong></li>
+              <li>Secure people <strong>communicate</strong></li>
+              <li>Wounded people <strong>trigger others' wounds</strong></li>
+              <li>Unstable people <strong>misinterpret</strong></li>
+              <li>Ashamed people <strong>hide</strong></li>
+              <li>Lonely people <strong>attach quickly</strong></li>
+              <li>Suppressed people become <strong>reactive</strong></li>
+            </ul>
+            <p class="mt-6 text-center font-semibold text-lg">
+              Understanding these patterns makes human behavior predictable.
+            </p>
+          </section>
+
+          <section id="sec8" class="content-section">
+            <h3 class="section-title">8. Practical Drills</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 1: Attachment Identification</h4>
+                <p class="tool-desc">
+                  Write how you behave in relationships: in conflict, in
+                  closeness, in distance, with emotions. Identify your
+                  attachment style.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 2: Safety Mapping</h4>
+                <p class="tool-desc">
+                  Write which behaviors increase or decrease your sense of
+                  safety.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 3: Nervous System Tracking</h4>
+                <p class="tool-desc">
+                  Track emotional states during interactions: safe, threatened,
+                  shut down. This creates relational awareness.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec9" class="content-section">
+            <h3 class="section-title">9. Wisdom Questions</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>What connection patterns repeat in my life?</li>
+              <li>What attachment wounds still affect me?</li>
+              <li>How does my nervous system react in relationships?</li>
+              <li>What do I need to feel emotionally safe?</li>
+            </ul>
+          </section>
+
+          <section id="sec10" class="content-section">
+            <h3 class="section-title">10. 7-Day Connection Mastery Program</h3>
+            <div class="grid gap-3">
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 1:</span
+                >
+                Observe attachment
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 2:</span
+                >
+                Build emotional safety
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 3:</span
+                >
+                Improve attunement
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 4:</span
+                >
+                Safe vulnerability
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 5:</span
+                >
+                Nervous system regulation
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 6:</span
+                >
+                Strengthen reciprocity
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 7:</span
+                >
+                Weekly reflection
+              </div>
+            </div>
+          </section>
+
+          <section id="summary" class="content-section summary-section">
+            <h3 class="section-title">Chapter Summary</h3>
+            <p class="text-lg mb-4">This chapter builds:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Relational awareness</li>
+              <li>Emotional intelligence</li>
+              <li>Attachment understanding</li>
+              <li>Predictable models of human behavior</li>
+              <li>Empathy and clarity</li>
+            </ul>
+          </section>
+
+          <nav
+            class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4"
+          >
+            <a href="chapter5.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 5</span>
+            </a>
+            <a href="chapter7.html" class="nav-button nav-button-primary">
+              <span>Chapter 7</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button id="popup-close" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+              aria-label="Chat input"
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

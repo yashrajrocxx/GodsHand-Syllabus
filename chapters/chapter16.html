@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Chapter 16: Meaning, Purpose & Personal Philosophy | God's Hand
+    </title>
+    <meta
+      name="description"
+      content="Build deep meaning, discover purpose, and construct your personal philosophy for a life worth living."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#meaning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Meaning Is</a
+              >
+              <a
+                href="#purpose"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Three Forms of Purpose</a
+              >
+              <a
+                href="#philosophy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Personal Philosophy</a
+              >
+              <a
+                href="#components"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Core Components</a
+              >
+              <a
+                href="#create-meaning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Create Meaningful Life</a
+              >
+              <a
+                href="#story"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Life as a Story</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#meaning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Meaning Is</a
+              >
+              <a
+                href="#purpose"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Three Forms of Purpose</a
+              >
+              <a
+                href="#philosophy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Personal Philosophy</a
+              >
+              <a
+                href="#components"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Core Components</a
+              >
+              <a
+                href="#create-meaning"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Create Meaningful Life</a
+              >
+              <a
+                href="#story"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Life as a Story</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-purple-600 to-indigo-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 16</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Meaning, Purpose & Personal Philosophy
+              </h1>
+              <p class="text-xl text-purple-50">
+                Build deep meaning, discover purpose, and construct your
+                philosophy for a life worth living
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="space-y-3">
+                  <div class="highlight-box">
+                    <p class="font-bold">Meaning gives depth to experience.</p>
+                  </div>
+                  <div class="highlight-box">
+                    <p class="font-bold">Purpose gives direction to life.</p>
+                  </div>
+                  <div class="highlight-box">
+                    <p class="font-bold">
+                      Philosophy gives structure to identity.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="tool-card mt-6 border-red-200 dark:border-red-800">
+                  <ul class="space-y-2 text-sm">
+                    <li class="font-semibold text-red-600 dark:text-red-400">
+                      Without meaning, life feels empty.
+                    </li>
+                    <li class="font-semibold text-red-600 dark:text-red-400">
+                      Without purpose, actions feel random.
+                    </li>
+                    <li class="font-semibold text-red-600 dark:text-red-400">
+                      Without philosophy, the mind becomes unstable.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">
+                    This chapter teaches you how to:
+                  </h3>
+                  <ul class="space-y-2">
+                    <li>✓ Build meaning from within</li>
+                    <li>✓ Construct a personal purpose</li>
+                    <li>✓ Develop your own philosophy</li>
+                    <li>✓ Align life with internal values</li>
+                    <li>✓ Create psychological clarity</li>
+                    <li>✓ Choose a direction you truly believe in</li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- Section 1: What Meaning Is -->
+              <section id="meaning" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Meaning Actually Is
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold">
+                    Meaning is created when three forces align:
+                  </p>
+                </div>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 text-lg mb-3"
+                    >
+                      1. Connection
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Feeling part of something bigger:
+                    </p>
+                    <div
+                      class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <div>• Relationships</div>
+                      <div>• Community</div>
+                      <div>• Nature</div>
+                      <div>• Higher ideals</div>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 text-lg mb-3"
+                    >
+                      2. Contribution
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Feeling that your actions benefit something:
+                    </p>
+                    <div
+                      class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <div>• A task</div>
+                      <div>• A person</div>
+                      <div>• Society</div>
+                      <div>• Your future self</div>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 text-lg mb-3"
+                    >
+                      3. Coherence
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Feeling that your life story makes sense:
+                    </p>
+                    <ul
+                      class="space-y-1 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• Your past has taught you</li>
+                      <li>• Your present challenges prepare you</li>
+                      <li>• Your future is intentionally shaped</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold mb-2">Meaning is not found.</p>
+                  <p class="font-bold text-purple-600 dark:text-purple-400">
+                    Meaning is constructed.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: Purpose -->
+              <section id="purpose" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The Three Forms of Purpose
+                </h2>
+                <p class="info-text">Purpose is multi-layered.</p>
+
+                <div class="space-y-4 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Personal Purpose</h3>
+                      <p class="mechanism-description">
+                        What you want to learn, create, or become.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Relational Purpose</h3>
+                      <p class="mechanism-description">
+                        How you support or impact others.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Collective Purpose</h3>
+                      <p class="mechanism-description">
+                        How you contribute to the world, society, or future
+                        generations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-purple-600 dark:text-purple-400">
+                    A fulfilling life integrates all three.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 3: Philosophy -->
+              <section id="philosophy" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — Building a Personal Philosophy
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold mb-2">A philosophy is not academic.</p>
+                  <p>It is the set of principles that anchors your identity.</p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-4">Your philosophy must answer:</h3>
+                  <div class="space-y-3">
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        What do I believe about life?
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        What values matter more than comfort?
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        What kind of person do I want to become?
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        How do I define a good life?
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        How should I act in difficult situations?
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        What is worth suffering for?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-purple-600 dark:text-purple-400">
+                    Your philosophy becomes your internal law.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 4: Components -->
+              <section id="components" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — The 5 Core Components of Personal Meaning
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      1. Values
+                    </h3>
+                    <p class="text-sm mb-2">Your core priorities:</p>
+                    <div
+                      class="grid grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <div>• Honesty</div>
+                      <div>• Growth</div>
+                      <div>• Freedom</div>
+                      <div>• Integrity</div>
+                      <div>• Love</div>
+                      <div>• Discipline</div>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      2. Identity
+                    </h3>
+                    <p class="text-sm">Who you choose to be.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      3. Vision
+                    </h3>
+                    <p class="text-sm">
+                      What you want your future to look like.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      4. Contribution
+                    </h3>
+                    <p class="text-sm">How you wish to impact others.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      5. Alignment
+                    </h3>
+                    <p class="text-sm">
+                      Consistency between beliefs, words, and actions.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-red-600 dark:text-red-400">
+                    Meaning collapses without alignment.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 5: Create Meaningful Life -->
+              <section id="create-meaning" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — How to Create a Meaningful Life
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">1. Discover your values</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Values = emotional compass.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">2. Align your actions</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Your actions reveal your true philosophy.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      3. Choose a direction, not a destination
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Purpose evolves over time.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">4. Build competence</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Meaning grows when you become capable.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">5. Create something</h3>
+                    <p class="text-sm mb-2">
+                      Projects, relationships, knowledge, solutions, art.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-purple-600 dark:text-purple-400"
+                    >
+                      Meaning is built through creation.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 6: Life as Story -->
+              <section id="story" class="content-section">
+                <h2 class="section-title">Section 6 — Life as a Story</h2>
+                <div class="info-box">
+                  <p class="font-bold mb-4">
+                    Your life gains meaning when you understand it as a story:
+                  </p>
+                  <div class="space-y-3">
+                    <div class="tool-card">
+                      <p class="text-sm">
+                        <span class="font-bold">Your past</span> = lessons.
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">
+                        <span class="font-bold">Your present</span> =
+                        transformation.
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">
+                        <span class="font-bold">Your future</span> = vision.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-purple-600 dark:text-purple-400">
+                    When you integrate the story, you gain coherence.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 7: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 7 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 1: Value Extraction</h3>
+                    <ul class="text-sm space-y-1">
+                      <li>• Write 10 things that matter deeply to you</li>
+                      <li>• Reduce to 5</li>
+                      <li>• Reduce to 3</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 2: Purpose Reflection</h3>
+                    <p class="text-sm">Write 1 page answering:</p>
+                    <p class="text-sm font-semibold italic mt-2">
+                      "What activities make me feel most alive?"
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 3: Philosophy Statement
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Write your philosophy in 5–10 sentences.
+                    </p>
+                    <p
+                      class="text-sm font-bold text-purple-600 dark:text-purple-400"
+                    >
+                      This becomes your life manual.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="space-y-4">
+                  <div class="highlight-box">
+                    <p class="font-bold">Meaning =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      connection + contribution + coherence
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold">Purpose =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      evolving direction
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold">Philosophy =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      your internal compass
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold text-purple-600 dark:text-purple-400">
+                      This chapter helps you build a life you are proud to live.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter15.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 15</span>
+            </a>
+            <a href="chapter17.html" class="nav-button nav-button-primary">
+              <span>Chapter 17</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

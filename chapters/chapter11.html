@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 11: Identity Mastery & Persona Crafting | God's Hand</title>
+    <meta
+      name="description"
+      content="Master identity construction, persona crafting, and inner integration for psychological freedom."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#identity-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Identity Actually Is</a
+              >
+              <a
+                href="#three-layers"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Layers of Identity</a
+              >
+              <a
+                href="#shadow-self"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Shadow Self</a
+              >
+              <a
+                href="#persona-crafting"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Persona Crafting</a
+              >
+              <a
+                href="#reconstruction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Identity Reconstruction</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#identity-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Identity Actually Is</a
+              >
+              <a
+                href="#three-layers"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Layers of Identity</a
+              >
+              <a
+                href="#shadow-self"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Shadow Self</a
+              >
+              <a
+                href="#persona-crafting"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Persona Crafting</a
+              >
+              <a
+                href="#reconstruction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Identity Reconstruction</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-violet-600 to-fuchsia-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 11</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Identity Mastery, Persona Crafting & Inner Integration
+              </h1>
+              <p class="text-xl text-violet-50">
+                Consciously design your identity and integrate your inner self
+                for psychological freedom
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold">Identity is not who you are.</p>
+                  <p class="text-lg font-bold">
+                    Identity is who you believe yourself to be.
+                  </p>
+                </div>
+
+                <p class="info-text mt-6">
+                  Most people never consciously shape their identity. They
+                  simply inherit:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                  <div class="tool-card">
+                    <p class="text-sm">• Family expectations</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Cultural beliefs</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Childhood roles</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Survival patterns</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Social masks</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Old emotional wounds</p>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">
+                    This Chapter Teaches You How To:
+                  </h3>
+                  <ul class="space-y-2">
+                    <li>→ Build your identity intentionally</li>
+                    <li>→ Craft a powerful persona</li>
+                    <li>→ Integrate your inner contradictions</li>
+                    <li>→ Release outdated roles</li>
+                    <li>→ Develop a stable self-image</li>
+                    <li>→ Align your identity with your purpose</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>Identity mastery is psychological freedom.</strong>
+                </p>
+              </section>
+
+              <!-- Section 1: What Identity Is -->
+              <section id="identity-definition" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Identity Actually Is
+                </h2>
+                <p class="info-text">Identity is formed from:</p>
+
+                <div class="space-y-4 mt-4">
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">Beliefs about yourself</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      "I am capable" vs "I am not good enough"
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">
+                      Memories you use to define yourself
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Past experiences that shape self-perception
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">Roles you repeat</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Caretaker, achiever, rebel, victim, hero
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">Stories you tell yourself</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Internal narratives that become self-fulfilling
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">Emotional patterns</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Recurring emotional responses
+                    </p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="font-bold mb-1">Social feedback loops</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      How others respond to you reinforces identity
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold mb-3">
+                    Identity is not fixed; it is adaptive.
+                  </p>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <p class="font-bold text-green-600 dark:text-green-400">
+                        Strong Identity =
+                      </p>
+                      <p class="text-sm">Stability + Clarity</p>
+                    </div>
+                    <div>
+                      <p class="font-bold text-red-600 dark:text-red-400">
+                        Weak Identity =
+                      </p>
+                      <p class="text-sm">Confusion + Fluctuation</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 2: Three Layers -->
+              <section id="three-layers" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The Three Layers of Identity
+                </h2>
+                <p class="info-text">Identity has 3 layers:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Assigned Identity</h3>
+                      <p class="mechanism-description mb-3">Given to you by:</p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                      >
+                        <li>• Parents</li>
+                        <li>• Society</li>
+                        <li>• Culture</li>
+                        <li>• Early environment</li>
+                      </ul>
+                      <p
+                        class="mt-3 text-sm font-bold text-red-600 dark:text-red-400"
+                      >
+                        Not chosen.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Performed Identity</h3>
+                      <p class="mechanism-description mb-3">
+                        Adaptive identities you use to:
+                      </p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                      >
+                        <li>• Fit in</li>
+                        <li>• Stay safe</li>
+                        <li>• Avoid rejection</li>
+                        <li>• Gain approval</li>
+                      </ul>
+                      <p
+                        class="mt-3 text-sm font-bold text-violet-600 dark:text-violet-400"
+                      >
+                        These are masks you learned to wear.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Authentic Identity</h3>
+                      <p class="mechanism-description mb-3">
+                        Your true self emerges only when:
+                      </p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                      >
+                        <li>• Shame dissolves</li>
+                        <li>• Fear reduces</li>
+                        <li>• Curiosity activates</li>
+                        <li>• Self-awareness increases</li>
+                        <li>• Emotional wounds are addressed</li>
+                      </ul>
+                      <p
+                        class="mt-3 text-sm font-bold text-green-600 dark:text-green-400"
+                      >
+                        Authenticity = identity without fear.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 3: Shadow Self -->
+              <section id="shadow-self" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The Role of Shadow Self
+                </h2>
+                <p class="info-text">Every person has:</p>
+
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                  <div class="tool-card">
+                    <p class="text-sm">• Hidden desires</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Suppressed emotions</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Disowned traits</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Rejected impulses</p>
+                  </div>
+                  <div class="tool-card">
+                    <p class="text-sm">• Unexpressed strengths</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-lg mb-2">This is your shadow.</p>
+                  <p class="mb-4">Your shadow is not negative.</p>
+                  <p>
+                    It is simply the part of you you never allowed to exist
+                    openly.
+                  </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div class="tool-card">
+                    <p
+                      class="font-bold text-green-600 dark:text-green-400 mb-2"
+                    >
+                      Integration
+                    </p>
+                    <p class="text-sm">Gives psychological strength</p>
+                  </div>
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <p class="font-bold text-red-600 dark:text-red-400 mb-2">
+                      Suppression
+                    </p>
+                    <p class="text-sm">Creates chaos</p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 4: Persona Crafting -->
+              <section id="persona-crafting" class="content-section">
+                <h2 class="section-title">Section 4 — Persona Crafting</h2>
+                <div class="highlight-box">
+                  <p class="font-bold text-lg">
+                    A persona is a conscious identity you design for the
+                    external world.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold text-lg mb-4">
+                    Persona Has 4 Components:
+                  </h3>
+                  <div class="space-y-4">
+                    <div class="tool-card">
+                      <h4
+                        class="font-bold text-violet-600 dark:text-violet-400 mb-2"
+                      >
+                        1. Presence
+                      </h4>
+                      <p class="text-sm">How you carry yourself</p>
+                    </div>
+                    <div class="tool-card">
+                      <h4
+                        class="font-bold text-violet-600 dark:text-violet-400 mb-2"
+                      >
+                        2. Expression
+                      </h4>
+                      <p class="text-sm">How you communicate</p>
+                    </div>
+                    <div class="tool-card">
+                      <h4
+                        class="font-bold text-violet-600 dark:text-violet-400 mb-2"
+                      >
+                        3. Values
+                      </h4>
+                      <p class="text-sm">What you stand for</p>
+                    </div>
+                    <div class="tool-card">
+                      <h4
+                        class="font-bold text-violet-600 dark:text-violet-400 mb-2"
+                      >
+                        4. Behavior
+                      </h4>
+                      <p class="text-sm">How you act consistently</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">Your Persona Must Be:</h3>
+                  <ul class="space-y-2">
+                    <li>✓ Intentional</li>
+                    <li>✓ Aligned with your authentic identity</li>
+                    <li>✓ Flexible</li>
+                    <li>✓ Sustainable</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>Persona is the armor, not the self.</strong>
+                </p>
+              </section>
+
+              <!-- Section 5: Reconstruction -->
+              <section id="reconstruction" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — Identity Reconstruction Framework
+                </h2>
+                <p class="info-text">
+                  Use the 6-step identity transformation process:
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Awareness</h3>
+                      <p class="mechanism-description">
+                        Identify your current identities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Dissolution</h3>
+                      <p class="mechanism-description">
+                        Let go of outdated roles.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Vision</h3>
+                      <p class="mechanism-description">
+                        Define who you want to become.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Alignment</h3>
+                      <p class="mechanism-description">
+                        Align daily behaviors with the new identity.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Practice</h3>
+                      <p class="mechanism-description">
+                        Repetition builds identity.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Integration</h3>
+                      <p class="mechanism-description">
+                        Merge authentic self + crafted persona.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="text-lg font-bold">
+                    Identity is built through consistency, not motivation.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 6: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 6 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 1: Identity Inventory</h3>
+                    <p class="text-sm mb-2">List your roles.</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Identify which ones no longer serve you.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 2: Persona Blueprint</h3>
+                    <p class="text-sm">Design how you want to be perceived.</p>
+                    <div
+                      class="mt-3 space-y-1 text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      <p>• What energy do you project?</p>
+                      <p>• What values do you embody?</p>
+                      <p>• How do you communicate?</p>
+                      <p>• What behaviors define you?</p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 3: Shadow Integration</h3>
+                    <p class="text-sm mb-2">Write traits you suppress.</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Integrate them safely through conscious expression.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="highlight-box">
+                  <ul class="space-y-3">
+                    <li>
+                      <strong>Identity mastery</strong> = Intentional
+                      self-creation
+                    </li>
+                    <li>
+                      <strong>Persona crafting</strong> = Conscious external
+                      expression
+                    </li>
+                    <li><strong>Integration</strong> = Internal peace</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  Your identity is not destiny. It is a tool you can redesign at
+                  any moment.
+                </p>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter10.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 10</span>
+            </a>
+            <a href="chapter12.html" class="nav-button nav-button-primary">
+              <span>Chapter 12</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

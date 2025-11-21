@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 8: Creativity & Pattern-Breaking | God's Hand</title>
+    <meta
+      name="description"
+      content="Master creativity through pattern recognition, idea synthesis, and cross-domain thinking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#creativity-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Creativity Actually Is</a
+              >
+              <a
+                href="#thinking-modes"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Modes of Creative Thinking</a
+              >
+              <a
+                href="#brain-mechanics"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >How the Brain Creates Ideas</a
+              >
+              <a
+                href="#creative-system"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Creative System</a
+              >
+              <a
+                href="#four-skills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4 Skills of Master-Level Creativity</a
+              >
+              <a
+                href="#mental-blocks"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Breaking Mental Blocks</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Creative Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#creativity-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Creativity Actually Is</a
+              >
+              <a
+                href="#thinking-modes"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Modes of Creative Thinking</a
+              >
+              <a
+                href="#brain-mechanics"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >How the Brain Creates Ideas</a
+              >
+              <a
+                href="#creative-system"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >The Creative System</a
+              >
+              <a
+                href="#four-skills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4 Skills of Master-Level Creativity</a
+              >
+              <a
+                href="#mental-blocks"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Breaking Mental Blocks</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Creative Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-purple-600 to-pink-500 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 8</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Creativity: Pattern-Breaking & Idea Synthesis
+              </h1>
+              <p class="text-xl text-purple-50">
+                Learn the structured cognitive process of generating original
+                ideas on command
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold mb-2">
+                    Creativity is not a talent.
+                  </p>
+                  <p class="text-lg font-bold">
+                    Creativity is a cognitive process.
+                  </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                      Most People Believe Creativity Is:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✗ Inspiration</li>
+                      <li>✗ Natural skill</li>
+                      <li>✗ A rare gift</li>
+                      <li>✗ Something artistic people have</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-3"
+                    >
+                      In Reality, Creativity Is Built From:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Pattern recognition</li>
+                      <li>✓ Synthesis of ideas</li>
+                      <li>✓ Curiosity</li>
+                      <li>✓ Mental flexibility</li>
+                      <li>✓ Questioning</li>
+                      <li>✓ Experimentation</li>
+                      <li>✓ Deep observation</li>
+                      <li>✓ Cross-domain thinking</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong
+                    >Creativity is the ability to connect unrelated ideas into
+                    new meaning.</strong
+                  >
+                </p>
+                <p
+                  class="text-lg font-bold text-purple-600 dark:text-purple-400"
+                >
+                  This chapter teaches you how to think creatively on command.
+                </p>
+              </section>
+
+              <!-- Section 1: What Creativity Is -->
+              <section id="creativity-definition" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Creativity Actually Is
+                </h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold mb-2">Creativity =</p>
+                  <p>
+                    Input Quality + Pattern Recognition + Idea Combination +
+                    Perspective Flexibility + Execution
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">Creative Thinkers:</h3>
+                  <ul class="space-y-2">
+                    <li>→ See hidden connections</li>
+                    <li>→ Challenge assumptions</li>
+                    <li>→ Reframe problems</li>
+                    <li>→ Find solutions others overlook</li>
+                    <li>→ Absorb information from many fields</li>
+                    <li>→ Combine ideas into new forms</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>Creativity is structured, not chaotic.</strong>
+                </p>
+              </section>
+
+              <!-- Section 2: Thinking Modes -->
+              <section id="thinking-modes" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The Three Modes of Creative Thinking
+                </h2>
+                <p class="info-text">Creativity works through three modes:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Divergent Thinking (Exploration)
+                      </h3>
+                      <p class="mechanism-description">
+                        Generating many possibilities.
+                      </p>
+                      <div class="mt-2">
+                        <p class="text-sm font-semibold">Example:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                          Brainstorming 30 solutions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Convergent Thinking (Reduction)
+                      </h3>
+                      <p class="mechanism-description">
+                        Choosing the best idea based on logic and constraints.
+                      </p>
+                      <div class="mt-2">
+                        <p class="text-sm font-semibold">Example:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                          Selecting the most practical solution.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Integrative Thinking (Synthesis)
+                      </h3>
+                      <p class="mechanism-description">
+                        Merging unrelated ideas into something new.
+                      </p>
+                      <div class="mt-2">
+                        <p class="text-sm font-semibold">Example:</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                          "Instagram + short-form video = TikTok"
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>Synthesis is the highest level of creativity.</strong>
+                </p>
+              </section>
+
+              <!-- Section 3: Brain Mechanics -->
+              <section id="brain-mechanics" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — How the Brain Creates Ideas
+                </h2>
+                <p class="info-text">Your brain connects ideas through:</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Association</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Analogy</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Metaphor</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Pattern Mapping</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Reframing</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Abstraction</p>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  Creative people have stronger neural integration pathways,
+                  which <strong>can be trained</strong>.
+                </p>
+              </section>
+
+              <!-- Section 4: Creative System -->
+              <section id="creative-system" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — The Creative System: Input → Processing → Output
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold">Creativity is not magic.</p>
+                  <p class="font-bold">It is a system:</p>
+                </div>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      STEP 1 — Input (Gather Fuel)
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Your creativity depends on what you absorb:
+                    </p>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                      <li>• Diverse ideas</li>
+                      <li>• Books</li>
+                      <li>• Conversations</li>
+                      <li>• Experiences</li>
+                      <li>• Knowledge</li>
+                      <li>• Contradictions</li>
+                      <li>• Cultures</li>
+                    </ul>
+                    <p
+                      class="mt-4 text-sm font-bold text-red-600 dark:text-red-400"
+                    >
+                      Poor input = poor creativity.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      STEP 2 — Processing (Pattern Recognition)
+                    </h3>
+                    <p class="text-sm mb-3">Your brain detects:</p>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Similarities</li>
+                      <li>• Contrasts</li>
+                      <li>• Structures</li>
+                      <li>• Metaphors</li>
+                      <li>• Emotional patterns</li>
+                    </ul>
+                    <p
+                      class="mt-4 text-sm font-bold text-purple-600 dark:text-purple-400"
+                    >
+                      Pattern recognition is the root of intelligence.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-purple-600 dark:text-purple-400 mb-3"
+                    >
+                      STEP 3 — Output (Synthesis)
+                    </h3>
+                    <p class="text-sm">
+                      The brain combines old information into new forms.
+                    </p>
+                    <p
+                      class="mt-4 text-sm font-bold text-purple-600 dark:text-purple-400"
+                    >
+                      All great ideas come from recombination.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 5: Four Skills -->
+              <section id="four-skills" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — The Four Skills of Master-Level Creativity
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Reframing</h3>
+                      <p class="mechanism-description">
+                        Changing the way you see a problem to reveal new
+                        solutions.
+                      </p>
+                      <div class="mt-3 space-y-2 text-sm">
+                        <div>
+                          <p class="font-semibold">Example:</p>
+                          <p class="text-gray-600 dark:text-gray-400">
+                            Instead of "How do I fix this?"
+                          </p>
+                          <p
+                            class="font-semibold text-purple-600 dark:text-purple-400"
+                          >
+                            Ask: "How do I reinvent this?"
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Cross-Domain Thinking</h3>
+                      <p class="mechanism-description">
+                        Using ideas from one field to improve another.
+                      </p>
+                      <div class="mt-3 text-sm">
+                        <p class="font-semibold mb-2">Examples:</p>
+                        <ul class="space-y-1 text-gray-600 dark:text-gray-400">
+                          <li>• Biology → Engineering</li>
+                          <li>• Psychology → Marketing</li>
+                          <li>• Physics → Philosophy</li>
+                        </ul>
+                        <p
+                          class="mt-3 font-semibold text-purple-600 dark:text-purple-400"
+                        >
+                          Great innovators are cross-disciplinary thinkers.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Constraint-Based Creativity
+                      </h3>
+                      <p class="mechanism-description">
+                        Creativity increases when limits exist.
+                      </p>
+                      <div class="mt-3 text-sm">
+                        <p class="font-semibold">Ask:</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          "What can I build with only X?"
+                        </p>
+                        <p
+                          class="mt-3 font-semibold text-purple-600 dark:text-purple-400"
+                        >
+                          Constraints force innovation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Pattern Synesthesia</h3>
+                      <p class="mechanism-description">
+                        Seeing patterns across unrelated domains.
+                      </p>
+                      <div class="mt-3 text-sm">
+                        <p class="font-semibold mb-2">Examples:</p>
+                        <ul class="space-y-1 text-gray-600 dark:text-gray-400">
+                          <li>• Relationship patterns → Business leadership</li>
+                          <li>• Music patterns → Coding structures</li>
+                          <li>• Nature patterns → Architecture</li>
+                        </ul>
+                        <p
+                          class="mt-3 font-semibold text-purple-600 dark:text-purple-400"
+                        >
+                          This skill creates genius-level insight.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 6: Mental Blocks -->
+              <section id="mental-blocks" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — How to Break Mental Blocks
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                      Mental Blocks Come From:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✗ Perfectionism</li>
+                      <li>✗ Rigid thinking</li>
+                      <li>✗ Fear of failure</li>
+                      <li>✗ Overemphasis on logic</li>
+                      <li>✗ Lack of input</li>
+                      <li>✗ Stress</li>
+                      <li>✗ Shame</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-3"
+                    >
+                      To Break Blocks:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Use divergent thinking</li>
+                      <li>✓ Reduce self-judgment</li>
+                      <li>✓ Study outside your domain</li>
+                      <li>✓ Explore curiosity without rules</li>
+                      <li>✓ Shift environments</li>
+                      <li>✓ Activate the subconscious</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 7: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — Practical Creative Drills
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 1: 25-Ideas Method</h3>
+                    <p class="text-sm mb-2">
+                      Write 25 solutions to any problem.
+                    </p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• The first 10 are obvious.</li>
+                      <li>• The last 15 are creative.</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 2: Forced Combination</h3>
+                    <p class="text-sm mb-2">
+                      Take two unrelated concepts. Force them together.
+                    </p>
+                    <div class="text-sm">
+                      <p class="font-semibold">Example:</p>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        "Education + gaming" → Gamified learning
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 3: Opposite Thinking</h3>
+                    <p class="text-sm mb-2">
+                      Find the opposite of your assumption.
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Explore that direction.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 4: Cross-Domain Input</h3>
+                    <p class="text-sm">
+                      Spend one hour studying a random field. Apply its
+                      principles to your current project.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 8: Wisdom Questions -->
+              <section id="wisdom" class="content-section">
+                <h2 class="section-title">Section 8 — Wisdom Questions</h2>
+                <div class="info-box">
+                  <ul class="space-y-3">
+                    <li>
+                      <strong>→</strong> What assumptions limit my creativity?
+                    </li>
+                    <li>
+                      <strong>→</strong> What fields inspire me even if I'm not
+                      skilled in them?
+                    </li>
+                    <li>
+                      <strong>→</strong> What patterns do I notice across
+                      unrelated areas?
+                    </li>
+                    <li>
+                      <strong>→</strong> What constraints can I use to spark
+                      innovation?
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- Section 9: 7-Day Program -->
+              <section id="program" class="content-section">
+                <h2 class="section-title">
+                  Section 9 — 7-Day Creativity Program
+                </h2>
+                <div class="space-y-3">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 1</h3>
+                      <p class="mechanism-description">25-ideas exercise</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 2</h3>
+                      <p class="mechanism-description">Reframing practice</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 3</h3>
+                      <p class="mechanism-description">Cross-domain study</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 4</h3>
+                      <p class="mechanism-description">Opposite thinking</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 5</h3>
+                      <p class="mechanism-description">Forced combinations</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 6</h3>
+                      <p class="mechanism-description">Environment shift</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 7</h3>
+                      <p class="mechanism-description">Synthesis reflection</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">Creativity is:</p>
+                  <ul class="space-y-2">
+                    <li>✓ Structured</li>
+                    <li>✓ Trainable</li>
+                    <li>✓ Cognitive</li>
+                    <li>✓ Pattern-based</li>
+                    <li>✓ Cross-disciplinary</li>
+                  </ul>
+                  <p class="mt-6 text-lg font-bold">
+                    It is the engine of innovation, problem-solving, and
+                    future-building.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter7.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 7</span>
+            </a>
+            <a href="chapter9.html" class="nav-button nav-button-primary">
+              <span>Chapter 9</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

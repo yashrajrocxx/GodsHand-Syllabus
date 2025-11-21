@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 4: Thinking Tools | God's Hand</title>
+    <meta
+      name="description"
+      content="Master logic, biases, and mental precision. Learn to think like a strategist and philosopher."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <nav
+            class="sticky top-24 bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700"
+          >
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4"
+            >
+              Contents
+            </h3>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li><a href="#sec1" class="nav-link">Clean Thinking</a></li>
+              <li><a href="#sec2" class="nav-link">Why Thinking Fails</a></li>
+              <li><a href="#sec3" class="nav-link">Four Levels</a></li>
+              <li><a href="#sec4" class="nav-link">Core Framework</a></li>
+              <li><a href="#sec5" class="nav-link">12 Cognitive Biases</a></li>
+              <li><a href="#sec6" class="nav-link">Logic Tools</a></li>
+              <li><a href="#sec7" class="nav-link">Error Correction</a></li>
+              <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+              <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+              <li><a href="#sec10" class="nav-link">7-Day Program</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="flex-1 min-w-0">
+          <div class="mb-8 text-center lg:text-left">
+            <div
+              class="inline-block mb-3 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+            >
+              <span
+                class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+                >Chapter 04</span
+              >
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            >
+              Thinking Tools: Logic, Biases & Mental Precision
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+              Master structured reasoning, eliminate biases, and build mental
+              clarity
+            </p>
+          </div>
+
+          <details
+            class="lg:hidden mb-8 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700"
+          >
+            <summary
+              class="px-6 py-4 cursor-pointer font-bold text-blue-600 dark:text-blue-400 flex justify-between items-center"
+            >
+              <span>Table of Contents</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <nav
+              class="px-6 pb-4 border-t border-gray-200 dark:border-slate-700"
+            >
+              <ul class="space-y-1 mt-4">
+                <li><a href="#intro" class="nav-link">Introduction</a></li>
+                <li><a href="#sec1" class="nav-link">Clean Thinking</a></li>
+                <li><a href="#sec2" class="nav-link">Why Thinking Fails</a></li>
+                <li><a href="#sec3" class="nav-link">Four Levels</a></li>
+                <li><a href="#sec4" class="nav-link">Core Framework</a></li>
+                <li>
+                  <a href="#sec5" class="nav-link">12 Cognitive Biases</a>
+                </li>
+                <li><a href="#sec6" class="nav-link">Logic Tools</a></li>
+                <li><a href="#sec7" class="nav-link">Error Correction</a></li>
+                <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+                <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+                <li><a href="#sec10" class="nav-link">7-Day Program</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+              </ul>
+            </nav>
+          </details>
+
+          <section id="intro" class="content-section">
+            <h3 class="section-title">Introduction</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              Humans don't suffer from lack of intelligence. They suffer from
+              <strong>lack of correct thinking tools</strong>.
+            </p>
+            <div class="highlight-box mb-6">
+              <p class="font-bold text-red-600 dark:text-red-400 mb-2">
+                Most people think with:
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Emotions instead of logic</li>
+                <li>Assumptions instead of evidence</li>
+                <li>Habits instead of analysis</li>
+                <li>Biases instead of clarity</li>
+                <li>Memory instead of reasoning</li>
+                <li>Cultural beliefs instead of truth</li>
+              </ul>
+            </div>
+            <p class="text-lg mb-4">
+              This creates unstable decisions, poor judgment, unnecessary
+              suffering, and repeated mistakes.
+            </p>
+            <div class="info-box">
+              <p class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                This chapter teaches you:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li>How to use logic in everyday life</li>
+                <li>How to detect and destroy cognitive biases</li>
+                <li>How to question beliefs intelligently</li>
+                <li>How to structure thoughts</li>
+                <li>How to separate feeling from fact</li>
+                <li>How to build clean, sharp reasoning</li>
+                <li>
+                  How to think like a scientist, strategist, and philosopher
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="sec1" class="content-section">
+            <h3 class="section-title">1. What Clean Thinking Actually Is</h3>
+            <p class="mb-6">
+              Clean thinking is: structured, calm, unbiased, evidence-oriented,
+              assumption-aware, flexible, and precise.
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  1. Awareness
+                </h4>
+                <p class="text-sm">
+                  Knowing what your mind is doing — feeling, reacting, assuming,
+                  interpreting.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  2. Structure
+                </h4>
+                <p class="text-sm">
+                  A clear method for analyzing situations, arguments, and ideas.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  3. Precision
+                </h4>
+                <p class="text-sm">
+                  Avoiding exaggeration, distortion, or vague language.
+                </p>
+              </div>
+            </div>
+            <p class="text-center text-lg font-semibold">
+              Most people think reactively. Clean thinkers think deliberately.
+            </p>
+          </section>
+
+          <section id="sec2" class="content-section">
+            <h3 class="section-title">
+              2. Why Your Thinking Isn't As Accurate As You Believe
+            </h3>
+            <p class="mb-4">
+              The human mind has built-in distortions. We don't see reality as
+              it is.
+            </p>
+            <div class="highlight-box">
+              <p class="font-bold mb-2">We see reality through filters:</p>
+              <ul class="grid grid-cols-2 gap-2 text-sm">
+                <li>• Emotion filters</li>
+                <li>• Memory filters</li>
+                <li>• Cultural filters</li>
+                <li>• Fear filters</li>
+                <li>• Bias filters</li>
+                <li>• Past pain filters</li>
+              </ul>
+            </div>
+            <p class="mt-4 italic">
+              You don't think with your brain alone. You think with your
+              history, beliefs, past pain, ego, and habitual patterns.
+            </p>
+          </section>
+
+          <section id="sec3" class="content-section">
+            <h3 class="section-title">3. The Four Levels of Thinking</h3>
+            <div class="space-y-4">
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Level 1 — Emotional Thinking
+                </h4>
+                <p class="text-sm mb-2">
+                  Fast, reactive, instinctive. Examples: anger-based
+                  conclusions, jealousy-driven interpretations, fear-driven
+                  assumptions.
+                </p>
+                <p class="text-xs font-semibold">Most people live here.</p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Level 2 — Social Thinking
+                </h4>
+                <p class="text-sm mb-2">
+                  Shaped by external pressure. "What will people think? What is
+                  normal? What is accepted?"
+                </p>
+                <p class="text-xs font-semibold">
+                  People stuck here never discover their own mind.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Level 3 — Rational Thinking
+                </h4>
+                <p class="text-sm mb-2">
+                  Based on logic, evidence, and structure. Analyzing before
+                  reacting, questioning assumptions, demanding clarity.
+                </p>
+                <p class="text-xs font-semibold">
+                  This chapter focuses on training this level.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Level 4 — Meta Thinking
+                </h4>
+                <p class="text-sm mb-2">
+                  Understanding how your own mind works. Noticing patterns,
+                  predicting reactions, identifying biases.
+                </p>
+                <p class="text-xs font-semibold">
+                  The level of strategists, philosophers, and high-clarity
+                  individuals.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec4" class="content-section">
+            <h3 class="section-title">
+              4. Core Framework: Fact → Interpretation → Emotion → Reaction
+            </h3>
+            <p class="mb-6">Reality happens in four steps:</p>
+            <div class="space-y-4">
+              <div
+                class="p-4 bg-gray-50 dark:bg-slate-800 rounded-lg border-l-4 border-blue-500"
+              >
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-1">
+                  Step 1 — Fact
+                </h4>
+                <p class="text-sm mb-2">
+                  What actually happens. Only the physical action, event, or
+                  words.
+                </p>
+                <p class="text-xs italic">
+                  Example: Someone replies after 6 hours. This is just a fact.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-gray-50 dark:bg-slate-800 rounded-lg border-l-4 border-yellow-500"
+              >
+                <h4 class="font-bold text-yellow-600 dark:text-yellow-400 mb-1">
+                  Step 2 — Interpretation
+                </h4>
+                <p class="text-sm mb-2">
+                  What your mind adds. Your meaning, assumptions, stories.
+                </p>
+                <p class="text-xs italic">
+                  Examples: "They don't care." "They're ignoring me." "They're
+                  losing interest."
+                </p>
+                <p class="text-xs font-bold mt-2">
+                  ⚠️ Interpretation ≠ reality
+                </p>
+              </div>
+              <div
+                class="p-4 bg-gray-50 dark:bg-slate-800 rounded-lg border-l-4 border-orange-500"
+              >
+                <h4 class="font-bold text-orange-600 dark:text-orange-400 mb-1">
+                  Step 3 — Emotion
+                </h4>
+                <p class="text-sm mb-2">Your reaction to the interpretation.</p>
+                <p class="text-xs italic">
+                  Examples: anxiety, anger, sadness, insecurity
+                </p>
+              </div>
+              <div
+                class="p-4 bg-gray-50 dark:bg-slate-800 rounded-lg border-l-4 border-red-500"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-1">
+                  Step 4 — Reaction
+                </h4>
+                <p class="text-sm mb-2">Your behavior shaped by emotion.</p>
+                <p class="text-xs italic">
+                  Examples: confrontation, avoidance, overthinking, insecurity
+                  spirals
+                </p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold text-lg">
+              People confuse interpretation with facts. Clean thinkers separate
+              them.
+            </p>
+          </section>
+
+          <section id="sec5" class="content-section">
+            <h3 class="section-title">
+              5. The 12 Most Important Cognitive Biases
+            </h3>
+            <p class="mb-6">
+              Below are the biases that damage thinking the most:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="tool-card">
+                <h4 class="tool-title">1. Confirmation Bias</h4>
+                <p class="tool-desc mb-2">
+                  You only look for evidence that supports what you already
+                  believe.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Actively search for evidence that disproves your
+                  belief.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">2. Anchoring Bias</h4>
+                <p class="tool-desc mb-2">
+                  The first information you receive influences everything else.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Ask "What if the first thing I learned was wrong?"
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">3. Availability Bias</h4>
+                <p class="tool-desc mb-2">
+                  You judge things based on the most recent or vivid example.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Look at long-term patterns, not isolated events.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">4. Black-and-White Thinking</h4>
+                <p class="tool-desc mb-2">
+                  Seeing everything as right/wrong, good/bad.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Train yourself to find the grey areas.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">5. Emotional Reasoning</h4>
+                <p class="tool-desc mb-2">
+                  "If I feel it strongly, it must be true."
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Separate emotion from interpretation.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">6. Attribution Error</h4>
+                <p class="tool-desc mb-2">
+                  You blame the person instead of their situation.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Ask "What external factors influenced their
+                  behavior?"
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">7. The Halo Effect</h4>
+                <p class="tool-desc mb-2">
+                  One trait influences your entire judgment.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Evaluate each trait independently.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">8. Confirmation-by-Fear</h4>
+                <p class="tool-desc mb-2">
+                  You choose the interpretation that scares you the most.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Ask "What is a neutral explanation?"
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">9. Projection</h4>
+                <p class="tool-desc mb-2">You assume others think like you.</p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Recognize emotional differences between people.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">10. Overgeneralization</h4>
+                <p class="tool-desc mb-2">One event becomes a rule.</p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Ask "Is this always true? Or just once?"
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">11. Mirror-Based Judging</h4>
+                <p class="tool-desc mb-2">
+                  You assume others' intentions from how you would behave.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Consider that people have different motives.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">12. Certainty Illusion</h4>
+                <p class="tool-desc mb-2">
+                  Believing you know more than you do.
+                </p>
+                <p class="text-xs font-bold text-green-600 dark:text-green-400">
+                  Solution: Say this more often: "I need more information."
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec6" class="content-section">
+            <h3 class="section-title">6. Logical Thinking Tools</h3>
+            <p class="mb-6">
+              These tools will form the backbone of your reasoning skill:
+            </p>
+            <div class="space-y-4">
+              <div class="mechanism-item">
+                <div class="mechanism-label">
+                  Tool 1: First Principles Thinking
+                </div>
+                <p class="text-sm">
+                  Break problems into their basic truths, then rebuild. Example:
+                  "This task is too big" → Break it into components → solve
+                  each. This removes confusion.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Tool 2: Inversion</div>
+                <p class="text-sm">
+                  Instead of asking "How do I succeed?" Ask: "How could I fail?"
+                  Preventing failure = faster progress.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Tool 3: Occam's Razor</div>
+                <p class="text-sm">
+                  The simplest explanation is usually correct. Choose clarity
+                  over complexity.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">
+                  Tool 4: Probabilistic Thinking
+                </div>
+                <p class="text-sm">
+                  Stop thinking in absolutes. Ask: "How likely is this?" This
+                  reduces emotional overreactions.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Tool 5: Second-Order Thinking</div>
+                <p class="text-sm">
+                  Think beyond the immediate consequence. Example: "You save
+                  time today but create a bigger problem tomorrow." Smart
+                  decisions consider long-term impact.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Tool 6: Steelmanning</div>
+                <p class="text-sm">
+                  Understand the STRONGEST version of the opposite view. This
+                  sharpens reasoning and reduces ego-driven thinking.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">
+                  Tool 7: The "What-Else?" Method
+                </div>
+                <p class="text-sm">
+                  Whenever your mind decides something, ask: "What else could
+                  this mean?" Instant clarity.
+                </p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">
+                  Tool 8: Neutral Observer Technique
+                </div>
+                <p class="text-sm">
+                  Detach emotionally. Analyze events like you're evaluating
+                  someone else's life. This increases objective reasoning.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec7" class="content-section">
+            <h3 class="section-title">7. The Error-Correction Loop</h3>
+            <p class="mb-4">To fix thinking errors, use this 5-step loop:</p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Identify the thought</li>
+              <li>Identify the emotion</li>
+              <li>Identify the bias</li>
+              <li>Replace with a logical alternative</li>
+              <li>Take action based on reason, not fear</li>
+            </ol>
+            <p class="mt-4 font-semibold text-center">
+              Repeat daily until habits change.
+            </p>
+          </section>
+
+          <section id="sec8" class="content-section">
+            <h3 class="section-title">8. Practical Drills</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 1: Interpretation Examination</h4>
+                <p class="tool-desc">
+                  Take one strong belief. Write three alternative explanations.
+                  This breaks mental rigidity.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 2: Bias Hunting</h4>
+                <p class="tool-desc">
+                  At the end of each day, identify: 1 emotional bias, 1
+                  assumption, 1 interpretation mistake. This builds
+                  meta-awareness.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 3: Logic Reconstruction</h4>
+                <p class="tool-desc">
+                  Take a problem. Break it into: facts, assumptions,
+                  interpretations, emotions, possible solutions, consequences.
+                  This is clean thinking.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 4: Second-Order Reflection</h4>
+                <p class="tool-desc">
+                  Before making a decision: "What is the long-term effect of
+                  this?" This saves years of regret.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec9" class="content-section">
+            <h3 class="section-title">9. Advanced Wisdom Questions</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>What assumptions do I accept without evidence?</li>
+              <li>Which emotional states distort my thinking the most?</li>
+              <li>Which situations trigger rigid thinking?</li>
+              <li>How often do I mistake interpretation for fact?</li>
+              <li>Where do I overestimate my understanding?</li>
+              <li>What beliefs do I defend out of fear, not truth?</li>
+              <li>Which biases appear repeatedly in my life?</li>
+            </ul>
+            <p class="mt-6 font-semibold text-center">
+              These questions lead to mental mastery.
+            </p>
+          </section>
+
+          <section id="sec10" class="content-section">
+            <h3 class="section-title">10. 7-Day Thinking Precision Program</h3>
+            <div class="grid gap-3">
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 1:</span
+                >
+                Identify biases
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 2:</span
+                >
+                Break assumptions
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 3:</span
+                >
+                First principles problem-solving
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 4:</span
+                >
+                Steelman opposite views
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 5:</span
+                >
+                Emotional separation practice
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 6:</span
+                >
+                Second-order decision-making
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 7:</span
+                >
+                Weekly reflection
+              </div>
+            </div>
+            <p class="mt-4 text-center font-semibold">
+              Repeat weekly until your mind becomes sharp, stable, and precise.
+            </p>
+          </section>
+
+          <section id="summary" class="content-section summary-section">
+            <h3 class="section-title">Chapter Summary</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Knowledge Gained:
+                </h4>
+                <p class="text-sm">
+                  Four levels of thinking, the fact → interpretation → emotion →
+                  reaction chain, 12 cognitive biases, core logic tools,
+                  probabilistic and strategic reasoning.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Wisdom Developed:
+                </h4>
+                <p class="text-sm">
+                  Emotion ≠ reality, assumptions must be questioned, neutrality
+                  increases clarity, flexible thinking increases intelligence.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  Skills Built:
+                </h4>
+                <p class="text-sm">
+                  Logical precision, assumption testing, perspective switching,
+                  bias detection, structured decision-making, meta thinking,
+                  daily reasoning discipline.
+                </p>
+              </div>
+            </div>
+            <p class="mt-6 text-lg font-bold text-center">
+              This chapter gives you the tools to think like a strategist, not
+              an emotional reactor.
+            </p>
+          </section>
+
+          <nav
+            class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4"
+          >
+            <a href="chapter3.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 3</span>
+            </a>
+            <a href="chapter5.html" class="nav-button nav-button-primary">
+              <span>Chapter 5</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button id="popup-close" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+              aria-label="Chat input"
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

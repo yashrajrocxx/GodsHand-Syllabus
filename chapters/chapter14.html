@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Chapter 14: Leadership, Influence & High-Agency Living | God's Hand
+    </title>
+    <meta
+      name="description"
+      content="Master true leadership, ethical influence, and high-agency mindset for personal power and impact."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Leadership</a
+              >
+              <a
+                href="#pillars"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Pillars of Leadership</a
+              >
+              <a
+                href="#high-agency"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >High-Agency Mindset</a
+              >
+              <a
+                href="#influence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Influence Is</a
+              >
+              <a
+                href="#ethical-influence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7 Elements of Influence</a
+              >
+              <a
+                href="#presence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Presence</a
+              >
+              <a
+                href="#decisions"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Decision-Making</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Leadership</a
+              >
+              <a
+                href="#pillars"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Pillars of Leadership</a
+              >
+              <a
+                href="#high-agency"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >High-Agency Mindset</a
+              >
+              <a
+                href="#influence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What Influence Is</a
+              >
+              <a
+                href="#ethical-influence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7 Elements of Influence</a
+              >
+              <a
+                href="#presence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Presence</a
+              >
+              <a
+                href="#decisions"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Decision-Making</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-rose-600 to-pink-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 14</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Leadership, Influence & High-Agency Living
+              </h1>
+              <p class="text-xl text-rose-50">
+                Master true leadership, ethical influence, and the power of
+                personal agency
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-2">
+                    Leadership is not about authority, followers, position, or
+                    titles.
+                  </p>
+                  <p class="text-rose-600 dark:text-rose-400 font-bold">
+                    Leadership is the ability to create direction, generate
+                    clarity, and stabilize people's emotional environments.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <p class="font-bold mb-2">
+                    Influence is the ability to move minds, emotions, and
+                    behavior ethically, without manipulation or force.
+                  </p>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <p class="font-bold mb-2">
+                    High-agency living is the mindset of someone who believes:
+                  </p>
+                  <p class="text-rose-600 dark:text-rose-400 font-bold italic">
+                    "My actions shape my future. I am responsible for what I
+                    become."
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">This chapter teaches:</h3>
+                  <ul class="space-y-2">
+                    <li>✓ How leadership works internally and externally</li>
+                    <li>✓ How influence emerges naturally</li>
+                    <li>✓ How to build high-agency identity</li>
+                    <li>✓ How to create clarity and direction</li>
+                    <li>✓ How to stabilize group dynamics</li>
+                    <li>✓ How to make decisive, effective decisions</li>
+                    <li>✓ How to earn respect and trust</li>
+                    <li>✓ How to lead without ego</li>
+                  </ul>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-rose-600 dark:text-rose-400">
+                    This is the core of personal power.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 1: Psychology -->
+              <section id="psychology" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — The Foundational Psychology of Leadership
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold">
+                    Leadership begins with self-regulation, not with giving
+                    orders.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold text-lg mb-3">
+                    Humans follow individuals who:
+                  </h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• Stay calm</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Think clearly</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Act consistently</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Communicate honestly</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Take responsibility</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Solve problems</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <p class="font-bold text-rose-600 dark:text-rose-400">
+                    Leadership is 80% psychological and 20% practical.
+                  </p>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <h3 class="font-bold mb-3">
+                    The human mind subconsciously follows those who:
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li>• Appear grounded under stress</li>
+                    <li>• Offer emotional safety</li>
+                    <li>• Speak with clarity</li>
+                    <li>• Show competence</li>
+                    <li>• Show integrity</li>
+                    <li>• Show confidence</li>
+                  </ul>
+                  <p class="mt-4 text-sm font-bold">
+                    This is called
+                    <span class="text-rose-600 dark:text-rose-400"
+                      >subconscious selection of leadership</span
+                    >.
+                  </p>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">Leaders don't demand authority.</p>
+                  <p class="font-bold text-rose-600 dark:text-rose-400">
+                    People simply give it to them.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: 3 Pillars -->
+              <section id="pillars" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The 3 Pillars of True Leadership
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-rose-600 dark:text-rose-400 text-lg mb-3"
+                    >
+                      1. Self-Leadership (Internal Command)
+                    </h3>
+                    <p class="text-sm mb-3 font-bold">
+                      You cannot lead others if you cannot lead yourself.
+                    </p>
+                    <div class="text-sm">
+                      <p class="font-semibold mb-2">
+                        Self-leadership includes:
+                      </p>
+                      <ul class="space-y-1 text-gray-600 dark:text-gray-400">
+                        <li>• Emotional regulation</li>
+                        <li>• Mental discipline</li>
+                        <li>• Self-awareness</li>
+                        <li>• Clarity of values</li>
+                        <li>• Consistent routines</li>
+                        <li>• Long-term thinking</li>
+                      </ul>
+                      <p
+                        class="mt-3 font-bold text-rose-600 dark:text-rose-400"
+                      >
+                        This creates inner gravity.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-rose-600 dark:text-rose-400 text-lg mb-3"
+                    >
+                      2. Relational Leadership (People Understanding)
+                    </h3>
+                    <p class="text-sm mb-3">
+                      Relational leadership is understanding:
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                      <div class="text-sm text-gray-600 dark:text-gray-400">
+                        • Emotions
+                      </div>
+                      <div class="text-sm text-gray-600 dark:text-gray-400">
+                        • Motives
+                      </div>
+                      <div class="text-sm text-gray-600 dark:text-gray-400">
+                        • Fears
+                      </div>
+                      <div class="text-sm text-gray-600 dark:text-gray-400">
+                        • Patterns
+                      </div>
+                      <div
+                        class="text-sm text-gray-600 dark:text-gray-400 col-span-2"
+                      >
+                        • Communication styles
+                      </div>
+                    </div>
+                    <p class="text-sm mb-3">
+                      It is about making people feel seen, understood, and
+                      respected.
+                    </p>
+                    <div class="text-sm font-bold">
+                      <p>Connection creates trust.</p>
+                      <p class="text-rose-600 dark:text-rose-400">
+                        Trust creates influence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-rose-600 dark:text-rose-400 text-lg mb-3"
+                    >
+                      3. Strategic Leadership (Big-Picture Thinking)
+                    </h3>
+                    <p class="text-sm mb-2">Strategic leaders:</p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400"
+                    >
+                      <li>• See patterns earlier</li>
+                      <li>• Anticipate problems</li>
+                      <li>• Think long-term</li>
+                      <li>• Understand incentives</li>
+                      <li>• Make decisions through structure, not impulse</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">
+                    Combined, these three pillars create powerful, ethical
+                    leadership.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 3: High-Agency -->
+              <section id="high-agency" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The High-Agency Mindset
+                </h2>
+
+                <div class="tool-card border-green-200 dark:border-green-800">
+                  <h3 class="font-bold text-green-600 dark:text-green-400 mb-3">
+                    High-agency people think:
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li class="font-semibold">
+                      "What can I do to solve this?"
+                    </li>
+                    <li class="font-semibold">"How can I improve this?"</li>
+                    <li class="font-semibold">
+                      "What options have I not considered yet?"
+                    </li>
+                    <li class="font-semibold">
+                      "If I don't know, I will learn."
+                    </li>
+                    <li class="font-semibold">
+                      "I influence my environment; my environment doesn't
+                      control me."
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tool-card mt-6 border-red-200 dark:border-red-800">
+                  <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                    Low-agency people think:
+                  </h3>
+                  <ul class="space-y-2 text-sm">
+                    <li class="font-semibold">
+                      "Someone else should fix this."
+                    </li>
+                    <li class="font-semibold">"This is not my fault."</li>
+                    <li class="font-semibold">"The situation controls me."</li>
+                    <li class="font-semibold">"Nothing can change."</li>
+                  </ul>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">High-agency = power.</p>
+                  <p class="font-bold text-red-600 dark:text-red-400">
+                    Low-agency = stagnation.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 4: Influence -->
+              <section id="influence" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — Influence: What It Actually Is
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold mb-3">
+                    Influence is not manipulation, persuasion, or dominance.
+                  </p>
+                  <div class="tool-card">
+                    <p class="font-bold text-rose-600 dark:text-rose-400 mb-2">
+                      Influence =
+                    </p>
+                    <p class="text-sm">
+                      Credibility + Clarity + Consistency + Empathy + Integrity
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-3">You influence people when:</h3>
+                  <div class="space-y-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• They trust you</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• You understand them</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Your actions match your words</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Your presence is stable</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Your direction is clear</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-rose-600 dark:text-rose-400">
+                    Real influence is quiet and powerful.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 5: Ethical Influence -->
+              <section id="ethical-influence" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — The 7 Elements of Ethical Influence
+                </h2>
+
+                <div class="space-y-4">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Emotional Intelligence</h3>
+                      <p class="mechanism-description">
+                        Understanding how people feel.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Clarity of Communication</h3>
+                      <p class="mechanism-description">
+                        Saying things in simple, direct language.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Credibility</h3>
+                      <p class="mechanism-description">
+                        People believe what you say.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Consistency</h3>
+                      <p class="mechanism-description">
+                        Your behavior is predictable (in a good way).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Empathy</h3>
+                      <p class="mechanism-description">
+                        Driving decisions with understanding, not force.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Respect for Autonomy</h3>
+                      <p class="mechanism-description">
+                        Influence without violating freedom.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Mutual Benefit</h3>
+                      <p class="mechanism-description">
+                        Ensuring both sides gain.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">This builds long-lasting respect.</p>
+                </div>
+              </section>
+
+              <!-- Section 6: Presence -->
+              <section id="presence" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — Presence: The Core of Leadership Effect
+                </h2>
+                <div class="highlight-box">
+                  <p class="font-bold">
+                    Your presence is your emotional signal to others.
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-3">Presence is built through:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• Calm nervous system</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Slow, grounded movements</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Confident but warm eye contact</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Controlled tone of voice</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Clear thinking</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Emotional stability</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-box mt-6">
+                  <p class="font-bold mb-2">
+                    People copy the emotional state of the person with the
+                    strongest presence.
+                  </p>
+                  <p class="text-sm">
+                    This is called
+                    <span class="font-bold text-rose-600 dark:text-rose-400"
+                      >emotional resonance</span
+                    >.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 7: Decisions -->
+              <section id="decisions" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — How to Make Decisions Like a Leader
+                </h2>
+                <div class="info-box">
+                  <h3 class="font-bold mb-3">
+                    A leader's decision-making must be:
+                  </h3>
+                  <div class="grid md:grid-cols-2 gap-2">
+                    <div class="text-sm">• Timely</div>
+                    <div class="text-sm">• Structured</div>
+                    <div class="text-sm">• Informed</div>
+                    <div class="text-sm">• Emotionally neutral</div>
+                    <div class="text-sm col-span-2">
+                      • Aligned with long-term goals
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <h3 class="font-bold mb-4">A 5-step decision loop:</h3>
+                  <div class="space-y-4">
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">1</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Define the problem clearly
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">2</div>
+                      <div>
+                        <h4 class="mechanism-title">List all options</h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">3</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Identify second-order consequences
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">4</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Choose based on values + long-term fit
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div class="mechanism-item">
+                      <div class="mechanism-number">5</div>
+                      <div>
+                        <h4 class="mechanism-title">
+                          Commit and execute calmly
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">
+                    This makes leaders appear powerful and reliable.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 8: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 8 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 1: Emotional Command Training
+                    </h3>
+                    <p class="text-sm">
+                      When stressed, pause for 5 seconds → deep breath → respond
+                      calmly.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 2: Clarity Exercise</h3>
+                    <p class="text-sm mb-2">
+                      Explain your idea in one sentence.
+                    </p>
+                    <p class="text-sm text-red-600 dark:text-red-400">
+                      If you can't, you don't understand it yet.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 3: Ownership Audit</h3>
+                    <p class="text-sm mb-2">
+                      Write down 5 areas where you avoid responsibility.
+                    </p>
+                    <p class="text-sm">Choose one to transform immediately.</p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="space-y-4">
+                  <div class="highlight-box">
+                    <p class="font-bold">Leadership =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      internal command + relational clarity + strategic vision
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold">Influence =</p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      ethical alignment + understanding + consistency
+                    </p>
+                  </div>
+
+                  <div class="highlight-box">
+                    <p class="font-bold text-rose-600 dark:text-rose-400">
+                      High-agency =
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      responsibility + adaptability + power
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter13.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 13</span>
+            </a>
+            <a href="chapter15.html" class="nav-button nav-button-primary">
+              <span>Chapter 15</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

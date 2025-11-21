@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Chapter 17: Teaching Frameworks & Transformation Systems | God's Hand
+    </title>
+    <meta
+      name="description"
+      content="Master the complete teaching architecture to guide others through deep transformation and lasting change."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Learning</a
+              >
+              <a
+                href="#transformation"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4-Layer Model</a
+              >
+              <a
+                href="#perfect-lesson"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7 Elements of Lesson</a
+              >
+              <a
+                href="#pyramid"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Teaching Pyramid</a
+              >
+              <a
+                href="#age-groups"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Children vs Adults</a
+              >
+              <a
+                href="#systems"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Transformation Systems</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Drills for Teachers</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Learning</a
+              >
+              <a
+                href="#transformation"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >4-Layer Model</a
+              >
+              <a
+                href="#perfect-lesson"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7 Elements of Lesson</a
+              >
+              <a
+                href="#pyramid"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Teaching Pyramid</a
+              >
+              <a
+                href="#age-groups"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Children vs Adults</a
+              >
+              <a
+                href="#systems"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >5 Transformation Systems</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Drills for Teachers</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-cyan-600 to-blue-600 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 17</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Teaching Frameworks & Transformation Systems
+              </h1>
+              <p class="text-xl text-cyan-50">
+                Master the complete teaching architecture to guide others
+                through deep transformation
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-2">
+                    This book isn't meant only for personal growth.
+                  </p>
+                  <p class="text-cyan-600 dark:text-cyan-400 font-bold">
+                    It is also a teaching architecture — a system you can use to
+                    guide others.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">You can use this to:</h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm">• Guide others</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Build classrooms</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Structure workshops</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Design programs</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Teach adults and children</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm">• Build transformational models</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold mb-2">
+                    Transformation does not happen by chance.
+                  </p>
+                  <p>
+                    It happens through structure, sequence, emotional
+                    intelligence, repetition, challenge, and safety.
+                  </p>
+                </div>
+
+                <p class="info-text mt-6">
+                  This chapter shows the exact blueprint for teaching everything
+                  in this book — whether to students, adults, teams, or
+                  communities.
+                </p>
+              </section>
+
+              <!-- Section 1: Psychology -->
+              <section id="psychology" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — The Psychology of Real Learning & Change
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold mb-4">Human beings only change when:</p>
+                </div>
+
+                <div class="space-y-4 mt-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They feel safe</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Safety = open mind.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They feel challenged</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Challenge = growth stimulation.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They feel guided</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Guidance = clarity + direction.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They feel capable</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Capability = confidence + mastery.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They repeat the skill</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Repetition = reinforcement.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They see progress</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Progress = motivation + consistency.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">They get feedback</h3>
+                    <p class="text-sm text-cyan-600 dark:text-cyan-400">
+                      Feedback = correction + improvement.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-cyan-600 dark:text-cyan-400">
+                    This psychological formula is the basis of all great
+                    teaching.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 2: 4-Layer Model -->
+              <section id="transformation" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The 4-Layer Transformation Model
+                </h2>
+                <div class="info-box">
+                  <p class="font-bold">
+                    Everything you teach must pass through these four layers to
+                    create genuine transformation.
+                  </p>
+                </div>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-cyan-600 dark:text-cyan-400 text-lg mb-3"
+                    >
+                      LAYER 1 — Knowledge (Understanding)
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Teaching definitions, principles, models, and frameworks.
+                    </p>
+                    <p class="text-sm font-bold">Goal: mental clarity.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-cyan-600 dark:text-cyan-400 text-lg mb-3"
+                    >
+                      LAYER 2 — Skill (Application)
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Guided practice, exercises, real-world scenarios.
+                    </p>
+                    <p class="text-sm font-bold">Goal: competence.</p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-cyan-600 dark:text-cyan-400 text-lg mb-3"
+                    >
+                      LAYER 3 — Identity (Internalization)
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Helping students see themselves differently:
+                    </p>
+                    <ul
+                      class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                    >
+                      <li>"I am capable."</li>
+                      <li>"I am disciplined."</li>
+                      <li>"I am a critical thinker."</li>
+                    </ul>
+                    <p class="text-sm font-bold">
+                      Goal: internal transformation.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-cyan-600 dark:text-cyan-400 text-lg mb-3"
+                    >
+                      LAYER 4 — Integration (Consistency)
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Daily routines, habits, checkpoints, repetition.
+                    </p>
+                    <p class="text-sm font-bold">Goal: permanent change.</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-cyan-600 dark:text-cyan-400">
+                    Teaching must move from mind → behavior → identity →
+                    lifestyle.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 3: Perfect Lesson -->
+              <section id="perfect-lesson" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The 7 Elements of a Perfect Lesson
+                </h2>
+                <p class="info-text">Every teaching session must include:</p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Hook (Attention Activation)
+                      </h3>
+                      <p class="mechanism-description mb-2">Begin with:</p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>• A question</li>
+                        <li>• A story</li>
+                        <li>• A problem</li>
+                        <li>• A real-life scenario</li>
+                      </ul>
+                      <p class="text-sm font-bold">This activates curiosity.</p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Clarity (Explain the Concept Simply)
+                      </h3>
+                      <p class="mechanism-description mb-2">
+                        Teach in short, structured blocks:
+                      </p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>• Definition</li>
+                        <li>• Explanation</li>
+                        <li>• Examples</li>
+                        <li>• Counterexamples</li>
+                      </ul>
+                      <p class="text-sm font-bold">
+                        Clarity unlocks comprehension.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Breakdown (Micro-Components)
+                      </h3>
+                      <p class="mechanism-description">
+                        Break every concept into smaller parts so the mind can
+                        process it easily.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Demonstration (Show, Don't Tell)
+                      </h3>
+                      <p class="mechanism-description mb-2">
+                        Use real-life examples:
+                      </p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>• Solve a problem</li>
+                        <li>• Show a conversation</li>
+                        <li>• Demonstrate a skill</li>
+                      </ul>
+                      <p class="text-sm font-bold">People learn by seeing.</p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Practice (Hands-On Application)
+                      </h3>
+                      <p class="mechanism-description mb-2">Give exercises:</p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>• Roleplays</li>
+                        <li>• Writing</li>
+                        <li>• Problem-solving</li>
+                        <li>• Discussions</li>
+                      </ul>
+                      <p class="text-sm font-bold">
+                        Practice creates competence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">
+                        Feedback (Correct Mistakes)
+                      </h3>
+                      <p class="mechanism-description mb-2">
+                        Feedback must be:
+                      </p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>• Immediate</li>
+                        <li>• Specific</li>
+                        <li>• Actionable</li>
+                        <li>• Kind but direct</li>
+                      </ul>
+                      <p class="text-sm font-bold">Feedback builds mastery.</p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Reflection (Integration)</h3>
+                      <p class="mechanism-description mb-2">End with:</p>
+                      <ul
+                        class="text-sm space-y-1 text-gray-600 dark:text-gray-400 mb-2"
+                      >
+                        <li>"What did we learn?"</li>
+                        <li>"How will you apply this?"</li>
+                        <li>"What is your next step?"</li>
+                      </ul>
+                      <p class="text-sm font-bold">
+                        Reflection locks learning into memory.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 4: Teaching Pyramid -->
+              <section id="pyramid" class="content-section">
+                <h2 class="section-title">Section 4 — The Teaching Pyramid</h2>
+                <p class="info-text">
+                  Different methods produce different levels of understanding.
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                      Bottom → Low impact
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                      <li>• Listening</li>
+                      <li>• Reading</li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="tool-card border-yellow-200 dark:border-yellow-800"
+                  >
+                    <h3
+                      class="font-bold text-yellow-600 dark:text-yellow-400 mb-3"
+                    >
+                      Middle → Moderate impact
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                      <li>• Discussion</li>
+                      <li>• Application</li>
+                      <li>• Practice</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card border-green-200 dark:border-green-800">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-3"
+                    >
+                      Top → Maximum impact
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                      <li>• Teaching others</li>
+                      <li>• Creating something</li>
+                      <li>• Solving real problems</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-cyan-600 dark:text-cyan-400">
+                    The higher you move up, the deeper the learning.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Section 5: Age Groups -->
+              <section id="age-groups" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — Framework for Teaching Children vs Adults
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold text-cyan-600 dark:text-cyan-400 mb-3">
+                      Children learn through:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Stories</li>
+                      <li>✓ Repetition</li>
+                      <li>✓ Games</li>
+                      <li>✓ Sensory experience</li>
+                      <li>✓ Emotional bonding</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold text-cyan-600 dark:text-cyan-400 mb-3">
+                      Adults learn through:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Practical application</li>
+                      <li>✓ Problem-solving</li>
+                      <li>✓ Meaningful purpose</li>
+                      <li>✓ Clarity</li>
+                      <li>✓ Challenge</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold">Teaching must adapt to age.</p>
+                </div>
+              </section>
+
+              <!-- Section 6: 5 Systems -->
+              <section id="systems" class="content-section">
+                <h2 class="section-title">
+                  Section 6 — The 5 Transformation Systems
+                </h2>
+                <p class="info-text">
+                  These systems help turn every chapter of this book into a
+                  complete teaching module.
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      SYSTEM 1 — Concept → Skill → Identity → Habit Loop
+                    </h3>
+                    <div class="text-sm">
+                      <p class="font-semibold mb-2">Example:</p>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1">
+                        Teaching open-mindedness
+                      </p>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1">
+                        → practice perspective switching
+                      </p>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1">
+                        → build identity of "I see from multiple angles"
+                      </p>
+                      <p class="text-gray-600 dark:text-gray-400">
+                        → daily reflection habit.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      SYSTEM 2 — 3-Level Questioning
+                    </h3>
+                    <ul class="text-sm space-y-1">
+                      <li>• Level 1: Surface questions</li>
+                      <li>• Level 2: Reasoning questions</li>
+                      <li>• Level 3: Depth questions (identity, meaning)</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      SYSTEM 3 — Behavioral Architecture
+                    </h3>
+                    <p class="text-sm">
+                      Create routines and habits around your lessons so students
+                      LIVE the skill.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      SYSTEM 4 — Community Learning
+                    </h3>
+                    <p class="text-sm">
+                      Group reflection and peer learning accelerate
+                      transformation.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      SYSTEM 5 — Accountability Structures
+                    </h3>
+                    <p class="text-sm mb-2">
+                      Weekly reviews, goals, reflections, logs.
+                    </p>
+                    <p class="text-sm font-bold">
+                      Accountability creates consistent growth.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 7: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — Practical Drills for Teachers
+                </h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 1 — 15-Minute Mini Lesson
+                    </h3>
+                    <p class="text-sm">
+                      Teach any concept in 15 minutes using all 7 elements.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">Drill 2 — Behavior Challenge</h3>
+                    <p class="text-sm">
+                      Assign a 7-day habit related to the chapter being taught.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-3">
+                      Drill 3 — Identity Reinforcement
+                    </h3>
+                    <p class="text-sm mb-2">Have students write:</p>
+                    <p class="text-sm font-semibold italic">
+                      "I am becoming someone who ____."
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="info-box">
+                  <h3 class="font-bold mb-4">
+                    This chapter gives you the complete framework to:
+                  </h3>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Teach ideas</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">✓ Build skills</p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        ✓ Transform identities
+                      </p>
+                    </div>
+                    <div class="tool-card">
+                      <p class="text-sm font-semibold">
+                        ✓ Create consistent progress
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <p class="font-bold text-cyan-600 dark:text-cyan-400">
+                    This is how you turn knowledge into results for others.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter16.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 16</span>
+            </a>
+            <a href="chapter18.html" class="nav-button nav-button-primary">
+              <span>Chapter 18</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

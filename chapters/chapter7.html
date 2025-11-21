@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Chapter 7: Relationship Intelligence & Boundaries | God's Hand
+    </title>
+    <meta
+      name="description"
+      content="Master emotional literacy, boundary-setting, and relationship intelligence for stable, healthy connections."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <!-- Desktop Sidebar TOC -->
+        <aside
+          class="hidden lg:block lg:w-64 lg:flex-shrink-0 lg:sticky lg:top-24 lg:self-start"
+        >
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <h3
+              class="text-sm font-bold text-gray-900 dark:text-white mb-4 uppercase tracking-wider"
+            >
+              Contents
+            </h3>
+            <nav class="space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#rq-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What RQ Actually Is</a
+              >
+              <a
+                href="#emotional-literacy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Layers of Emotional Literacy</a
+              >
+              <a
+                href="#boundary-psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Boundaries</a
+              >
+              <a
+                href="#boundary-framework"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Boundary-Setting Framework</a
+              >
+              <a
+                href="#relationship-types"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Healthy vs Unhealthy Relationships</a
+              >
+              <a
+                href="#conflict-intelligence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Conflict Intelligence</a
+              >
+              <a
+                href="#communication"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Communication Blueprint</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Mobile TOC -->
+        <div class="lg:hidden mb-8">
+          <details
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 p-6 shadow-sm"
+          >
+            <summary
+              class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider cursor-pointer"
+            >
+              Contents
+            </summary>
+            <nav class="mt-4 space-y-2">
+              <a
+                href="#introduction"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Introduction</a
+              >
+              <a
+                href="#rq-definition"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >What RQ Actually Is</a
+              >
+              <a
+                href="#emotional-literacy"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >3 Layers of Emotional Literacy</a
+              >
+              <a
+                href="#boundary-psychology"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Psychology of Boundaries</a
+              >
+              <a
+                href="#boundary-framework"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Boundary-Setting Framework</a
+              >
+              <a
+                href="#relationship-types"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Healthy vs Unhealthy Relationships</a
+              >
+              <a
+                href="#conflict-intelligence"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Conflict Intelligence</a
+              >
+              <a
+                href="#communication"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Communication Blueprint</a
+              >
+              <a
+                href="#drills"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Practical Drills</a
+              >
+              <a
+                href="#wisdom"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Wisdom Questions</a
+              >
+              <a
+                href="#program"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >7-Day Program</a
+              >
+              <a
+                href="#summary"
+                class="block text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1"
+                >Summary</a
+              >
+            </nav>
+          </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 max-w-4xl">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-lg overflow-hidden"
+          >
+            <div
+              class="bg-gradient-to-br from-blue-600 to-cyan-500 px-8 py-12 text-white"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold"
+                  >CHAPTER 7</span
+                >
+              </div>
+              <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                Relationship Intelligence, Boundaries & Emotional Literacy
+              </h1>
+              <p class="text-xl text-blue-50">
+                Master the skills that make relationships succeed: emotional
+                literacy, boundaries, and communication clarity
+              </p>
+            </div>
+
+            <div class="p-8 md:p-12 space-y-12">
+              <!-- Introduction -->
+              <section id="introduction" class="content-section">
+                <h2 class="section-title">Introduction</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-semibold mb-4">
+                    Relationships succeed or fail not because of
+                    "compatibility," but because of skills:
+                  </p>
+                  <ul class="space-y-2">
+                    <li>✓ Emotional literacy</li>
+                    <li>✓ Boundary-setting</li>
+                    <li>✓ Conflict management</li>
+                    <li>✓ Communication clarity</li>
+                    <li>✓ Nervous system regulation</li>
+                    <li>✓ Respect for autonomy</li>
+                    <li>✓ Honesty</li>
+                    <li>✓ Alignment of values</li>
+                  </ul>
+                </div>
+                <p class="info-text">
+                  <strong>Relationship Intelligence</strong> is the ability to
+                  navigate human connection with clarity, maturity, and
+                  stability.
+                </p>
+                <div class="info-box">
+                  <h3 class="font-bold mb-2">This Chapter Teaches:</h3>
+                  <ul class="space-y-1">
+                    <li>→ How emotions work in relationships</li>
+                    <li>→ How to communicate without distortion</li>
+                    <li>→ How to set boundaries without guilt</li>
+                    <li>→ How to avoid toxic dynamics</li>
+                    <li>→ How to choose the right people</li>
+                    <li>→ How to build healthy long-term connections</li>
+                  </ul>
+                </div>
+                <p class="text-lg font-bold text-blue-600 dark:text-blue-400">
+                  You cannot master life without mastering relationships.
+                </p>
+              </section>
+
+              <!-- Section 1: What RQ Is -->
+              <section id="rq-definition" class="content-section">
+                <h2 class="section-title">
+                  Section 1 — What Relationship Intelligence (RQ) Actually Is
+                </h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold mb-2">
+                    Relationship Intelligence =
+                  </p>
+                  <p>
+                    Emotional Intelligence + Behavioral Awareness + Boundary
+                    Mastery + Communication Clarity + Pattern Recognition
+                  </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-3"
+                    >
+                      People with High RQ:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Choose partners wisely</li>
+                      <li>✓ Avoid chaos</li>
+                      <li>✓ Communicate clearly</li>
+                      <li>✓ Handle conflict calmly</li>
+                      <li>✓ Respect needs and autonomy</li>
+                      <li>✓ Avoid repeating childhood wounds</li>
+                      <li>✓ Maintain stable connections</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                      People with Low RQ:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✗ Fall into drama</li>
+                      <li>✗ Repeat the same pain</li>
+                      <li>✗ Attract unstable partners</li>
+                      <li>✗ Overgive or over-control</li>
+                      <li>✗ Become reactive</li>
+                      <li>✗ Misinterpret signals</li>
+                      <li>✗ Sabotage connection unintentionally</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>RQ is a measurable skill</strong> that this chapter
+                  builds.
+                </p>
+              </section>
+
+              <!-- Section 2: Emotional Literacy -->
+              <section id="emotional-literacy" class="content-section">
+                <h2 class="section-title">
+                  Section 2 — The Three Layers of Emotional Literacy
+                </h2>
+                <p class="info-text">
+                  You cannot navigate relationships without understanding
+                  emotions correctly.
+                </p>
+
+                <div class="space-y-6 mt-6">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Emotional Awareness</h3>
+                      <p class="mechanism-description">
+                        The ability to identify what you feel.
+                      </p>
+                      <div class="mt-3 space-y-1 text-sm">
+                        <p class="font-semibold">Examples:</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "I am anxious because I feel distance."
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "I am irritated because I feel unheard."
+                        </p>
+                      </div>
+                      <p
+                        class="mt-3 text-sm font-semibold text-blue-600 dark:text-blue-400"
+                      >
+                        Without awareness, you react blindly.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Emotional Interpretation</h3>
+                      <p class="mechanism-description">
+                        Understanding why you feel what you feel.
+                      </p>
+                      <div class="mt-3 space-y-1 text-sm">
+                        <p class="font-semibold">Examples:</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "This trigger comes from childhood rejection
+                          wounds."
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "This anger is actually disappointment."
+                        </p>
+                      </div>
+                      <p
+                        class="mt-3 text-sm font-semibold text-blue-600 dark:text-blue-400"
+                      >
+                        Interpretation prevents overreaction.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Emotional Expression</h3>
+                      <p class="mechanism-description">
+                        Communicating emotions clearly and respectfully.
+                      </p>
+                      <div class="mt-3 space-y-1 text-sm">
+                        <p class="font-semibold">Examples:</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "I need clarity, not distance."
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "I feel overwhelmed and need space."
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                          • "I feel hurt and want to talk about it."
+                        </p>
+                      </div>
+                      <p
+                        class="mt-3 text-sm font-semibold text-blue-600 dark:text-blue-400"
+                      >
+                        Expression creates connection instead of conflict.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 3: Boundary Psychology -->
+              <section id="boundary-psychology" class="content-section">
+                <h2 class="section-title">
+                  Section 3 — The Psychology of Boundaries
+                </h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold">Boundaries are not walls.</p>
+                  <p class="text-lg font-bold">
+                    Boundaries are rules for emotional safety.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">Boundaries Protect:</h3>
+                  <ul class="grid grid-cols-2 gap-2">
+                    <li>→ Identity</li>
+                    <li>→ Emotional energy</li>
+                    <li>→ Mental health</li>
+                    <li>→ Time</li>
+                    <li>→ Self-respect</li>
+                    <li>→ Personal values</li>
+                  </ul>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <h3 class="font-bold mb-3">
+                    People Struggle with Boundaries Because of:
+                  </h3>
+                  <ul class="space-y-2">
+                    <li>• Fear of rejection</li>
+                    <li>• Fear of conflict</li>
+                    <li>• Fear of hurting others</li>
+                    <li>• Desire to please</li>
+                    <li>• Childhood conditioning</li>
+                  </ul>
+                </div>
+
+                <div class="space-y-4 mt-6">
+                  <h3 class="font-bold text-lg">Three Types of Boundaries:</h3>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h4 class="mechanism-title">Physical Boundaries</h4>
+                      <p class="mechanism-description">
+                        Space, touch, environmental comfort.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h4 class="mechanism-title">Emotional Boundaries</h4>
+                      <p class="mechanism-description">
+                        How much emotional energy you give.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h4 class="mechanism-title">Psychological Boundaries</h4>
+                      <p class="mechanism-description">
+                        Your beliefs, values, needs, and autonomy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  Healthy relationships require all three.
+                </p>
+              </section>
+
+              <!-- Section 4: Boundary Framework -->
+              <section id="boundary-framework" class="content-section">
+                <h2 class="section-title">
+                  Section 4 — How to Set Boundaries (Detailed Framework)
+                </h2>
+                <div class="highlight-box">
+                  <h3 class="font-bold text-lg mb-4">
+                    The 4-Step Boundary Formula:
+                  </h3>
+                  <div class="space-y-4">
+                    <div>
+                      <p class="font-bold text-blue-600 dark:text-blue-400">
+                        1. Observation:
+                      </p>
+                      <p class="text-sm">"This behavior affects me."</p>
+                    </div>
+                    <div>
+                      <p class="font-bold text-blue-600 dark:text-blue-400">
+                        2. Feeling:
+                      </p>
+                      <p class="text-sm">
+                        "It makes me feel unsafe/overwhelmed/disrespected."
+                      </p>
+                    </div>
+                    <div>
+                      <p class="font-bold text-blue-600 dark:text-blue-400">
+                        3. Need:
+                      </p>
+                      <p class="text-sm">"I need X to feel comfortable."</p>
+                    </div>
+                    <div>
+                      <p class="font-bold text-blue-600 dark:text-blue-400">
+                        4. Request/Limit:
+                      </p>
+                      <p class="text-sm">
+                        "I request this," or "If this continues, I will step
+                        back."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tool-card mt-6">
+                  <h3 class="font-bold mb-3">Example in Action:</h3>
+                  <p class="text-sm leading-relaxed">
+                    "I feel overwhelmed when messages go unanswered for 3 days.
+                    I need consistent communication. If that's not possible,
+                    I'll adjust my expectations."
+                  </p>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>Boundaries are clarity, not conflict.</strong>
+                </p>
+              </section>
+
+              <!-- Section 5: Relationship Types -->
+              <section id="relationship-types" class="content-section">
+                <h2 class="section-title">
+                  Section 5 — Healthy vs Unhealthy Relationships
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="tool-card">
+                    <h3
+                      class="font-bold text-green-600 dark:text-green-400 mb-3"
+                    >
+                      Healthy Connections Have:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✓ Emotional safety</li>
+                      <li>✓ Communication</li>
+                      <li>✓ Accountability</li>
+                      <li>✓ Respect for differences</li>
+                      <li>✓ Stable nervous systems</li>
+                      <li>✓ Aligned values</li>
+                      <li>✓ Mature conflict resolution</li>
+                    </ul>
+                  </div>
+
+                  <div class="tool-card border-red-200 dark:border-red-800">
+                    <h3 class="font-bold text-red-600 dark:text-red-400 mb-3">
+                      Unhealthy Connections Have:
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                      <li>✗ Inconsistency</li>
+                      <li>✗ Unpredictability</li>
+                      <li>✗ Manipulation</li>
+                      <li>✗ Avoidance</li>
+                      <li>✗ Emotional volatility</li>
+                      <li>✗ Invalidation</li>
+                      <li>✗ Lack of accountability</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="info-text mt-6">
+                  Knowing the difference prevents trauma bonds.
+                </p>
+              </section>
+
+              <!-- Section 6: Conflict Intelligence -->
+              <section id="conflict-intelligence" class="content-section">
+                <h2 class="section-title">Section 6 — Conflict Intelligence</h2>
+                <div class="highlight-box">
+                  <p class="text-lg font-bold">
+                    Conflict doesn't break relationships.
+                  </p>
+                  <p class="text-lg font-bold">
+                    Immature conflict breaks relationships.
+                  </p>
+                </div>
+
+                <div class="info-box mt-6">
+                  <h3 class="font-bold mb-3">
+                    Conflict Intelligence Includes:
+                  </h3>
+                  <ul class="space-y-2">
+                    <li>→ Pausing instead of reacting</li>
+                    <li>→ Identifying triggers</li>
+                    <li>→ Separating fact vs feeling</li>
+                    <li>→ Listening instead of defending</li>
+                    <li>→ Speaking honestly, not emotionally</li>
+                    <li>→ Repairing after rupture</li>
+                  </ul>
+                </div>
+
+                <p class="info-text mt-6">
+                  <strong>High RQ turns conflict into growth.</strong>
+                </p>
+              </section>
+
+              <!-- Section 7: Communication -->
+              <section id="communication" class="content-section">
+                <h2 class="section-title">
+                  Section 7 — Communication Blueprint
+                </h2>
+                <p class="info-text">All communication must follow:</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Clarity</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Specificity</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Neutrality</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Respect</p>
+                  </div>
+                  <div class="tool-card text-center">
+                    <p class="font-bold">Non-reactivity</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box mt-6">
+                  <h3 class="font-bold mb-2">Communication Formula:</h3>
+                  <p class="text-lg">
+                    "When you do <strong>X</strong>, I feel <strong>Y</strong>,
+                    and I need <strong>Z</strong>."
+                  </p>
+                </div>
+
+                <p class="info-text mt-6">
+                  This reduces confusion and increases emotional safety.
+                </p>
+              </section>
+
+              <!-- Section 8: Drills -->
+              <section id="drills" class="content-section">
+                <h2 class="section-title">Section 8 — Practical Drills</h2>
+
+                <div class="space-y-6">
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      Drill 1: Emotional Precision Practice
+                    </h3>
+                    <p class="text-sm">
+                      Every time you feel something, name it accurately.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">
+                      Drill 2: Boundary Identification
+                    </h3>
+                    <p class="text-sm">
+                      List 5 behaviors that violate your boundaries. Write how
+                      you will communicate each one.
+                    </p>
+                  </div>
+
+                  <div class="tool-card">
+                    <h3 class="font-bold mb-2">Drill 3: Trigger Mapping</h3>
+                    <p class="text-sm">
+                      Identify patterns of emotional triggers. Connect them to
+                      past experiences.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section 9: Wisdom Questions -->
+              <section id="wisdom" class="content-section">
+                <h2 class="section-title">Section 9 — Wisdom Questions</h2>
+                <div class="info-box">
+                  <ul class="space-y-3">
+                    <li>
+                      <strong>→</strong> What emotional patterns do I bring into
+                      relationships?
+                    </li>
+                    <li>
+                      <strong>→</strong> Which boundaries do I fail to maintain?
+                      Why?
+                    </li>
+                    <li>
+                      <strong>→</strong> What behaviors make me feel emotionally
+                      unsafe?
+                    </li>
+                    <li>
+                      <strong>→</strong> What kind of connection allows me to be
+                      my full self?
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- Section 10: 7-Day Program -->
+              <section id="program" class="content-section">
+                <h2 class="section-title">
+                  Section 10 — 7-Day Relationship Intelligence Program
+                </h2>
+                <div class="space-y-3">
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">1</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 1</h3>
+                      <p class="mechanism-description">Emotional literacy</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">2</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 2</h3>
+                      <p class="mechanism-description">Boundary awareness</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">3</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 3</h3>
+                      <p class="mechanism-description">Trigger mapping</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">4</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 4</h3>
+                      <p class="mechanism-description">Clear communication</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">5</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 5</h3>
+                      <p class="mechanism-description">Conflict intelligence</p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">6</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 6</h3>
+                      <p class="mechanism-description">
+                        Autonomy strengthening
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mechanism-item">
+                    <div class="mechanism-number">7</div>
+                    <div>
+                      <h3 class="mechanism-title">Day 7</h3>
+                      <p class="mechanism-description">Weekly reflection</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Summary -->
+              <section id="summary" class="content-section">
+                <h2 class="section-title">Chapter Summary</h2>
+                <div class="highlight-box">
+                  <p class="font-bold mb-3">This chapter builds:</p>
+                  <ul class="space-y-2">
+                    <li>✓ Emotional intelligence</li>
+                    <li>✓ Boundary mastery</li>
+                    <li>✓ Relationship awareness</li>
+                    <li>✓ Communication skill</li>
+                    <li>✓ Self-respect</li>
+                    <li>✓ Relational stability</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex justify-between gap-4 mt-8">
+            <a href="chapter6.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 6</span>
+            </a>
+            <a href="chapter8.html" class="nav-button nav-button-primary">
+              <span>Chapter 8</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Selection Popup -->
+    <div
+      id="selection-popup"
+      class="popup-container"
+      style="display: none"
+    ></div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

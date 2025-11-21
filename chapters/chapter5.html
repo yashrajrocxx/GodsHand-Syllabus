@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 5: Truth-Seeking | God's Hand</title>
+    <meta
+      name="description"
+      content="Build intellectual honesty and master the art of seeing reality clearly without ego."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+      if (localStorage.theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-slate-700"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-3">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white text-xl font-black">G</span>
+              </div>
+              <h1
+                class="text-2xl font-black tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                GOD'S HAND
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../index.html"
+              class="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >All Chapters</a
+            >
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="w-5 h-5 hidden dark:block text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 block dark:hidden text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto lg:flex lg:gap-12">
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <nav
+            class="sticky top-24 bg-white dark:bg-slate-800 rounded-xl p-6 border border-gray-200 dark:border-slate-700"
+          >
+            <h3
+              class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4"
+            >
+              Contents
+            </h3>
+            <ul class="space-y-1">
+              <li><a href="#intro" class="nav-link">Introduction</a></li>
+              <li>
+                <a href="#sec1" class="nav-link">What Is Truth-Seeking</a>
+              </li>
+              <li>
+                <a href="#sec2" class="nav-link">Why Humans Avoid Truth</a>
+              </li>
+              <li><a href="#sec3" class="nav-link">Types of Truth</a></li>
+              <li><a href="#sec4" class="nav-link">Truth-Seeking Lens</a></li>
+              <li><a href="#sec5" class="nav-link">Intellectual Honesty</a></li>
+              <li><a href="#sec6" class="nav-link">Self-Deception Forms</a></li>
+              <li>
+                <a href="#sec7" class="nav-link">Truth-Seeking Process</a>
+              </li>
+              <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+              <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+              <li><a href="#sec10" class="nav-link">7-Day Training</a></li>
+              <li><a href="#summary" class="nav-link">Summary</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main id="main-content" class="flex-1 min-w-0">
+          <div class="mb-8 text-center lg:text-left">
+            <div
+              class="inline-block mb-3 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+            >
+              <span
+                class="text-sm font-semibold text-blue-600 dark:text-blue-400"
+                >Chapter 05</span
+              >
+            </div>
+            <h2
+              class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            >
+              Truth-Seeking & Intellectual Honesty
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
+              Build a mind strong enough to face reality without ego protection
+            </p>
+          </div>
+
+          <details
+            class="lg:hidden mb-8 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700"
+          >
+            <summary
+              class="px-6 py-4 cursor-pointer font-bold text-blue-600 dark:text-blue-400 flex justify-between items-center"
+            >
+              <span>Table of Contents</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <nav
+              class="px-6 pb-4 border-t border-gray-200 dark:border-slate-700"
+            >
+              <ul class="space-y-1 mt-4">
+                <li><a href="#intro" class="nav-link">Introduction</a></li>
+                <li>
+                  <a href="#sec1" class="nav-link">What Is Truth-Seeking</a>
+                </li>
+                <li>
+                  <a href="#sec2" class="nav-link">Why Humans Avoid Truth</a>
+                </li>
+                <li><a href="#sec3" class="nav-link">Types of Truth</a></li>
+                <li><a href="#sec4" class="nav-link">Truth-Seeking Lens</a></li>
+                <li>
+                  <a href="#sec5" class="nav-link">Intellectual Honesty</a>
+                </li>
+                <li>
+                  <a href="#sec6" class="nav-link">Self-Deception Forms</a>
+                </li>
+                <li>
+                  <a href="#sec7" class="nav-link">Truth-Seeking Process</a>
+                </li>
+                <li><a href="#sec8" class="nav-link">Practical Drills</a></li>
+                <li><a href="#sec9" class="nav-link">Wisdom Questions</a></li>
+                <li><a href="#sec10" class="nav-link">7-Day Training</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+              </ul>
+            </nav>
+          </details>
+
+          <section id="intro" class="content-section">
+            <h3 class="section-title">Introduction</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              Truth-seeking is not about having the "right answers." It is about
+              <strong>building a mind strong enough to face reality</strong>,
+              even when reality is uncomfortable.
+            </p>
+            <div class="highlight-box mb-6">
+              <p class="font-bold text-red-600 dark:text-red-400 mb-2">
+                Most people are not interested in truth. They seek:
+              </p>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Validation</li>
+                <li>Ego protection</li>
+                <li>Emotional comfort</li>
+                <li>Confirmation of old beliefs</li>
+              </ul>
+            </div>
+            <div class="info-box">
+              <p class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                This chapter teaches you:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-sm">
+                <li>How to see reality clearly</li>
+                <li>How to remove ego from thinking</li>
+                <li>How to question beliefs without fear</li>
+                <li>How to identify self-deception</li>
+                <li>How to analyze information accurately</li>
+                <li>How to pursue truth even when it challenges identity</li>
+              </ul>
+            </div>
+            <p class="mt-6 text-lg font-semibold text-center">
+              Truth-seeking is the foundation of all intellectual strength.
+            </p>
+          </section>
+
+          <section id="sec1" class="content-section">
+            <h3 class="section-title">1. What Truth-Seeking Really Means</h3>
+            <p class="mb-6">Truth-seeking is the ability to ask:</p>
+            <ul class="list-disc pl-5 space-y-2 mb-6">
+              <li>What is real?</li>
+              <li>What is the evidence?</li>
+              <li>What am I ignoring?</li>
+              <li>What biases influence me?</li>
+              <li>What assumptions am I making?</li>
+              <li>What discomfort am I avoiding?</li>
+            </ul>
+            <p class="text-center text-lg font-semibold">
+              Truth is not emotional comfort. Truth is clarity.
+            </p>
+          </section>
+
+          <section id="sec2" class="content-section">
+            <h3 class="section-title">2. Why Humans Avoid Truth</h3>
+            <p class="mb-4">Humans avoid truth because truth threatens:</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  Identity
+                </h4>
+                <p class="text-sm">
+                  If a belief changes, the self-image feels unstable.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  Ego
+                </h4>
+                <p class="text-sm">Admitting mistakes feels painful.</p>
+              </div>
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  Comfort
+                </h4>
+                <p class="text-sm">
+                  Truth often reveals problems that require change.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  Control
+                </h4>
+                <p class="text-sm">Truth introduces uncertainty.</p>
+              </div>
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-600 dark:text-red-400 mb-2">
+                  Social Safety
+                </h4>
+                <p class="text-sm">Some truths risk judgment or rejection.</p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold">
+              Most thinking errors come from fear-driven avoidance of reality.
+            </p>
+          </section>
+
+          <section id="sec3" class="content-section">
+            <h3 class="section-title">3. Types of Truth You Must Master</h3>
+            <div class="space-y-4">
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  1. Objective Truth
+                </h4>
+                <p class="text-sm mb-2">
+                  Based on facts, evidence, and observable reality.
+                </p>
+                <p class="text-xs italic">
+                  Examples: scientific facts, verified history, mathematical
+                  truths, physical laws
+                </p>
+                <p class="text-xs font-bold mt-2">This is stable truth.</p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  2. Subjective Truth
+                </h4>
+                <p class="text-sm mb-2">
+                  Based on personal experience, feelings, and internal states.
+                </p>
+                <p class="text-xs italic">
+                  Examples: "I feel hurt." "I feel excited."
+                </p>
+                <p class="text-xs font-bold mt-2">
+                  Subjective truth is valid but not universal.
+                </p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  3. Psychological Truth
+                </h4>
+                <p class="text-sm mb-2">
+                  Underlying motives, fears, wounds, desires, patterns.
+                </p>
+                <p class="text-xs italic">
+                  Examples: "I get angry because I fear rejection." "I overwork
+                  because I seek validation."
+                </p>
+                <p class="text-xs font-bold mt-2">This requires reflection.</p>
+              </div>
+              <div class="info-box">
+                <h4 class="font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  4. Social Truth
+                </h4>
+                <p class="text-sm mb-2">
+                  How people behave in groups: norms, culture, reputation, group
+                  psychology.
+                </p>
+                <p class="text-xs italic">
+                  Examples: people align with group ideas, people hide their
+                  real selves socially
+                </p>
+                <p class="text-xs font-bold mt-2">
+                  Understanding social truth increases relational intelligence.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec4" class="content-section">
+            <h3 class="section-title">4. The Truth-Seeking Lens</h3>
+            <p class="mb-6">
+              Truth appears only when you look through four lenses:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="mechanism-item">
+                <div class="mechanism-label">Lens 1: Evidence</div>
+                <p class="text-sm">"What are the facts?"</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Lens 2: Patterns</div>
+                <p class="text-sm">"What happens repeatedly?"</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Lens 3: Motives</div>
+                <p class="text-sm">"Why do people behave this way?"</p>
+              </div>
+              <div class="mechanism-item">
+                <div class="mechanism-label">Lens 4: Consequences</div>
+                <p class="text-sm">
+                  "What results from this belief or action?"
+                </p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-semibold">
+              This lens reveals reality without distortion.
+            </p>
+          </section>
+
+          <section id="sec5" class="content-section">
+            <h3 class="section-title">
+              5. Intellectual Honesty: The Core of High-Level Thinking
+            </h3>
+            <p class="mb-6">Intellectual honesty is the ability to say:</p>
+            <div class="highlight-box mb-6">
+              <ul class="space-y-2">
+                <li class="font-semibold text-blue-600 dark:text-blue-400">
+                  "I don't know."
+                </li>
+                <li class="font-semibold text-blue-600 dark:text-blue-400">
+                  "I was wrong."
+                </li>
+                <li class="font-semibold text-blue-600 dark:text-blue-400">
+                  "My belief needs updating."
+                </li>
+                <li class="font-semibold text-blue-600 dark:text-blue-400">
+                  "This is my bias speaking."
+                </li>
+                <li class="font-semibold text-blue-600 dark:text-blue-400">
+                  "This interpretation lacks evidence."
+                </li>
+              </ul>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div
+                class="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800"
+              >
+                <h4 class="font-bold text-green-700 dark:text-green-400 mb-2">
+                  People who can admit truth gain:
+                </h4>
+                <ul class="list-disc pl-4 text-sm space-y-1">
+                  <li>Clarity</li>
+                  <li>Accuracy</li>
+                  <li>Psychological strength</li>
+                  <li>Rapid growth</li>
+                  <li>Better decisions</li>
+                  <li>Deeper relationships</li>
+                </ul>
+              </div>
+              <div
+                class="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-100 dark:border-red-800"
+              >
+                <h4 class="font-bold text-red-700 dark:text-red-400 mb-2">
+                  People who cannot admit truth:
+                </h4>
+                <p class="text-sm font-semibold">Stay stuck.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec6" class="content-section">
+            <h3 class="section-title">6. The 7 Forms of Self-Deception</h3>
+            <p class="mb-6">
+              Humans lie to themselves unconsciously. The 7 primary forms:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="tool-card">
+                <h4 class="tool-title">1. Emotional Filtering</h4>
+                <p class="tool-desc">Strong emotions override facts.</p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">2. Selective Attention</h4>
+                <p class="tool-desc">
+                  Focusing only on evidence that confirms beliefs.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">3. Identity Protection</h4>
+                <p class="tool-desc">Rejecting truth to protect ego.</p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">4. Projection</h4>
+                <p class="tool-desc">Assigning personal traits to others.</p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">5. Justification</h4>
+                <p class="tool-desc">
+                  Creating false explanations to avoid accountability.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">6. Denial</h4>
+                <p class="tool-desc">
+                  Ignoring information that threatens comfort.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">7. Fantasy Thinking</h4>
+                <p class="tool-desc">
+                  Believing ideas that feel good, not ideas that are real.
+                </p>
+              </div>
+            </div>
+            <p class="mt-6 text-center font-bold text-lg">
+              Self-deception is the enemy of growth.
+            </p>
+          </section>
+
+          <section id="sec7" class="content-section">
+            <h3 class="section-title">7. The Truth-Seeking Process</h3>
+            <p class="mb-4">
+              Use this 6-step process for any belief, decision, or situation:
+            </p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li><strong>Identify the fact</strong></li>
+              <li><strong>Identify your interpretation</strong></li>
+              <li><strong>Identify the emotion attached</strong></li>
+              <li><strong>Identify your bias</strong></li>
+              <li><strong>Check for alternative explanations</strong></li>
+              <li><strong>Evaluate evidence</strong></li>
+            </ol>
+            <p class="mt-6 text-center font-semibold text-lg">
+              This is scientific thinking for life.
+            </p>
+          </section>
+
+          <section id="sec8" class="content-section">
+            <h3 class="section-title">8. Practical Drills</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 1: Fact vs Story Separation</h4>
+                <p class="tool-desc">
+                  Write the fact and the story your mind added. Separate them.
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 2: Belief Audit</h4>
+                <p class="tool-desc">
+                  Take one belief. Ask: Why do I believe this? What evidence
+                  supports/contradicts it? What biases influence it?
+                </p>
+              </div>
+              <div class="tool-card">
+                <h4 class="tool-title">Drill 3: Assumption Hunting</h4>
+                <p class="tool-desc">Ask: "What am I assuming here?"</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sec9" class="content-section">
+            <h3 class="section-title">9. Wisdom Questions</h3>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>What truths do I avoid because they are uncomfortable?</li>
+              <li>
+                What beliefs do I defend emotionally rather than logically?
+              </li>
+              <li>What patterns of self-deception appear in my life?</li>
+              <li>What facts am I ignoring?</li>
+            </ul>
+          </section>
+
+          <section id="sec10" class="content-section">
+            <h3 class="section-title">10. 7-Day Truth-Seeking Training</h3>
+            <div class="grid gap-3">
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 1:</span
+                >
+                Fact vs Interpretation
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 2:</span
+                >
+                Bias detection
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 3:</span
+                >
+                Updating one belief
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 4:</span
+                >
+                Challenging assumptions
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 5:</span
+                >
+                Asking for evidence
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 6:</span
+                >
+                Practicing humility
+              </div>
+              <div
+                class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800"
+              >
+                <span class="font-bold text-blue-600 dark:text-blue-400"
+                  >Day 7:</span
+                >
+                Weekly reflection
+              </div>
+            </div>
+          </section>
+
+          <section id="summary" class="content-section summary-section">
+            <h3 class="section-title">Chapter Summary</h3>
+            <p class="text-lg mb-4">This chapter builds:</p>
+            <ul class="list-disc pl-5 space-y-1 mb-6">
+              <li>Clarity</li>
+              <li>Objectivity</li>
+              <li>Honesty</li>
+              <li>Analytical depth</li>
+              <li>Identity flexibility</li>
+              <li>Emotional maturity</li>
+            </ul>
+            <p class="text-lg font-bold text-center">
+              You cannot master life without mastering truth.
+            </p>
+          </section>
+
+          <nav
+            class="flex flex-col sm:flex-row justify-between items-center mt-12 gap-4"
+          >
+            <a href="chapter4.html" class="nav-button nav-button-secondary">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              <span>Chapter 4</span>
+            </a>
+            <a href="chapter6.html" class="nav-button nav-button-primary">
+              <span>Chapter 6</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <div id="selection-popup">
+      <div class="popup-header">
+        <div class="flex gap-1 w-full">
+          <button class="popup-tab active" data-tab="explain">Explain</button>
+          <button class="popup-tab" data-tab="discuss">Discuss</button>
+        </div>
+        <button id="popup-close" aria-label="Close popup">&times;</button>
+      </div>
+      <div class="popup-body">
+        <div
+          id="popup-content-explain"
+          class="popup-content markdown-body"
+        ></div>
+        <div id="popup-chat" class="chat-container hidden">
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-area">
+            <input
+              type="text"
+              id="chat-input"
+              class="chat-input"
+              placeholder="Ask a question..."
+              aria-label="Chat input"
+            />
+            <button id="chat-send" class="chat-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
