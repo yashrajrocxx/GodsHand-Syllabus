@@ -37,6 +37,10 @@
       type="image/svg+xml"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📘</text></svg>"
     />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%233b82f6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='120' fill='white'>📘</text></svg>"
+    />
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
@@ -113,12 +117,11 @@
             </h1>
           </div>
           <div class="flex items-center gap-4">
-            <div style="position: relative">
+            <div class="settings-container">
               <button
                 id="settings-btn-nav"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 aria-label="Settings"
-                style="cursor: pointer"
                 onclick="document.getElementById('settings-dropdown').classList.toggle('visible'); event.stopPropagation();"
               >
                 <svg
@@ -244,12 +247,10 @@
           class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
         ></div>
         <div
-          class="absolute top-40 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
-          style="animation-delay: 2s"
+          class="absolute top-40 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob animate-blob-delay-2"
         ></div>
         <div
-          class="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob"
-          style="animation-delay: 4s"
+          class="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-3xl animate-blob animate-blob-delay-4"
         ></div>
       </div>
 

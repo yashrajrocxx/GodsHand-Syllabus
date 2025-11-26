@@ -7,6 +7,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* TEXT SELECTION SUPPORT */
+* {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Allow text selection in main content */
+#main-content,
+#main-content * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default;
+}
+
+/* Prevent selection in UI elements */
+button,
+nav,
+.popup-header,
+#theme-toggle,
+#settings-btn-nav,
+#settings-dropdown {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
 /* MOBILE RESPONSIVE - FULL WIDTH & OPTIMIZED SPACING */
 @media (max-width: 768px) {
   body {
@@ -483,12 +515,19 @@ html.dark .markdown-body code {
   transition: 
     opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
+  display: none;
   flex-direction: column;
   max-height: 650px;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   overflow: hidden;
+}
+
+#selection-popup.visible {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
 }
 
 /* Very small phones (< 375px) */
@@ -1496,6 +1535,11 @@ html.dark .summary-section {
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
+.nav-button-complete {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
 .nav-button-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
@@ -1637,6 +1681,15 @@ html.dark .kbd {
   border-color: #475569;
 }
 
+/* ANIMATED BLOBS */
+.animate-blob-delay-2 {
+  animation-delay: 2s;
+}
+
+.animate-blob-delay-4 {
+  animation-delay: 4s;
+}
+
 html.dark .nav-link:hover,
 html.dark .nav-link.active {
   background: rgba(56, 189, 248, 0.1);
@@ -1644,6 +1697,10 @@ html.dark .nav-link.active {
 }
 
 /* SETTINGS DROPDOWN MENU */
+.settings-container {
+  position: relative;
+}
+
 #settings-btn-nav {
   cursor: pointer;
   display: flex;

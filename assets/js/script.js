@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     groq: {
       name: "Groq",
-      apiKey: "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",
+      apiKey: "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",
       endpoint: "https://api.groq.com/openai/v1/chat/completions",
       model: "llama-3.1-8b-instant",
     },
@@ -100,6 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.closest("#settings-btn-nav")) return;
     if (e.target.closest("#settings-dropdown")) return;
 
+    // For mobile, use longer delay to allow selection to complete
+    const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const delay = isMobile ? 100 : 10;
+
     // Wait for browser to update selection
     setTimeout(() => {
       const selection = window.getSelection();
@@ -138,12 +142,49 @@ document.addEventListener("DOMContentLoaded", () => {
           selectionPopup.classList.remove("visible");
         }
       }
-    }, 10);
+    }, delay);
   };
 
   // Attach to mouse and touch events
   document.addEventListener("mouseup", handleSelection);
   document.addEventListener("touchend", handleSelection);
+
+  // For mobile: also listen to selectionchange event
+  if ("ontouchstart" in window) {
+    let selectionTimeout;
+    document.addEventListener("selectionchange", () => {
+      // Debounce to avoid too many calls
+      clearTimeout(selectionTimeout);
+      selectionTimeout = setTimeout(() => {
+        const selection = window.getSelection();
+        const text = selection.toString().trim();
+
+        if (
+          text.length > 0 &&
+          selection.anchorNode &&
+          mainContent &&
+          mainContent.contains(selection.anchorNode)
+        ) {
+          // Only trigger if we have a valid selection
+          try {
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+
+            // Make sure the selection is visible (not collapsed)
+            if (rect.width > 0 && rect.height > 0) {
+              selectedText = text;
+              chatHistory = [];
+              if (chatMessages) chatMessages.innerHTML = "";
+              showPopup(rect);
+              switchTab("explain");
+            }
+          } catch (err) {
+            // Ignore errors
+          }
+        }
+      }, 200);
+    });
+  }
 
   // Disable context menu on selected text
   document.addEventListener("contextmenu", (e) => {
@@ -359,14 +400,14 @@ Output Format (Markdown):
         isApiCallPending = false;
         return result;
       } catch (e) {
-        if (e.message.includes("429") || e.message.includes("quota")) {
+        // Continue to next provider on any error
+        if (i < providers.length - 1) {
           continue;
         }
 
-        if (i === providers.length - 1) {
-          isApiCallPending = false;
-          return fallbackOfflineResponse(prompt);
-        }
+        // Last provider failed, show offline mode
+        isApiCallPending = false;
+        return fallbackOfflineResponse(prompt);
       }
     }
 
@@ -400,18 +441,15 @@ Output Format (Markdown):
 
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
-          throw new Error(
-            `${response.status}: ${
-              errorData.error?.message || response.statusText
-            }`
-          );
+          const errorMsg = errorData.error?.message || response.statusText;
+          throw new Error(`Gemini ${response.status}: ${errorMsg}`);
         }
 
         const data = await response.json();
         if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
           return data.candidates[0].content.parts[0].text;
         }
-        throw new Error("Invalid response format");
+        throw new Error("Gemini: Invalid response format");
       } else if (provider === "groq") {
         response = await fetch(config.endpoint, {
           method: "POST",
@@ -431,14 +469,16 @@ Output Format (Markdown):
         clearTimeout(timeoutId);
 
         if (!response.ok) {
-          throw new Error(`${response.status}: ${response.statusText}`);
+          const errorData = await response.json().catch(() => ({}));
+          const errorMsg = errorData.error?.message || response.statusText;
+          throw new Error(`Groq ${response.status}: ${errorMsg}`);
         }
 
         const data = await response.json();
         if (data.choices?.[0]?.message?.content) {
           return data.choices[0].message.content;
         }
-        throw new Error("Invalid response format");
+        throw new Error("Groq: Invalid response format");
       } else if (provider === "ollama") {
         response = await fetch(config.endpoint, {
           method: "POST",
@@ -454,14 +494,14 @@ Output Format (Markdown):
         clearTimeout(timeoutId);
 
         if (!response.ok) {
-          throw new Error("Ollama not available");
+          throw new Error(`Ollama ${response.status}: ${response.statusText}`);
         }
 
         const data = await response.json();
         if (data.response) {
           return data.response;
         }
-        throw new Error("Invalid response format");
+        throw new Error("Ollama: Invalid response format");
       }
     } catch (e) {
       clearTimeout(timeoutId);
@@ -473,10 +513,40 @@ Output Format (Markdown):
     const text = selectedText.toLowerCase().trim();
 
     if (prompt.includes("Define the term") || prompt.includes("dictionary")) {
-      return `**Offline Mode**\n\n**Selected Text:** ${selectedText}\n\n*AI services are temporarily unavailable.*\n\n**Tip:** You can:\n1. Try again in a few moments\n2. Search online for more information\n3. Check a dictionary or reference material`;
+      return `## Offline Mode - AI Unavailable
+
+**Selected Text:** "${selectedText}"
+
+Unfortunately, all AI services are currently unavailable:
+- ❌ Gemini API (Rate limited or quota exceeded)
+- ❌ Groq API (Check API key)
+- ❌ Ollama (Local server not running)
+
+### What you can do:
+
+1. **Wait a few minutes** - API rate limits usually reset quickly
+2. **Check your API keys** in \`script.js\` (lines 3-20)
+3. **Install Ollama locally** for offline AI:
+   - Visit [ollama.ai](https://ollama.ai)
+   - Install and run: \`ollama run llama3.2\`
+4. **Search online** for "${selectedText}" definition
+5. **Use a dictionary** or reference material
+
+*This feature requires working AI providers. Please check your setup.*`;
     }
 
-    return `**Offline Mode**\n\nAI services are currently unavailable. Please:\n\n1. Check your internet connection\n2. Wait a moment and try again\n3. Get a free Groq API key at console.groq.com\n\nSelected text: "${selectedText}"`;
+    return `## Offline Mode
+
+**Selected:** "${selectedText}"
+
+AI services are currently unavailable. Please:
+
+1. Check your internet connection
+2. Wait a moment and try again
+3. Verify API keys in the code
+4. Consider installing Ollama for local AI
+
+*Features will resume when AI services are accessible.*`;
   }
 
   // --- CHAT LOGIC ---
